@@ -13,7 +13,7 @@
        
         <footer>
                 <div class="email_footer">
-                        <img src="../img/email.png" alt="">
+                <i class="fas fa-envelope-square"></i>
                         <div class="letter_footer">
                                 <b>Đăng ký nhận bản tin</b>
                                 <p>Nhập email để nhận các chương trình khuyến mãi kèm nhiều ưu đãi hấp dẫn </p>
