@@ -25,7 +25,7 @@
 
                 </div>
                 <div class="footer">
-                        <img id="logo" src="../img/logo .png" alt="">
+                        <img id="logo" src="../upload/logo.png" alt="">
                         <div class="footer_box1">
                                 <h1>Mạng xã hội</h1>
                                 <p><i class="fab fa-facebook-square"></i>&nbsp; Facebook</p>

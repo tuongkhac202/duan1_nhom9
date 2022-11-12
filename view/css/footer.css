@@ -39,7 +39,7 @@ footer{
        
 }
 .footer{
-        background-image: url(/upload/banner_footer.png);
+        background-image: url(../upload/banner_footer.png);
         height:300px ;
         position: relative;
 }
