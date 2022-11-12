@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --bg-main: #3AA88E;
+}
+/* .bao{
+    background-color: aqua;
+    height: auto;
+    width: 100%;
+} */
+.nav{
+    background: var(--bg-main);
+}
+.nav .logo img{ 
+    height: 80px;
+}
+.nav h5{
+    transition: .5s;
+}
+.nav h5:hover{
+color: rgb(37, 13, 122);
+
+}
+article .filter{
+background: var(--bg-main);
+}
+.form-filter{
+    display: flex;
+    justify-content: space-evenly;
+}
+.chon-tour{
+    background: #64B899;
+    color: white;
+    display: flex;
+}
+.chon-tour h6{
+    text-align: center;
+    transition: .2s;
+}
+
+.chon-tour img{
+    height: 100px;
+    width: 70%;
+}
+.mien .contentt{
+    background-color: var(--bg-main);
+}
+.mien-bac .tour{
+    background: url('../../upload/mien-bac-bg.png');
+}
+.mien-trung .tour{
+    background: url('../../upload/mien-trung-bg.png');
+}
+.mien-nam .tour{
+    background: url('../../upload/mien-nam.png');
+}
+.image-tour{
+    overflow: hidden;
+}
+.image-tour img{
+    transition: .3s;
+    transform: rotate(0deg);
+}
+.image-tour img:hover{
+    transform: scale(1.3) rotate(10deg);
+}
+.khoanh-khac-lu-hanh{
+    background: url('../../upload/khoanh-khac-lu-hanh.png');
+}
