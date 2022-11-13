@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.font-thu-phap{
+    font-family: 'Great Vibes', cursive;
+}
 :root{
     --bg-main: #3AA88E;
 }

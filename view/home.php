@@ -357,7 +357,7 @@
 
         <div class="row m-0 py-4  khoanh-khac-lu-hanh justify-content-center">
 <div class="col-12 col-xl-12 p-4 text-center lu-hanh-title">
- <h3 class="text-white">KHOẢNH KHẮC LỮ HÀNH</h3>
+ <h3 class="text-white font-thu-phap">KHOẢNH KHẮC LỮ HÀNH</h3>
 </div>
 <div class="row col-12 col-xl-10 g-4  m-0 anh-lu-hanh">
 <div class="col-6 col-xl-4"><img class="img-fluid" src="upload/lu-hanh-1.png" alt=""></div>

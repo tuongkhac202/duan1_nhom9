@@ -15,6 +15,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <!-- link font thư pháp -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="view/css/footer.css">
     <link rel="stylesheet" href="view/css/style.css" />
   </head>
@@ -61,6 +65,11 @@
                   href="index.php?act=tt"
                   ><h5>TIN TỨC</h5></a
                 >
+              </div>
+
+              <div class="col text-center text-white">
+                <a><i class="fas fa-user"></i></a> &nbsp; |&nbsp;
+                <a><i class="fas fa-shopping-cart"></i></a>
               </div>
             </div>
           </div>
