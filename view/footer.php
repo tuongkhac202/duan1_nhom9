@@ -1,11 +1,12 @@
    <footer>
-        <div class="row m-0">
+        <div class="row m-0 p-0">
               
-                <div class="row m-0 col-12 p-0 email-footer bg-main align-items-center p-4">
-                        <div class="col-2 text-end text-white">
+                <div class="row m-0 col-12 px-5 email-footer bg-main align-items-center justify-content-center p-4">
+                        <div class="row col-12 justify-content-center">
+                        <div class="col-1 text-white">
                         <i class="fas fa-envelope-square fa-4x"></i>
                         </div>
-                        <div class="col-6 text-white">
+                        <div class="col-6 text-white text-start">
                        
                
                            <b>Đăng ký nhận bản tin</b>
@@ -13,11 +14,12 @@
                
                         </div>
 
-                 <div class="col-4 d-flex align-items-center justify-content-evenly">
+                 <div class="col-4 d-flex align-items-center justify-content-evenly text-end">
 
                  <input id="email" type="email" value="email" class=" form-control w-75 d-inline">
                            <input id="submit" type="submit" value="Đăng ký" class="btn btn-danger d-inline">
                  </div>
+                        </div>
                 
                    
 
