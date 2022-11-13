@@ -57,7 +57,7 @@
 
               <div class="col text-center text-white">
                 <a href="index.php?act=dn" class="text-white"><i class="fas fa-user"></i></a> &nbsp; |&nbsp;
-                <a href="index.php?act=dh" class="text-white"><i class="fas fa-shopping-cart"></i></a>
+                <a href="index.php?act=cart" class="text-white"><i class="fas fa-shopping-cart"></i></a>
               </div>
             </div>
           </div>
