@@ -50,7 +50,7 @@
                 </a>
               </div>
               <div class="col text-center">
-                <a class="text-decoration-none text-white" href="index.php?act=tt">
+                <a class="text-decoration-none text-white" href="index.php?act=handbook">
                   <h4 class="font-thu-phap">Cẩm Nang</h4>
                 </a>
               </div>
