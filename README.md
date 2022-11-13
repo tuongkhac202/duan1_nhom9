@@ -9,6 +9,7 @@
 
 ### -home: done
 ### -contact: done
+### -register: done
 
 # Back-end(chuc nang)
 
