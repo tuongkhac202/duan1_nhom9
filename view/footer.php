@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css ">
-        <link rel="stylesheet" href="">
-
-</head>
-<body>
-       
+   
         <footer>
                 <div class="email_footer">
-                        <img src="../img/email.png" alt="">
+                <i class="fas fa-envelope-square fa-4x"></i>
                         <div class="letter_footer">
                                 <b>Đăng ký nhận bản tin</b>
                                 <p>Nhập email để nhận các chương trình khuyến mãi kèm nhiều ưu đãi hấp dẫn </p>
@@ -25,7 +13,7 @@
 
                 </div>
                 <div class="footer">
-                        <img id="logo" src="../img/logo .png" alt="">
+                        <img id="logo" src="../upload/logo.png" alt="">
                         <div class="footer_box1">
                                 <h1>Mạng xã hội</h1>
                                 <p><i class="fab fa-facebook-square"></i>&nbsp; Facebook</p>
@@ -46,5 +34,6 @@
                         </div>
                 </div>
         </footer>
+ </div>
 </body>
 </html>
