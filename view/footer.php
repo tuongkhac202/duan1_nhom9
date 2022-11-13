@@ -1,37 +1,57 @@
    <footer>
-           <div class="email_footer">
-                   <i class="fas fa-envelope-square fa-4x"></i>
-                   <div class="letter_footer">
+        <div class="row m-0">
+              
+                <div class="row m-0 col-12 p-0 email-footer bg-main align-items-center p-4">
+                        <div class="col-2 text-end text-white">
+                        <i class="fas fa-envelope-square fa-4x"></i>
+                        </div>
+                        <div class="col-6 text-white">
+                       
+               
                            <b>Đăng ký nhận bản tin</b>
                            <p>Nhập email để nhận các chương trình khuyến mãi kèm nhiều ưu đãi hấp dẫn </p>
-                   </div>
-                   <div class="input_footer">
-                           <input id="email" type="email" value="email">
-                           <input id="submit" type="submit" value="Đăng ký">
-                   </div>
+               
+                        </div>
 
-           </div>
-           <div class="footer">
-                   <img id="logo" src="../upload/logo.png" alt="">
-                   <div class="footer_box1">
-                           <h1>Mạng xã hội</h1>
-                           <p><i class="fab fa-facebook-square"></i>&nbsp; Facebook</p>
+                 <div class="col-4 d-flex align-items-center justify-content-evenly">
+
+                 <input id="email" type="email" value="email" class=" form-control w-75 d-inline">
+                           <input id="submit" type="submit" value="Đăng ký" class="btn btn-danger d-inline">
+                 </div>
+                
+                   
+
+          </div>
+                <div class="row m-0 col-12 align-items-center footer">
+                        <div class="col-3 text-white p-4 text-center">
+                                <img src="upload/logo.png" alt="" class="img-fluid">
+                        </div>
+                        <div class=".row m-0 col-4 text-white p-4 text-center align-self-start"> 
+                           <h1 class="col-12 font-thu-phap">Mạng Xã Hội</h3>
+                          <div class="col-6 offset-3 text-start">
+                          <p><i class="fab fa-facebook-square"></i>&nbsp; Facebook</p>
                            <p><i class="fab fa-instagram-square"></i>&nbsp; Instagram</p>
                            <p><i class="fab fa-youtube"></i>&nbsp; Youtube</p>
                            <p><i class="fab fa-google-plus-square"></i>&nbsp; Google</p>
+                          </div>
 
-                   </div>
-
-                   <div class="footer_box2">
-                           <h1>Liên hệ</h1>
+                  </div>
+                        <div class="col-4 text-white p-4 text-center">
+                       
+                           <h1 class="font-thu-phap">Liên Hệ</h1>
+                           <div class="lh text-start">
                            <p>CÔNG TY DỊCH VỤ DU LỊCH YẾN TƯỜNG(YENTUONG TOURIST)</p>
                            <p>Trụ sở:288 Đ.Nguyễn Văn Linh,Hưng Lợi,Ninh Kiều,TP Cần Thơ</p>
                            <p>Tel:079.548.3987</p>
                            <p>Email:yentuong@yentuongrourst.com</p>
                            <p>Tổng đài:1900 9999</p>
+                           </div>
 
-                   </div>
-           </div>
+                   
+                        </div>
+                </div>
+        </div>
+           
    </footer>
 
    <!-- Trần Tường thêm -->
