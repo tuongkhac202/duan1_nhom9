@@ -1,5 +1,31 @@
 <article>
-       
+       <!-- ảnh banner -->
+      <div class="row m-0 banner">
+        <div class="col-12 p-0">
+          <!-- Slideshow container -->
+          <div class="slideshow-container m-0">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="upload/BANNER1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="upload/BANNER2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="upload/BANNER3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="upload/BANNER4.jpg" style="width:100%">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
        <!-- lọc tour -->
        <div class="row d-none d-xl-block p-3 filter">
          <div class="row col-xl-8 offset-xl-2 text-center filter-chirld">
@@ -69,9 +95,9 @@
        <div class="mien mien-bac">
          <div class="contentt text-center text-white">
            <p class="pt-2 mb-1">
-             Khám phá lịch sử, văn hóa, con người miền Nam với
+             Khám phá lịch sử, văn hóa, con người miền Bắc với
            </p>
-           <h5 class="pb-2 m-0">TOUR MIỀN BẮC</h5>
+           <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Bắc</h3>
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
@@ -166,9 +192,9 @@
         <div class="mien mien-trung">
          <div class="contentt text-center text-white">
            <p class="pt-2 mb-1">
-             Khám phá lịch sử, văn hóa, con người miền Nam với
+             Khám phá lịch sử, văn hóa, con người miền Trung với
            </p>
-           <h5 class="pb-2 m-0">TOUR MIỀN TRUNG</h5>
+           <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Trung</h3>
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
@@ -266,7 +292,7 @@
            <p class="pt-2 mb-1">
              Khám phá lịch sử, văn hóa, con người miền Nam với
            </p>
-           <h5 class="pb-2 m-0">TOUR MIỀN NAM</h5>
+           <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Nam</h3>
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">

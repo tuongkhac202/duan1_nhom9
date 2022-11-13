@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'dao/pdo.php';
+include 'dao/tour.php';
 include 'view/header.php';
 
 
@@ -21,11 +22,15 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
             include 'view/login.php';
             break;
         // tin tức
-        case 'news':
-            include 'view/news.php';
+        case 'handbook':
+            include 'view/handbook.php';
             break;
 
-
+         // danh sách du lịch 
+         case 'dl':
+            $tours=load_tour();
+            include 'view/list-tour.php';
+            break;
 
 
 
