@@ -31,6 +31,11 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
             $tours=load_tour();
             include 'view/list-tour.php';
             break;
+         //giỏ hàng
+         case 'cart':
+            include 'view/cart.php';
+            break;
+
 
 
 
