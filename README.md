@@ -3,6 +3,7 @@
 ## Tran Thi Bao Yen
 ### -footer: done
 ### -handbook:done
+### -cart:done
 
 ## Nguyen Khanh Tuong
 ## Tran Khac Tuong
