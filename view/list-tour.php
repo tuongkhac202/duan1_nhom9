@@ -1,5 +1,33 @@
 <article>
 
+ <!-- ảnh banner -->
+ <div class="row m-0 banner">
+        <div class="col-12 p-0">
+          <!-- Slideshow container -->
+          <div class="slideshow-container m-0">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="upload/BANNER1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="upload/BANNER2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="upload/BANNER3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="upload/BANNER4.jpg" style="width:100%">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
 
 <div class="mien mien-bac">
          <div class="contentt text-center text-white">
