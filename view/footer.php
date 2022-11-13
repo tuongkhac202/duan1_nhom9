@@ -26,8 +26,8 @@
                         <div class="col-3 text-white p-4 text-center">
                                 <img src="upload/logo.png" alt="" class="img-fluid">
                         </div>
-                        <div class=".row m-0 col-4 text-white p-4 text-center align-self-start"> 
-                           <h1 class="col-12 font-thu-phap">Mạng Xã Hội</h3>
+                        <div class=".row m-0 col-4 text-white p-4 align-self-start"> 
+                           <h1 class="col-8 offset-2 font-thu-phap">Mạng Xã Hội</h3>
                           <div class="col-6 offset-3 text-start">
                           <p><i class="fab fa-facebook-square"></i>&nbsp; Facebook</p>
                            <p><i class="fab fa-instagram-square"></i>&nbsp; Instagram</p>
@@ -36,7 +36,7 @@
                           </div>
 
                   </div>
-                        <div class="col-4 text-white p-4 text-center">
+                        <div class="col-4 text-white p-4 align-self-start">
                        
                            <h1 class="font-thu-phap">Liên Hệ</h1>
                            <div class="lh text-start">
