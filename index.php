@@ -8,10 +8,27 @@ include 'view/header.php';
 if(isset($_GET['act']) && $_GET['act'] !=""){
     $act = $_GET['act'];
     switch ($act) {
+        // liên hệ
         case 'lh':
             include 'view/contact.php';
             break;
-        
+        // đăng ký
+        case 'dk':
+            include 'view/register.php';
+            break;
+
+
+
+
+
+
+
+
+
+
+
+
+            
         default:
         include 'view/home.php';
             break;
