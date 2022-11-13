@@ -2,6 +2,7 @@
 # Front-end(giao dien)
 ## Tran Thi Bao Yen
 ### -footer: done
+### -handbook:done
 
 ## Nguyen Khanh Tuong
 ## Tran Khac Tuong
