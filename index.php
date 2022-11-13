@@ -20,6 +20,10 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
         case 'dn':
             include 'view/login.php';
             break;
+        // tin tức
+        case 'news':
+            include 'view/news.php';
+            break;
 
 
 
