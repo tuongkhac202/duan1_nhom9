@@ -131,13 +131,4 @@ background: var(--bg-main);
   }
   /* end slide show */
 
-  /* footer yến */
-  .footer{
-    background: url('../../upload/banner_footer.png');
-    background-size: cover;
-    position: relative;
-   
-}
-.email-footer{
-    background: #3AA88E;
-}
+ 
