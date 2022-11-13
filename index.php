@@ -16,6 +16,10 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
         case 'dk':
             include 'view/register.php';
             break;
+        //  dăng nhập
+        case 'dn':
+            include 'view/login.php';
+            break;
 
 
 
@@ -48,4 +52,3 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
 
 
 include 'view/footer.php';
-?>
