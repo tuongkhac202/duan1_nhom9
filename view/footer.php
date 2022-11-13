@@ -15,7 +15,7 @@
 
                  <div class="col-4 d-flex align-items-center justify-content-evenly">
 
-                 <input id="email" type="email" value="email" class=" form-control w-75 d-inline">
+                 <input id="email" type="email" placeholder="Email" class=" form-control w-75 d-inline">
                            <input id="submit" type="submit" value="Đăng ký" class="btn btn-danger d-inline">
                  </div>
                 
