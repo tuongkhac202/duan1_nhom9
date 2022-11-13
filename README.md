@@ -1,13 +1,14 @@
 # duan1_nhom9
 # Front-end(giao dien)
 ## Tran Thi Bao Yen
-### footer: done
+### -footer: done
 
 ## Nguyen Khanh Tuong
 ## Tran Khac Tuong
-### header: done
+### -header: done
 
-### home: done
+### -home: done
+### -contact: done
 
 # Back-end(chuc nang)
 

@@ -10,11 +10,9 @@
 :root{
     --bg-main: #3AA88E;
 }
-/* .bao{
-    background-color: aqua;
-    height: auto;
-    width: 100%;
-} */
+.color-main{
+    color: #3AA88E;
+}
 .nav{
     background: var(--bg-main);
 }
