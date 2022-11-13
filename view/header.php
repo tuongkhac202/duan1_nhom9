@@ -63,7 +63,7 @@
                 <a
                   class="text-decoration-none text-white"
                   href="index.php?act=tt"
-                  ><h5>TIN TỨC</h5></a
+                  ><h5>CẨM NANG</h5></a
                 >
               </div>
 
