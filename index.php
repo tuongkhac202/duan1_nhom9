@@ -22,8 +22,8 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
             include 'view/login.php';
             break;
         // tin tức
-        case 'news':
-            include 'view/news.php';
+        case 'handbook':
+            include 'view/handbook.php';
             break;
 
          // danh sách du lịch 
