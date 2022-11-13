@@ -26,44 +26,47 @@
     <div class="container-fluid p-0 bao">
       <header>
         <div class="row m-0 g-2 nav p-1 align-items-center">
-          <div class="col-xl-1 offset-1 d-none d-xl-block logo">
+
+          <div class="col-xl-1 offset-xl-2 d-none d-xl-block logo">
             <a href="index.php" class="text-decoration-none text-white">
               <img class="img-fluid" src="upload/logo150.png" alt=""
             /></a>
           </div>
-          <div class="row col-xl-10 col-md-12 text-center menu">
+
+         <div class="col-xl-8 offset-xl-1 col-12">
+         <div class="row col-xl-10 col-md-12 text-center menu">
             <div class="row menu">
               <div class="col text-center">
                 <a class="text-decoration-none text-white" href="index.php"
-                  ><h5>TRANG CHỦ</h5></a
+                  ><h4 class="font-thu-phap">Trang Chủ</h4></a
                 >
               </div>
               <div class="col text-center">
                 <a
                   class="text-decoration-none text-white"
                   href="index.php?act=dl"
-                  ><h5>DU LỊCH</h5></a
+                  ><h4 class="font-thu-phap">Du Lịch</h4></a
                 >
               </div>
               <div class="col text-center">
                 <a
                   class="text-decoration-none text-white"
                   href="index.php?act=gt"
-                  ><h5>GIỚI THIỆU</h5></a
+                  ><h4 class="font-thu-phap">Giới Thiệu</h4></a
                 >
               </div>
               <div class="col text-center">
                 <a
                   class="text-decoration-none text-white"
                   href="index.php?act=lh"
-                  ><h5>LIÊN HỆ</h5></a
+                  ><h4 class="font-thu-phap">Liên hệ</h4></a
                 >
               </div>
               <div class="col text-center">
                 <a
                   class="text-decoration-none text-white"
                   href="index.php?act=tt"
-                  ><h5>CẨM NANG</h5></a
+                  ><h4 class="font-thu-phap">Cẩm Nang</h4></a
                 >
               </div>
 
@@ -73,6 +76,9 @@
               </div>
             </div>
           </div>
+         </div>
+
+
         </div>
          <!-- ảnh banner -->
          <div class="row banner">
