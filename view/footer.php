@@ -1,7 +1,7 @@
    <footer>
         <div class="row m-0">
               
-                <div class="row m-0 color-main col-12 p-0 email-footer bg-main align-items-center p-4">
+                <div class="row m-0 col-12 p-0 email-footer bg-main align-items-center p-4">
                         <div class="col-2 text-end text-white">
                         <i class="fas fa-envelope-square fa-4x"></i>
                         </div>
@@ -22,7 +22,7 @@
                    
 
           </div>
-                <div class="row m-0 col-12 align-items-center  footer">
+                <div class="row m-0 col-12 align-items-center footer">
                         <div class="col-3 text-white p-4 text-center">
                                 <img src="upload/logo.png" alt="" class="img-fluid">
                         </div>
