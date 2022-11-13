@@ -11,6 +11,7 @@
 ### -contact: done
 ### -register: done
 ### -login: done
+### -list-tour: waiting for database
 
 # Back-end(chuc nang)
 
