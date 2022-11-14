@@ -1,11 +1,15 @@
    <footer>
         <div class="row m-0 p-0">
               
+<<<<<<< HEAD
 
                 <div class="row m-0 col-12 px-5 email-footer bg-main align-items-center justify-content-center p-4">
                         <div class="row col-12 justify-content-center">
                         <div class="col-1 text-white">
                 <div class="row m-0 color-main col-12 p-0 email-footer bg-main align-items-center p-4">
+=======
+                <div class="row m-0 col-12 p-0 email-footer bg-main align-items-center p-4">
+>>>>>>> 831270e93aed390a105eaa7cf8f0fd614d381bed
                         <div class="col-2 text-end text-white">
 
                         <i class="fas fa-envelope-square fa-4x"></i>
@@ -20,7 +24,7 @@
 
                  <div class="col-4 d-flex align-items-center justify-content-evenly text-end">
 
-                 <input id="email" type="email" value="email" class=" form-control w-75 d-inline">
+                 <input id="email" type="email" placeholder="Email" class=" form-control w-75 d-inline">
                            <input id="submit" type="submit" value="Đăng ký" class="btn btn-danger d-inline">
                  </div>
                         </div>
@@ -28,7 +32,7 @@
                    
 
           </div>
-                <div class="row m-0 col-12 align-items-center  footer">
+                <div class="row m-0 col-12 align-items-center footer">
                         <div class="col-3 text-white p-4 text-center">
                                 <img src="upload/logo.png" alt="" class="img-fluid">
                         </div>
