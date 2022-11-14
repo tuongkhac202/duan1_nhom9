@@ -14,7 +14,7 @@
 ### -register: done
 ### -login: done
 ### -list-tour: waiting for database
-
+### -tour-detail: doing...
 # Back-end(chuc nang)
 
 
