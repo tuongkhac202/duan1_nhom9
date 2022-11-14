@@ -1,15 +1,12 @@
    <footer>
         <div class="row m-0 p-0">
               
-<<<<<<< HEAD
 
                 <div class="row m-0 col-12 px-5 email-footer bg-main align-items-center justify-content-center p-4">
                         <div class="row col-12 justify-content-center">
                         <div class="col-1 text-white">
                 <div class="row m-0 color-main col-12 p-0 email-footer bg-main align-items-center p-4">
-=======
                 <div class="row m-0 col-12 p-0 email-footer bg-main align-items-center p-4">
->>>>>>> 831270e93aed390a105eaa7cf8f0fd614d381bed
                         <div class="col-2 text-end text-white">
 
                         <i class="fas fa-envelope-square fa-4x"></i>
