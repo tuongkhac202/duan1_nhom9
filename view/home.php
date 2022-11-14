@@ -102,7 +102,7 @@
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-           <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
                <a href="">
                  <img
@@ -129,7 +129,7 @@
              </div>
            </div>
 
-           <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3  tourr">
+           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
                <a href="">
                  <img
@@ -156,7 +156,7 @@
              </div>
            </div>
 
-           <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
               <a href="">
                <img
@@ -199,7 +199,7 @@
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-           <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
                <a href="">
                  <img
@@ -226,7 +226,7 @@
              </div>
            </div>
 
-           <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3  tourr">
+           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
                <a href="">
                  <img
@@ -253,7 +253,7 @@
              </div>
            </div>
 
-           <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
               <a href="">
                <img
@@ -297,7 +297,7 @@
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-           <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
                <a href="">
                  <img
@@ -324,7 +324,7 @@
              </div>
            </div>
 
-           <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3  tourr">
+           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
                <a href="">
                  <img
@@ -351,7 +351,7 @@
              </div>
            </div>
 
-           <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
               <a href="">
                <img
@@ -383,7 +383,7 @@
 
         <div class="row m-0 py-4  khoanh-khac-lu-hanh justify-content-center">
 <div class="col-12 col-xl-12 p-4 text-center lu-hanh-title">
- <h3 class="text-white font-thu-phap">KHOẢNH KHẮC LỮ HÀNH</h3>
+ <h1><i class="text-white font-thu-phap">Khoảnh Khắc Lữ Hành</i></h1>
 </div>
 <div class="row col-12 col-xl-10 g-4  m-0 anh-lu-hanh">
 <div class="col-6 col-xl-4"><img class="img-fluid" src="upload/lu-hanh-1.png" alt=""></div>

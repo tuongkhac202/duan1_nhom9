@@ -31,11 +31,23 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
             $tours=load_tour();
             include 'view/list-tour.php';
             break;
+
          //giỏ hàng
          case 'cart':
             include 'view/cart.php';
             break;
 
+             // chi tiết tour du lịch
+            case 'ctt':
+                if (isset($_GET['id']) && $_GET['id'] > 0) {
+                    $id = $_GET['id'];
+                    $tthis = load_tour_one($id);
+                    extract($tthis);
+                    include 'view/tour-detail.php';
+                } else {
+                    include "view/home.php";
+                }
+            break;
 
 
 

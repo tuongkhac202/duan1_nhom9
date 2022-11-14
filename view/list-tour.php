@@ -46,7 +46,7 @@ if($category =="Bắc"){
     echo '
     <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-      <a href="">
+      <a href="index.php?act=ctt&id='.$id_tour.'">
         <img
         class="img-fluid rounded-top"
         src="'.$hinh_tour.'"
@@ -97,7 +97,7 @@ if($category =="Trung"){
     echo '
     <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-      <a href="">
+    <a href="index.php?act=ctt&id='.$id_tour.'">
         <img
         class="img-fluid rounded-top"
         src="'.$hinh_tour.'"
@@ -149,7 +149,7 @@ if($category =="Nam"){
     echo '
     <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-      <a href="">
+    <a href="index.php?act=ctt&id='.$id_tour.'">
         <img
         class="img-fluid rounded-top"
         src="'.$hinh_tour.'"
