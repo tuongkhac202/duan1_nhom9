@@ -95,14 +95,14 @@
        <div class="mien mien-bac">
          <div class="contentt text-center text-white">
            <p class="pt-2 mb-1">
-             Khám phá lịch sử, văn hóa, con người miền Bắc với
+            <i> Khám phá lịch sử, văn hóa, con người miền Bắc với</i>
            </p>
            <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Bắc</h3>
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-2 mt-xl-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
                <a href="">
                  <img
@@ -129,7 +129,7 @@
              </div>
            </div>
 
-           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-2 mt-xl-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
                <a href="">
                  <img
@@ -156,7 +156,7 @@
              </div>
            </div>
 
-           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-2 mt-xl-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
               <a href="">
                <img
@@ -192,14 +192,14 @@
         <div class="mien mien-trung">
          <div class="contentt text-center text-white">
            <p class="pt-2 mb-1">
-             Khám phá lịch sử, văn hóa, con người miền Trung với
+            <i> Khám phá lịch sử, văn hóa, con người miền Trung với</i>
            </p>
            <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Trung</h3>
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-2 mt-xl-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
                <a href="">
                  <img
@@ -226,7 +226,7 @@
              </div>
            </div>
 
-           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-2 mt-xl-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
                <a href="">
                  <img
@@ -253,7 +253,7 @@
              </div>
            </div>
 
-           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-2 mt-xl-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
               <a href="">
                <img
@@ -290,14 +290,14 @@
         <div class="mien mien-nam">
          <div class="contentt text-center text-white">
            <p class="pt-2 mb-1">
-             Khám phá lịch sử, văn hóa, con người miền Nam với
+            <i> Khám phá lịch sử, văn hóa, con người miền Nam với</i>
            </p>
            <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Nam</h3>
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-2 mt-xl-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
                <a href="">
                  <img
@@ -324,7 +324,7 @@
              </div>
            </div>
 
-           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-2 mt-xl-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
                <a href="">
                  <img
@@ -351,7 +351,7 @@
              </div>
            </div>
 
-           <div class="row m-0 mt-sm-2 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+           <div class="row m-0 mt-2 mt-xl-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
              <div class="col-12 col-xl-12 rounded-top image-tour px-0">
               <a href="">
                <img

@@ -2,7 +2,7 @@
            <div class="row m-0 p-0">
 
 
-                   <div class="row m-0 col-12 px-5 email-footer bg-main align-items-center justify-content-center py-0">
+                   <div class="row m-0 col-12 px-5 d-none d-xl-block email-footer bg-main align-items-center justify-content-center py-0">
                            <div class="row col-12 justify-content-center">
                                    <div class="row col-12 text-white">
                                            <div class="row m-0 color-main col-12 p-0 email-footer bg-main align-items-center p-4">
