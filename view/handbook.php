@@ -1,5 +1,5 @@
 <article>
-        <div class="row m-0 g-2 nav p-1 align-items-center text-center title_hb">
+        <div class="row my-5 g-2 nav p-1 align-items-center text-center title_hb">
                 <h1 class="text-danger">CẨM NANG DU LỊCH</h1>
 
         </div>
@@ -29,7 +29,7 @@
                         </div>
                 </div>
         </div>
-        <hr class="bg-dark">
+        <hr class="text-primary">
         <div class="row">
                 <div class=" col-4 m-5">
                         <img class="rounded" src="upload/khoanh-khac-lu-hanh.png" alt="" width="500">
@@ -40,7 +40,7 @@
                 </div>
                 
         </div>
-        <hr class="bg-dark">
+        <hr class="text-primary">
         <div class="row">
                 <div class=" col-4 m-5">
                         <img class="rounded" src="upload/khoanh-khac-lu-hanh.png" alt="" width="500">
@@ -51,7 +51,7 @@
                 </div>
                 
         </div>
-        <hr class="bg-dark">
+        <hr class="text-primary">
         <div class="row">
                 <div class=" col-4 m-5">
                         <img class="rounded" src="upload/khoanh-khac-lu-hanh.png" alt="" width="500">
