@@ -30,7 +30,7 @@ if (isset($_GET["act"])) {
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                insert_loai($tenloai,$diachi,$hinh);
+                insert_places($tenloai,$diachi,$hinh);
                 $thongbao = "thêm thành công";
             }
             include "dia-diem/new.php";
@@ -43,7 +43,7 @@ if (isset($_GET["act"])) {
 
         case 'xoaloai':
             if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
-                delete_loai($_GET['maloai']);
+                delete_places($_GET['maloai']);
             }
             $listloai = load_list();
             include "dia-diem/list.php";
@@ -71,7 +71,7 @@ if (isset($_GET["act"])) {
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                update_loai($maloai, $tenloai,$diachi,$hinh);
+                update_places($maloai, $tenloai,$diachi,$hinh);
             }
             $listloai = load_list();
             include 'dia-diem/list.php';
