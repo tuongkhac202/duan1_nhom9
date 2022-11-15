@@ -130,5 +130,14 @@ background: var(--bg-main);
     .text {font-size: 11px}
   }
   /* end slide show */
+/* gioi thieu */
+.baoimg .img{
+    border: 5px solid black;
+    border-radius: 50%;
+ }
+ .baoimg .img img{
+    width: 400px;
+    height: 400px;
+ }
 
  
