@@ -277,3 +277,4 @@ case 'bdtk':
 }
 
 include "footer.php";
+?>
