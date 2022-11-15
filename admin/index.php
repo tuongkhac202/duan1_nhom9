@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../dao/pdo.php';
-// include "header.php";
+ include "header.php";
 include '../dao/dia-diem.php';
 include "../dao/khach-hang.php";
 include "../dao/binh-luan.php";
