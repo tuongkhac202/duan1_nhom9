@@ -9,10 +9,6 @@
         <center><hr width="50%" align="center"></center>
     </div>
     <div class="row col-12 mx-0 my-5">
-
-
-
-
         <div class="row m-0 col-7">
             <div class="col-12">
                 <h2 class="font-thu-phap text-danger">Tour Miền <?php echo $tt['category'] ?> - Tour Du Lịch

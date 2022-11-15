@@ -48,7 +48,11 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
                     include "view/home.php";
                 }
             break;
-
+                
+         //giới thiệu
+         case 'gt':
+            include 'view/introduce.php';
+            break;
 
 
 
