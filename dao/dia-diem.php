@@ -1,10 +1,10 @@
 <?php
-function insert_loai($tenloai,$diachi,$hinh){
+function insert_places($tenloai,$diachi,$hinh){
     $sql = "insert into places(name_place, address_place, image_place) values ('$tenloai','$diachi','$hinh')";
     pdo_execute($sql);
 }
 
-function delete_loai($id){
+function delete_places($id){
     $sql ="delete from places where id_place =".$id;
     pdo_execute($sql);
 }
@@ -22,7 +22,7 @@ function load_one($id){
 }
 
 
-function update_loai($maloai,$tenloai,$diachi,$hinh){
+function update_places($maloai,$tenloai,$diachi,$hinh){
     $sql = "update places set name_place = '$tenloai', address_place ='$diachi', image_place = '$hinh' where id_place = '$maloai'";
                 pdo_execute($sql);
 }
