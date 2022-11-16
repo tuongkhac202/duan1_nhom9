@@ -19,6 +19,20 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
             break;
         //  dăng nhập
         case 'dn':
+            if(isset($_POST['dn'])&&($_POST['dn'])){
+                $user = $_POST['name'];
+                $pass = $_POST['pass'];
+                $checkuser=checkUser($user,$pass);
+                if(is_array($checkuser)){
+                    $_SESSION['user'] =$checkuser;
+                    $thongbao = "Bạn đã đăng nhập thành công!";
+                    header('Location:index.php');
+                   
+                }
+                else{
+                    $thongbao ="Tài khoản không tồn tại vui lòng kiểm tra hoặc đăng ký !";
+                }
+            }
             include 'view/login.php';
             break;
         // tin tức

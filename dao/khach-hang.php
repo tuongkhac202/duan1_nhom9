@@ -43,9 +43,15 @@ function update_mk($makh,$passnew){
     $sql = "update customers set mat_khau ='$passnew' where ma_kh ='$makh'";
                 pdo_execute($sql);
 }
-function checkLogin($name,$pass){
-$sql ="select * from customers where id_customer =2 and name ='$name'  and pass_word ='$pass' and  role = 1";
-$login = pdo_query($sql);
-return $login;
+// function checkLogin($name,$pass){
+// $sql ="select * from customers where id_customer =2 and name ='$name'  and pass_word ='$pass' and  role = 1";
+// $login = pdo_query($sql);
+// return $login;
+// }
+function checkUser($name,$pass){
+    $sql = "select * from customers where name='".$name."' AND pass_word='".$pass."'";
+    $user = pdo_query_one($sql);
+    return $user;
+
 }
 ?>
