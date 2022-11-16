@@ -24,6 +24,5 @@
 ### -logout: done
 ### -tour-detail: no
 ### -filter-home: no
-### -: no
 ### -cart: no
 
