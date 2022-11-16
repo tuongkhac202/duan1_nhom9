@@ -25,4 +25,5 @@
 ### -tour-detail: no
 ### -filter-home: no
 ### -cart: no
+### -resgiter:no
 
