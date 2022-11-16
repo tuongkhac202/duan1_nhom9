@@ -71,7 +71,7 @@
 
        <!-- chọn loại tour -->
        <div class="row d-xl-block d-none p-2 chon-tour">
-         <div class="row col-8 offset-2 gy-1 chon2">
+         <div class="row col-6 offset-3 gy-1 chon2">
            <div class="col text-center justify-content-center">
              <img src="upload/tour-mua-thu.png" alt="" />
              <h6>TOUR MÙA THU</h6>
