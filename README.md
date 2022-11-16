@@ -17,5 +17,13 @@
 ### -list-tour: waiting for database
 ### -tour-detail: doing...
 # Back-end(chuc nang)
-
+## Addmin: done
+## Nguoi dung: doing
+### -list-tour: done
+### -login: done
+### -logout: done
+### -tour-detail: no
+### -filter-home: no
+### -: no
+### -cart: no
 

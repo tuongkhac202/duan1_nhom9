@@ -49,7 +49,7 @@ function update_mk($makh,$passnew){
 // return $login;
 // }
 function checkUser($name,$pass){
-    $sql = "select * from customers where name='".$name."' AND pass_word='".$pass."'";
+    $sql = "select * from customers where name='$name' and pass_word='$pass'";
     $user = pdo_query_one($sql);
     return $user;
 

@@ -1,5 +1,5 @@
 <div class="row m-4 text-center">
-    <form action="index.php?act=dn"  class="col-6 offset-3  bg-light rounded p-4">
+    <form action="index.php?act=dn" method="post"  class="col-6 offset-3  bg-light rounded p-4">
         <h1 class=" font-thu-phap">Đăng Nhập</h1>
   <center>      <hr size="5px" width="80%" align="center" color="red"></center>
        
