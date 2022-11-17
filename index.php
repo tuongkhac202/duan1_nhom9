@@ -16,7 +16,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
             // đăng ký
         case 'dk':
-            if (isset($_POST['dangky']) && $_POST['dangky']) {
+            if (isset($_POST['dangky'])) {
                
                 $name = $_POST['name'];
                 $pass = $_POST['pass'];
