@@ -9,16 +9,18 @@ function delete_customers($id){
     $sql ="delete from customers where id_customer ='$id'";
     pdo_execute($sql);
 }
-// đang ký
-// function insert_customers($email,$ten,$pass){
-//     $sql = "insert into customers(email,ho_ten,mat_khau) values ('$email','$ten','$pass')";
-//     pdo_execute($sql);
-// }
+// đăng ký
+function insert_customers($name,$pass,$birth,$phone,$email){
+    $sql = "insert into customers(name,pass_word,birth_day,phone_number,email) values ('$name','$pass','$birth','$phone','$email')";
+    pdo_execute($sql);
+    
+}
 function select_kh($makh){
     $sql="select * from customers where id_customer='$makh'";
     $kh=pdo_query_one($sql);
     return $kh;
 }
+
 // function check_kh($ten,$pass){
 //     $sql="select * from customers where ho_ten='$ten' and mat_khau = '$pass'" ;
 //     $kh=pdo_query_one($sql);
