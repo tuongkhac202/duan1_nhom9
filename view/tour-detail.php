@@ -1,73 +1,225 @@
-<?php foreach ($tthis as $tt):  ?>
-
-<div class="row m-0 tour-detail">
+<?php
 
 
+$tours = load_tour();
 
-    <div class="col-12 title-detail text-center">
-        <h1 class="color-main font-thu-phap my-3 align-items-center text-">Chi Tiết Tour Du Lịch</h1>
-        <center><hr width="50%" align="center"></center>
-    </div>
-    <div class="row col-12 mx-0 my-5">
-        <div class="row m-0 col-7">
+$dsbl = select_all_binh_luan();
+
+
+foreach ($tthis as $tt) :  ?>
+
+    <div class="row mx-5 px-5 tour-detail">
+
+
+
+        <div class="col-12 title-detail text-center">
+            <h1 class="color-main font-thu-phap my-3 align-items-center text-">Chi Tiết Tour Du Lịch</h1>
+            <center>
+                <hr width="50%" align="center">
+            </center>
+        </div>
+
+        <div class="row col-12 mx-0 my-5">
             <div class="col-12">
                 <h2 class="font-thu-phap text-danger">Tour Miền <?php echo $tt['category'] ?> - Tour Du Lịch
                     <?php echo $tt['name_place'] ?></h2>
-                   
-            </div>
-            <div class="col-12">
-
-                <?php echo  '<img src="upload/'.$tt["image_tour"].'" alt="" class="img-fluid w-100">'  ?>
 
             </div>
-        </div>
+            <div class="row m-0 col-7">
 
-        <div class="row m-0 col-5 form-book">
-            <form action="" class="bg-light p-3">
-                <div class="row mx-0 my-1 col-12">
-                    <div class="col-1"><i class="fas fa-clock"></i></div>
-                    <div class="col-11">Thời gian: </div>
+                <div class="col-12">
+
+                    <?php echo  '<img src="upload/' . $tt["image_tour"] . '" alt="" class="img-fluid w-100 h-100">'  ?>
+
                 </div>
-                <div class="row mx-0 my-1 col-12">
-                    <div class="col-1"><i class="fas fa-calendar-alt"></i></div>
-                    <div class="col-11">Ngày khởi hành: </div>
-                </div>
-                <div class="row mx-0 my-1 col-12">
-                    <div class="col-1"><i class="fas fa-car-side"></i></div>
-                    <div class="col-11">Phương tiện: xe chuyên dụng</div>
-                </div>
-                <div class="row mx-0 my-1 col-12">
-                    <div class="col-1"><i class="fas fa-hotel"></i></div>
-                    <div class="col-11">Khách sạn: tiêu chuẩn</div>
-                </div>
-                <div class="row mx-0 my-1 col-12">
-                    <div class="col-1"><i class="fas fa-users"></i></div>
-                    <div class="col-11">Số người: <input type="number " class="form-control w-50 d-inline"></div>
-                </div>
-                <div class="row mx-0 my-1 col-12">
-                    <div class="col-1"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="col-11">Điểm đến: </div>
-                </div>
-                <div class="row mx-0 my-1 col-12">
-                    <div class="col-1"><i class="fas fa-qrcode"></i></div>
-                    <div class="col-11">Mã tour: <?php echo $tt['id_tour'] ?></div>
-                </div>
-                <div class="row mx-0 my-1 col-12">
-                    <div class="col-1"><i class="fas fa-dollar-sign"></i></div>
-                    <div class="col-11 text-danger">Giá tour: <?php echo $tt['price'] ?>đ</div>
-                </div>
-                <div class="row mx-0 my-1 col-12">
-                   
-                    <div class="col-12 text-danger">
-                        <textarea name="" id="" cols="30" rows="10" class="w-100 form-control" placeholder="Ghi chú"></textarea>
+            </div>
+
+            <div class="row m-0 col-5 form-book">
+                <form action="" class="bg-light border border-2 rounded-2 border-dark p-3">
+                    <div class="row mx-0 my-1 col-12">
+                        <div class="col-1"><i class="fas fa-clock"></i></div>
+                        <div class="col-11">Thời gian: </div>
                     </div>
+                    <div class="row mx-0 my-1 col-12">
+                        <div class="col-1"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="col-11">Ngày khởi hành: </div>
+                    </div>
+                    <div class="row mx-0 my-1 col-12">
+                        <div class="col-1"><i class="fas fa-car-side"></i></div>
+                        <div class="col-11">Phương tiện: xe chuyên dụng</div>
+                    </div>
+                    <div class="row mx-0 my-1 col-12">
+                        <div class="col-1"><i class="fas fa-hotel"></i></div>
+                        <div class="col-11">Khách sạn: tiêu chuẩn</div>
+                    </div>
+                    <div class="row mx-0 my-1 col-12">
+                        <div class="col-1"><i class="fas fa-users"></i></div>
+                        <div class="col-11">Số người: <input type="number " class="form-control w-50 d-inline"></div>
+                    </div>
+                    <div class="row mx-0 my-1 col-12">
+                        <div class="col-1"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="col-11">Điểm đến: </div>
+                    </div>
+                    <div class="row mx-0 my-1 col-12">
+                        <div class="col-1"><i class="fas fa-qrcode"></i></div>
+                        <div class="col-11">Mã tour: <?php echo $tt['id_tour'] ?></div>
+                    </div>
+                    <div class="row mx-0 my-1 col-12">
+                        <div class="col-1"><i class="fas fa-dollar-sign"></i></div>
+                        <div class="col-11 text-danger">Giá tour: <?php echo $tt['price'] ?> VNĐ</div>
+                    </div>
+                    <div class="row mx-0 my-1 col-12">
+
+                        <div class="col-12 text-danger">
+                            <textarea name="" id="" cols="30" rows="5" class="w-100 form-control" placeholder="Ghi chú"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mx-0 my-1 col-12">
+                        <div class="col-12 text-center my-2">
+                            <input type="submit" class="btn btn-danger" value="ĐẶT TOUR">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+
+            <div class="col-12 mt-5 mb-2">
+                <h2 class="font-thu-phap text-danger">Lịch Trình Tour
+                    <?php echo $tt['name_place'] ?></h2>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="row m-0 col-7">
+                <hr size="20px" color="red" class="rounded">
+                <p style="text-align: justify;" class="px-0">
+                    mô tả
+                </p>
+
+
+
+
+
+
+
+
+                <!-- bình luận -->
+                <div class="row col-12 p-0 m-0">
+                    <div class="col-12 p-0 text-center text-white bg-danger rounded-top py-3 boxtitle "><h4>BÌNH LUẬN CỦA KHÁCH HÀNG</h4></div>
+                    <div class="row m-0 col-12 p-0 boxcontent2">
+                        <table class="table text-center w-100 p-3">
+                            <tr >
+                                <th>Mã tour</th>
+                                <th>Nội dung bình luận</th>
+                                <th>Mã khách hàng</th>
+                                <th>Ngày bình luận</th>
+                            </tr>
+                            <?php
+
+                            foreach ($dsbl as $bl) {
+                                extract($bl);
+                                echo '
+   <tr ">
+  <td>' . $id_tour . '</td>
+   <td>' . $content . '</td>
+   <td>' . $id_customer . '</td>
+   <td>' . $day_comment . '</td>
+   </tr>
+   ';
+                            }
+                            ?>
+                        </table>
+                    </div>
+
+
+
+
+                    <div class="boxfooter p-0">
+                        <form action="index.php?act=ctt&id=<?php echo $_GET['id'] ?>" method="post">
+                            <input type="text" hidden name="idtour" value="<?php echo $_GET['id'] ?>">
+                            <input type="text" placeholder="Nhập nội dung bình luận" name="ndbl" class="form-control w-100" style="margin-bottom: 5px;">
+                            <input type="submit" value="Gửi bình luận" name="bl" class="btn btn-danger w-25">
+                        </form>
+                        <div class="div">
+                            <?php
+if(!isset($_SESSION['user'])){
+    echo $tb;
+}
+                            ?>
+                        </div>
+                    </div>
+                    <?php
+                   if(isset($_SESSION['user'])){
+                    if (isset($_POST['bl'])) {
+                        $makh = $_SESSION['user']['id_customer'];
+                        $nd = $_POST['ndbl'];
+                        $matour = $_POST['idtour'];
+                        $ngay = date('Y/m/d');
+
+                        binh_luan_insert($makh, $matour, $nd, $ngay);
+                    }
+                   }
+                    else{
+                        $tb = "bạn cần đăng nhập để có thể bình luận !";
+                    }
+                   
+                    ?>
+
                 </div>
-                <div class="row mx-0 my-1 col-12">
-                   <div class="col-12 text-center my-2">
-                    <input type="submit" class="btn btn-danger" value="ĐẶT TOUR">
-                   </div>
+                <!-- bình luận -->
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="row m-0 col-5 ">
+                <div class="col-12 bg-danger rounded-top text-white d-flex justify-content-center align-items-center">
+                    <h5 class="m-0 p-0">TOUR GỢI Ý</h5>
                 </div>
-            </form>
+
+                <?php 
+                foreach ($tours as $tour) {
+                    extract($tour);
+                    echo '  <div class="row col-12 p-0 my-3">
+                    <div class="col-5"><img src="upload/'.$image_tour.'" alt="" class="img-fluid"></div>
+                    <div class="col-7 overflow-hidden"><a href="" class="text-decoration-none text-black link-warning text-start">'.$name_tour.'</a></div>
+                </div>';
+                }
+                ?>
+              
+            </div>
 
         </div>
 
@@ -75,9 +227,4 @@
 
 
     </div>
-
-
-
-
-</div>
 <?php endforeach  ?>

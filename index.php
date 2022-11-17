@@ -4,6 +4,9 @@ include 'dao/pdo.php';
 include 'dao/tour.php';
 include 'view/header.php';
 include 'dao/khach-hang.php';
+include 'dao/binh-luan.php';
+include 'dao/booking.php';
+
 
 
 // code dưới này

@@ -1,8 +1,8 @@
 <?php
 require_once 'pdo.php';
 
-function binh_luan_insert($ma_kh, $ma_hh, $noi_dung, $ngay_bl){
-    $sql = "INSERT INTO comments(id_customer, id_tour, content, day_comment) VALUES ('$ma_kh','$ma_hh','$noi_dung','$ngay_bl')";
+function binh_luan_insert($ma_kh, $ma_tour, $noi_dung, $ngay_bl){
+    $sql = "INSERT INTO comments(id_customer, id_tour, content, day_comment) VALUES ('$ma_kh','$ma_tour','$noi_dung','$ngay_bl')";
     pdo_execute($sql);
 }
 function select_all_binh_luan(){

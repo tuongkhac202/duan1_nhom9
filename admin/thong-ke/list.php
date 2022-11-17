@@ -18,7 +18,7 @@
           <th>Số lượt book</th>
           <th>Giá thấp nhất</th>
           <th>Giá cao nhất</th>
-          <th>Tour được yêu thích trong loại</th>
+    
 
         </tr>
        
@@ -34,7 +34,7 @@
           <td>'.$so_luot.'</td>
           <td>'.$gia_min.'</td>
           <td>'.$gia_max.'</td>
-          <td>'.$yeu_thich.'</td>
+        
         
           </tr>
           ';

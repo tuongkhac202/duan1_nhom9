@@ -5,7 +5,6 @@ function thong_ke_tour(){
     $sql = "select tours.id_tour, category, bookings.id_booking, "
             ."count(category) so_luong,"
             ."count(bookings.id_booking) so_luot,"
-            ."name_place in (select max(tours.id_tour)  from tours join bookings on tours.id_tour=bookings.id_tour group by category),"
             ."min(price) gia_min,"
             ."max(price) gia_max "
             ." from tours join bookings on tours.id_tour=bookings.id_tour "

@@ -73,31 +73,39 @@
        <div class="row d-xl-block d-none p-2 chon-tour">
          <div class="row col-6 offset-3 gy-1 chon2">
            <div class="col text-center justify-content-center">
-             <img src="upload/tour-mua-thu.png" alt="" />
-             <h6>TOUR MÙA THU</h6>
+          <a href="" class="text-white link-primary text-decoration-none">
+               <img src="upload/tour-mua-thu.png" alt="" />
+             <h6 class="mt-1">TOUR MÙA THU</h6>
+          </a>
            </div>
            <div class="col text-center justify-content-center">
-             <img src="upload/tour-tet.png" alt="" />
-             <h6>TOUR TẾT</h6>
+           <a href="" class="text-white link-primary text-decoration-none">
+              <img src="upload/tour-tet.png" alt="" />
+             <h6 class="mt-1">TOUR TẾT</h6>
+           </a>
            </div>
            <div class="col text-center justify-content-center">
-             <img src="upload/tour-hh.png" alt="" />
-             <h6>TOUR HÀNH HƯƠNG</h6>
+            <a href="" class="text-white link-primary text-decoration-none">
+               <img src="upload/tour-hh.png" alt="" />
+             <h6 class="mt-1">TOUR HÀNH HƯƠNG</h6>
+            </a>
            </div>
            <div class="col text-center justify-content-center">
-             <img src="upload/tour-world.png" alt="" />
-             <h6>WORLD</h6>
+            <a href="" class="text-white link-primary text-decoration-none">
+               <img src="upload/tour-world.png" alt="" />
+             <h6 class="mt-1">WORLD</h6>
+            </a>
            </div>
          </div>
        </div>
 
        <!-- tour bắc -->
        <div class="mien mien-bac">
-         <div class="contentt text-center text-white">
+         <div class="contentt text-center text-white py-2">
            <p class="pt-2 mb-1">
-            <i> Khám phá lịch sử, văn hóa, con người miền Bắc với</i>
+     <h5>       <i> Khám phá lịch sử, văn hóa, con người miền Bắc với</i></h5>
            </p>
-           <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Bắc</h3>
+           <h1 class="pb-2 m-0 font-thu-phap">Tour Miền Bắc</h1>
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
@@ -190,11 +198,11 @@
 
         <!-- tour trung -->
         <div class="mien mien-trung">
-         <div class="contentt text-center text-white">
-           <p class="pt-2 mb-1">
-            <i> Khám phá lịch sử, văn hóa, con người miền Trung với</i>
+         <div class="contentt text-center text-white py-4">
+         <p class="pt-2 mb-1">
+     <h5>       <i> Khám phá lịch sử, văn hóa, con người miền Trung với</i></h5>
            </p>
-           <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Trung</h3>
+           <h1 class="pb-2 m-0 font-thu-phap">Tour Miền Trung</h1>
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
@@ -288,11 +296,11 @@
 
         <!-- tour nam-->
         <div class="mien mien-nam">
-         <div class="contentt text-center text-white">
-           <p class="pt-2 mb-1">
-            <i> Khám phá lịch sử, văn hóa, con người miền Nam với</i>
+         <div class="contentt text-center text-white py-4">
+         <p class="pt-2 mb-1">
+     <h5>       <i> Khám phá lịch sử, văn hóa, con người miền Nam với</i></h5>
            </p>
-           <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Nam</h3>
+           <h1 class="pb-2 m-0 font-thu-phap">Tour Miền Nam</h1>
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">

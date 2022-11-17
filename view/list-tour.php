@@ -65,7 +65,7 @@ if($category =="Bắc"){
       <div class="row m-0 footer-tour">
         <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">'.$price.' đ</p></div>
         <div class="col text-center">
-          <button class="btn btn-danger"><a href="" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+          <button class="btn btn-danger"><a href="index.php?act=ctt&id='.$id_tour.'" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
         </div>
       </div>
     </div>
@@ -116,7 +116,7 @@ if($category =="Trung"){
       <div class="row m-0 footer-tour">
         <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">'.$price.' đ</p></div>
         <div class="col text-center">
-          <button class="btn btn-danger"><a href="" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+          <button class="btn btn-danger"><a href="index.php?act=ctt&id='.$id_tour.'" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
         </div>
       </div>
     </div>
@@ -168,7 +168,7 @@ if($category =="Nam"){
       <div class="row m-0 footer-tour">
         <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">'.$price.' đ</p></div>
         <div class="col text-center">
-          <button class="btn btn-danger"><a href="" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+          <button class="btn btn-danger"><a href="index.php?act=ctt&id='.$id_tour.'" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
         </div>
       </div>
     </div>
