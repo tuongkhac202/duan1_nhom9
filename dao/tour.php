@@ -1,6 +1,12 @@
 <?php
 function load_tour(){
-    $sql ="select tours.*, places.name_place from tours join places on tours.id_place = places.id_place  limit 6";
+    $sql ="select tours.*, places.name_place from tours join places on tours.id_place = places.id_place  limit 8";
+    $tour = pdo_query($sql);
+    return $tour;
+}
+
+function load_tour_3(){
+    $sql ="select tours.*, places.name_place from tours join places on tours.id_place = places.id_place order by id_tour  limit 5";
     $tour = pdo_query($sql);
     return $tour;
 }

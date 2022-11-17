@@ -19,11 +19,12 @@
 # Back-end(chuc nang)
 ## Addmin: done
 ## Nguoi dung: doing
+### -list-tour-home: done
 ### -list-tour: done
 ### -login: done
 ### -logout: done
-### -tour-detail: no
+### -tour-detail: doing
 ### -filter-home: no
 ### -cart: no
-### -resgiter:no
+### -resgiter: done
 

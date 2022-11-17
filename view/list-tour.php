@@ -29,7 +29,9 @@
       </div>
 
 
-<div class="mien mien-bac">
+<!-- miền bắc -->
+
+<div class="mien mien-nam">
          <div class="contentt text-center text-white">
            <p class="pt-2 mb-1">
              Khám phá lịch sử, văn hóa, con người miền Bắc với
@@ -38,37 +40,39 @@
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
-<?php
+
+         <div class="row m-0 col-8 offset-xl-2 p-xl-0">
+         <?php
 foreach ($tours as $tour) {
     extract($tour);
     $hinh_tour = "upload/".$image_tour;
 if($category =="Bắc"){
     echo '
-    <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+    <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-      <a href="index.php?act=ctt&id='.$id_tour.'">
-        <img
-        class="img-fluid rounded-top"
-        src="'.$hinh_tour.'"
-        alt=""
-      />
-       </a>
-    </div>
-    <div class="content rounded-bottom bg-light p-3">
-      <div class="title-tour text-center">
-        <h6>'.$name_tour.'</h6>
-      </div>
-      <div class="add-time justify-content-start">
-        <p><i class="far fa-flag"></i>&ensp; '.$name_place.'</p>
-        <p><i class="far fa-clock"></i> &ensp;'.$day_start.' - '.$day_end.'</p>
-      </div>
-      <div class="row m-0 footer-tour">
-        <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">'.$price.' đ</p></div>
-        <div class="col text-center">
-          <button class="btn btn-danger"><a href="index.php?act=ctt&id='.$id_tour.'" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+        <a href="index.php?act=ctt&id='.$id_tour.'">
+            <img
+            class="img-fluid w-100 h-100 rounded-top"
+            src="'.$hinh_tour.'"
+            alt=""
+          />
+           </a>
         </div>
-      </div>
-    </div>
+        <div class="content rounded-bottom bg-light p-3">
+          <div class="title-tour text-center">
+            <h6>'.$name_tour.'</h6>
+          </div>
+          <div class="add-time justify-content-start">
+            <p><i class="far fa-flag"></i>&ensp; '.$name_place.'</p>
+            <p><i class="far fa-clock"></i> &ensp;'.$day_start.' - '.$day_end.'</p>
+          </div>
+          <div class="row m-0 footer-tour">
+            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">'.$price.' đ</p></div>
+            <div class="col text-center">
+              <button class="btn btn-danger"><a href="index.php?act=ctt&id='.$id_tour.'" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+            </div>
+          </div>
+        </div>
   </div>
     
     ';
@@ -77,10 +81,11 @@ if($category =="Bắc"){
 }
 ?>
          </div>
+         </div>
        </div>
 
 <!-- miền trung -->
-<div class="mien mien-trung">
+<div class="mien mien-nam">
          <div class="contentt text-center text-white">
            <p class="pt-2 mb-1">
              Khám phá lịch sử, văn hóa, con người miền Trung với
@@ -89,37 +94,39 @@ if($category =="Bắc"){
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
-<?php
+
+         <div class="row m-0 col-8 offset-xl-2 p-xl-0">
+         <?php
 foreach ($tours as $tour) {
     extract($tour);
     $hinh_tour = "upload/".$image_tour;
 if($category =="Trung"){
     echo '
-    <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+    <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-    <a href="index.php?act=ctt&id='.$id_tour.'">
-        <img
-        class="img-fluid rounded-top"
-        src="'.$hinh_tour.'"
-        alt=""
-      />
-       </a>
-    </div>
-    <div class="content rounded-bottom bg-light p-3">
-      <div class="title-tour text-center">
-        <h6>'.$name_tour.'</h6>
-      </div>
-      <div class="add-time justify-content-start">
-        <p><i class="far fa-flag"></i>&ensp; '.$name_place.'</p>
-        <p><i class="far fa-clock"></i> &ensp;'.$day_start.' - '.$day_end.'</p>
-      </div>
-      <div class="row m-0 footer-tour">
-        <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">'.$price.' đ</p></div>
-        <div class="col text-center">
-          <button class="btn btn-danger"><a href="index.php?act=ctt&id='.$id_tour.'" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+        <a href="index.php?act=ctt&id='.$id_tour.'">
+            <img
+            class="img-fluid w-100 h-100 rounded-top"
+            src="'.$hinh_tour.'"
+            alt=""
+          />
+           </a>
         </div>
-      </div>
-    </div>
+        <div class="content rounded-bottom bg-light p-3">
+          <div class="title-tour text-center">
+            <h6>'.$name_tour.'</h6>
+          </div>
+          <div class="add-time justify-content-start">
+            <p><i class="far fa-flag"></i>&ensp; '.$name_place.'</p>
+            <p><i class="far fa-clock"></i> &ensp;'.$day_start.' - '.$day_end.'</p>
+          </div>
+          <div class="row m-0 footer-tour">
+            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">'.$price.' đ</p></div>
+            <div class="col text-center">
+              <button class="btn btn-danger"><a href="index.php?act=ctt&id='.$id_tour.'" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+            </div>
+          </div>
+        </div>
   </div>
     
     ';
@@ -127,6 +134,7 @@ if($category =="Trung"){
     
 }
 ?>
+         </div>
          </div>
        </div>
 
@@ -141,37 +149,39 @@ if($category =="Trung"){
          </div>
 
          <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
-<?php
+
+         <div class="row m-0 col-8 offset-xl-2 p-xl-0">
+         <?php
 foreach ($tours as $tour) {
     extract($tour);
     $hinh_tour = "upload/".$image_tour;
 if($category =="Nam"){
     echo '
-    <div class="row m-0 col-12 rounded-top rounded-bottom col-xl-3 tourr">
+    <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-    <a href="index.php?act=ctt&id='.$id_tour.'">
-        <img
-        class="img-fluid rounded-top"
-        src="'.$hinh_tour.'"
-        alt=""
-      />
-       </a>
-    </div>
-    <div class="content rounded-bottom bg-light p-3">
-      <div class="title-tour text-center">
-        <h6>'.$name_tour.'</h6>
-      </div>
-      <div class="add-time justify-content-start">
-        <p><i class="far fa-flag"></i>&ensp; '.$name_place.'</p>
-        <p><i class="far fa-clock"></i> &ensp;'.$day_start.' - '.$day_end.'</p>
-      </div>
-      <div class="row m-0 footer-tour">
-        <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">'.$price.' đ</p></div>
-        <div class="col text-center">
-          <button class="btn btn-danger"><a href="index.php?act=ctt&id='.$id_tour.'" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+        <a href="index.php?act=ctt&id='.$id_tour.'">
+            <img
+            class="img-fluid w-100 h-100 rounded-top"
+            src="'.$hinh_tour.'"
+            alt=""
+          />
+           </a>
         </div>
-      </div>
-    </div>
+        <div class="content rounded-bottom bg-light p-3">
+          <div class="title-tour text-center">
+            <h6>'.$name_tour.'</h6>
+          </div>
+          <div class="add-time justify-content-start">
+            <p><i class="far fa-flag"></i>&ensp; '.$name_place.'</p>
+            <p><i class="far fa-clock"></i> &ensp;'.$day_start.' - '.$day_end.'</p>
+          </div>
+          <div class="row m-0 footer-tour">
+            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">'.$price.' đ</p></div>
+            <div class="col text-center">
+              <button class="btn btn-danger"><a href="index.php?act=ctt&id='.$id_tour.'" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+            </div>
+          </div>
+        </div>
   </div>
     
     ';
@@ -179,6 +189,7 @@ if($category =="Nam"){
     
 }
 ?>
+         </div>
          </div>
        </div>
 

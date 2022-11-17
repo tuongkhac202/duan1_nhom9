@@ -62,6 +62,7 @@ background: var(--bg-main);
 }
 .image-tour{
     overflow: hidden;
+    height: 250px;
 }
 .image-tour img{
     transition: .3s;
@@ -147,5 +148,6 @@ background: var(--bg-main);
     max-width: 220px;
   
  }
+
 
  
