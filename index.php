@@ -16,6 +16,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
             // đăng ký
         case 'dk':
+            if (isset($_POST['dangky']) && $_POST['dangky']) {
                
                 $name = $_POST['name'];
                 $pass = $_POST['pass'];
@@ -25,7 +26,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 insert_customers( $name, $pass,$birth,$phone,$email);
                 $tb = "Đăng ký thành công";
                 
-           
+            }
             include 'view/register.php';
             break;
             //  dăng nhập
