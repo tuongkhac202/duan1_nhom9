@@ -15,7 +15,7 @@
 ### -register: done
 ### -login: done
 ### -list-tour: waiting for database
-### -tour-detail: doing...
+### -tour-detail: done
 # Back-end(chuc nang)
 ## Addmin: done
 ## Nguoi dung: doing
