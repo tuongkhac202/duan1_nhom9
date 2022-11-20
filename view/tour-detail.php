@@ -6,7 +6,12 @@ $tours = load_tour();
 $dsbl = select_all_binh_luan();
 
 
-foreach ($tthis as $tt) :  ?>
+foreach ($tthis as $tt) :
+
+
+?>
+
+
 
     <div class="row m-0 d-flex justify-content-center">
         <div class="row col-10 offset-1  mx-5 px-5 tour-detail">
@@ -36,14 +41,19 @@ foreach ($tthis as $tt) :  ?>
                 </div>
 
                 <div class="row m-0 col-5 form-book">
-                    <form action="" class="bg-light border border-2 rounded-2 border-dark p-3">
+                    <form action="index.php?act=bo" method="post" class="bg-light border border-2 rounded-2 border-dark p-3">
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-clock"></i></div>
-                            <div class="col-11">Thời gian: 2 ngày 1 đêm</div>
+                            <div class="col-11">Thời gian: <?php $first_date = strtotime('' . $tt['day_end'] . '');
+                                                            $second_date = strtotime('' . $tt['day_start'] . '');
+                                                            $datediff = ($first_date - $second_date);
+                                                            echo floor($datediff / (60 * 60 * 24)); ?> ngày</div>
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-calendar-alt"></i></div>
-                            <div class="col-11">Ngày khởi hành: 10/10/2022</div>
+                            <div class="col-11">Ngày khởi hành: <?php echo $tt['day_start']  ?></div>
+
+
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-car-side"></i></div>
@@ -55,29 +65,34 @@ foreach ($tthis as $tt) :  ?>
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-users"></i></div>
-                            <div class="col-11">Số người: <input type="number " class="form-control w-50 d-inline"></div>
+                            <div class="col-11">Số người: <input type="number" name="songuoi" class="form-control w-50 d-inline"></div>
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="col-11">Điểm đến: Cà Mau</div>
+                            <div class="col-11">Điểm đến: <?php echo $tt['name_place']  ?></div>
+
+
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-qrcode"></i></div>
                             <div class="col-11">Mã tour: <?php echo $tt['id_tour'] ?></div>
+                            <input type="text" hidden value="<?php echo $tt['id_tour'] ?>" name="matour">
+
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-dollar-sign"></i></div>
                             <div class="col-11 text-danger">Giá tour: <?php echo $tt['price'] ?> VNĐ</div>
+
                         </div>
                         <div class="row mx-0 my-1 col-12">
 
                             <div class="col-12 text-danger">
-                                <textarea name="" id="" cols="30" rows="5" class="w-100 form-control" placeholder="Ghi chú"></textarea>
+                                <textarea name="ghichu" id="" cols="30" rows="5" class="w-100 form-control" placeholder="Ghi chú"></textarea>
                             </div>
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-12 text-center my-2">
-                                <input type="submit" class="btn btn-danger" value="ĐẶT TOUR">
+                                <input type="submit" class="btn btn-danger" name="book" value="ĐẶT TOUR">
                             </div>
                         </div>
                     </form>

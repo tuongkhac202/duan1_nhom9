@@ -23,7 +23,8 @@
 ### -list-tour: done
 ### -login: done
 ### -logout: done
-### -tour-detail: doing
+### -tour-detail: done
+### -booking: done
 ### -filter-home: no
 ### -cart: no
 ### -resgiter: done
