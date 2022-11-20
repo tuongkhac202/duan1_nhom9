@@ -20,15 +20,14 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             // đăng ký
         case 'dk':
             if (isset($_POST['dangky'])) {
-               
+
                 $name = $_POST['name'];
                 $pass = $_POST['pass'];
                 $birth = $_POST['birth'];
                 $phone = $_POST['phone'];
                 $email = $_POST['email'];
-                insert_customers( $name, $pass,$birth,$phone,$email);
+                insert_customers($name, $pass, $birth, $phone, $email);
                 $tb = "Đăng ký thành công";
-                
             }
             include 'view/register.php';
             break;
@@ -89,7 +88,16 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include 'view/introduce.php';
             break;
 
-
+            // book tour trong chi tiết tour
+        case 'bo':
+            $makh = $_SESSION['user']['id_customer'];
+            $matour = $_POST['matour'];
+            $songuoi = $_POST['songuoi'];
+            $ngaybook = date('Y/m/d');
+            $ghichu = $_POST['ghichu'];
+            insert_booking($makh, $matour, $songuoi, $ngaybook, $ghichu);
+            include 'view/cart.php';
+            break;
 
 
 

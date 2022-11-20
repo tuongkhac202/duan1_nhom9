@@ -62,7 +62,7 @@ background: var(--bg-main);
 }
 .image-tour{
     overflow: hidden;
-    height: 250px;
+    height: 200px;
 }
 .image-tour img{
     transition: .3s;
@@ -148,6 +148,16 @@ background: var(--bg-main);
     max-width: 220px;
   
  }
-
-
+ /* chi tiết tour */
+ .mota{
+    word-wrap: break-word;
+ }
+/* bình luận */
+.boxtitle{
+    vertical-align: middle;
+}
+.tour-suggest .img-suggest img{
+height: 100px;
+width: 100%;
+}
  

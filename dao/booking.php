@@ -6,6 +6,11 @@
 //     $sql = "INSERT INTO comments(id_customer, id_tour, content, day_comment) VALUES ('$ma_kh','$ma_hh','$noi_dung','$ngay_bl')";
 //     pdo_execute($sql);
 // }
+function insert_booking($makh,$matour,$songuoi,$ngaybook,$ghichu){
+    $sql ="insert into bookings(id_customer,id_tour,number_customers,day_booking,note) values ('$makh','$matour','$songuoi','$ngaybook','$ghichu')";
+    pdo_execute($sql);
+}
+
 function select_all_booking(){
 $sql ="select * from bookings order by id_booking ";
 $listbook = pdo_query($sql);
