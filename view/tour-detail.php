@@ -1,7 +1,7 @@
 <?php
 
 
-$tours = load_tour();
+$tours = load_tour_goiy();
 
 $dsbl = select_all_binh_luan();
 

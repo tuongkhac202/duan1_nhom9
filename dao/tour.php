@@ -33,19 +33,7 @@ function load_list_tour(){
     $list_tour=pdo_query($sql);
     return $list_tour;
 }
-// function load_listhh($kw,$maloai){
-//     $sql="select * from tours where 1";
-  
-//     if($kw!=""){
-//         $sql.=" and category like '%".$kw."%'";
-//     }
-//     if($maloai>0){
-//         $sql.=" and id_place = '".$maloai."'";
-//     }
-//     $sql.=" order by id_tour";
-//     $listhh=pdo_query($sql);
-//     return $listhh;
-// }
+
 
 
 
@@ -104,4 +92,11 @@ function filter_tour($loai,$diadiem,$gia){
     return $list_filter;
 
 }
+function load_tour_goiy(){
+    $sql ="select tours.*, places.name_place from tours join places on tours.id_place = places.id_place  limit 9";
+    $tour = pdo_query($sql);
+    return $tour;
+
+}
 ?>
+
