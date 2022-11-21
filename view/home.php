@@ -117,7 +117,7 @@
         </div>
         <div class="content rounded-bottom bg-light p-3">
           <div class="title-tour text-center">
-            <h6>' . $name_tour . '</h6>
+                                    <a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning"><h6>' . $name_tour . '</h6></a>
           </div>
           <div class="add-time justify-content-start">
             <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
@@ -173,7 +173,7 @@
         </div>
         <div class="content rounded-bottom bg-light p-3">
           <div class="title-tour text-center">
-            <h6>' . $name_tour . '</h6>
+                                    <a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning"><h6>' . $name_tour . '</h6></a>
           </div>
           <div class="add-time justify-content-start">
             <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
@@ -230,7 +230,7 @@
         </div>
         <div class="content rounded-bottom bg-light p-3">
           <div class="title-tour text-center">
-            <h6>' . $name_tour . '</h6>
+                                    <a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning"><h6>' . $name_tour . '</h6></a>
           </div>
           <div class="add-time justify-content-start">
             <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>

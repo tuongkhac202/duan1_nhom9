@@ -109,7 +109,11 @@ foreach ($tthis as $tt) :
 
 
 
-
+<?php
+$mota =$tt['tour_detail'];
+$motaa = str_replace('h00:','h00: <br>',$mota);
+$motaaa=str_replace('h30:',' h30: <br>',$motaa);
+?>
 
 
 
@@ -123,8 +127,8 @@ foreach ($tthis as $tt) :
                     <div class="row col-12 py-4 m-0 px-0">
 
                         <div class="row m-0 col-12 px-0 ">
-                            <p class="col-12 px-0 mota">
-                                <?php echo $tt['tour_detail'] ?>
+                            <p class="col-12 px-4 mota" style="text-align: justify;">
+                                <?php echo $motaaa ?>
                             </p>
                         </div>
                     </div>

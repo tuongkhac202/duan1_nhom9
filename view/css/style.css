@@ -160,10 +160,14 @@ background: var(--bg-main);
     height: 250px;
  }
  .title-tour{
+  
     height: 80px;
     text-overflow: ellipsis;
     text-align: start !important;
     margin-bottom: 5px !important;
+ }
+ .title-tour a h6{
+    transition: .3s;
  }
 
 /* bình luận */
