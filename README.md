@@ -29,3 +29,8 @@
 ### -cart: no
 ### -resgiter: done
 
+
+# FIX BUG
+### list-tour: done
+### admin/edit/tour/ten_dia_diem: done
+

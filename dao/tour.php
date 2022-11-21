@@ -1,12 +1,12 @@
 <?php
-function load_tour(){
-    $sql ="select tours.*, places.name_place from tours join places on tours.id_place = places.id_place  limit 8";
+function load_tour($cate){
+    $sql ="select tours.*, places.name_place from tours join places on tours.id_place = places.id_place  where category = '$cate' limit 6";
     $tour = pdo_query($sql);
     return $tour;
 }
 
-function load_tour_3(){
-    $sql ="select tours.*, places.name_place from tours join places on tours.id_place = places.id_place order by id_tour  limit 5";
+function load_tour_3($cate){
+    $sql ="select tours.*, places.name_place from tours join places on tours.id_place = places.id_place where category = '$cate' order by id_tour  limit 3";
     $tour = pdo_query($sql);
     return $tour;
 }
@@ -98,4 +98,10 @@ function update_tour($ma,$iddd,$ten,$loai,$bd,$kt,$gia,$giamgia,$mota,$hinh){
                 pdo_execute($sql);
 }
 
+function filter_tour($loai,$diadiem,$gia){
+    $sql = "select tours.*, places.name_place from tours join places on tours.id_place = places.id_place where category = ".$loai." and name_place like '%".$diadiem."%' and price <= ".$gia." ";
+    $list_filter=pdo_query($sql);
+    return $list_filter;
+
+}
 ?>

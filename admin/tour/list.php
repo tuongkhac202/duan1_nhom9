@@ -49,7 +49,7 @@
         foreach ($listhh as $hh) {
           extract($hh);
 
-          $suahh = "index.php?act=suahh&mahh=" . $id_tour;
+          $suahh = "index.php?act=suahh&mahh=" . $id_tour ."&tendd=".$name_place;
           $xoahh = "index.php?act=xoahh&mahh=" . $id_tour;
           $hinhpath = "../upload/" . $image_tour;
           if (is_file($hinhpath)) {

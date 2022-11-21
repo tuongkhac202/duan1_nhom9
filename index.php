@@ -62,7 +62,6 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
             // danh sách du lịch 
         case 'dl':
-            $tours = load_tour();
             include 'view/list-tour.php';
             break;
 
@@ -97,6 +96,16 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             $ghichu = $_POST['ghichu'];
             insert_booking($makh, $matour, $songuoi, $ngaybook, $ghichu);
             include 'view/cart.php';
+            break;
+
+
+             //lọc tour trang chủ
+        case 'filter-tour':
+            $loai = $_POST['loai'];
+            $diadiem = $_POST['diadiem'];
+            $gia = $_POST['gia'];
+            $listft=filter_tour($loai,$diadiem,$gia);
+            include 'view/list-filter-tour.php';
             break;
 
 

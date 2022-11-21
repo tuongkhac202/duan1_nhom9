@@ -152,6 +152,20 @@ background: var(--bg-main);
  .mota{
     word-wrap: break-word;
  }
+ .tourr{
+    height: 450px;
+ }
+ .tourr .content{
+   
+    height: 250px;
+ }
+ .title-tour{
+    height: 80px;
+    text-overflow: ellipsis;
+    text-align: start !important;
+    margin-bottom: 5px !important;
+ }
+
 /* bình luận */
 .boxtitle{
     vertical-align: middle;

@@ -69,7 +69,8 @@ if (is_file($hinhpath)) {
       <div class="row mb10">
               Tên địa điểm
               <br />
-              <select name="iddd">
+              <select name="iddd"  >
+               <option value="<?php echo $_GET['tendd']  ?>"><?php echo $_GET['tendd'] ?></option>
                 <?php
                   foreach ($listloai as $loai) {
                     extract($loai);

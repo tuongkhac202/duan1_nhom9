@@ -31,7 +31,7 @@
 
 <!-- miền bắc -->
 
-<div class="mien mien-nam">
+<div class="mien mien-bac">
          <div class="contentt text-center text-white">
            <p class="pt-2 mb-1">
              Khám phá lịch sử, văn hóa, con người miền Bắc với
@@ -43,10 +43,12 @@
 
          <div class="row m-0 col-8 offset-xl-2 p-xl-0">
          <?php
+         $cate ="Bắc";
+         $tours = load_tour($cate);
 foreach ($tours as $tour) {
     extract($tour);
     $hinh_tour = "upload/".$image_tour;
-if($category =="Bắc"){
+
     echo '
     <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
@@ -78,14 +80,13 @@ if($category =="Bắc"){
     ';
 }
     
-}
 ?>
          </div>
          </div>
        </div>
 
 <!-- miền trung -->
-<div class="mien mien-nam">
+<div class="mien mien-trung">
          <div class="contentt text-center text-white">
            <p class="pt-2 mb-1">
              Khám phá lịch sử, văn hóa, con người miền Trung với
@@ -97,10 +98,12 @@ if($category =="Bắc"){
 
          <div class="row m-0 col-8 offset-xl-2 p-xl-0">
          <?php
+         $cate ="Trung";
+         $tours = load_tour($cate);
 foreach ($tours as $tour) {
     extract($tour);
     $hinh_tour = "upload/".$image_tour;
-if($category =="Trung"){
+
     echo '
     <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
@@ -132,7 +135,6 @@ if($category =="Trung"){
     ';
 }
     
-}
 ?>
          </div>
          </div>
@@ -152,10 +154,12 @@ if($category =="Trung"){
 
          <div class="row m-0 col-8 offset-xl-2 p-xl-0">
          <?php
+         $cate ="Nam";
+         $tours = load_tour($cate);
 foreach ($tours as $tour) {
     extract($tour);
     $hinh_tour = "upload/".$image_tour;
-if($category =="Nam"){
+
     echo '
     <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
@@ -187,7 +191,6 @@ if($category =="Nam"){
     ';
 }
     
-}
 ?>
          </div>
          </div>
