@@ -68,7 +68,7 @@ background: var(--bg-main);
     transition: .3s;
     transform: rotate(0deg);
 }
-.tourr .image-tour img:hover{
+.tourr:hover img{
     transform: scale(1.3);
 }
 .khoanh-khac-lu-hanh{
