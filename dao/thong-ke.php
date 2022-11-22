@@ -7,8 +7,8 @@ function thong_ke_tour(){
             ."count(bookings.id_booking) so_luot,"
             ."min(price) gia_min,"
             ."max(price) gia_max "
-            ." from tours join bookings on tours.id_tour=bookings.id_tour "
-            ."group by tours.id_tour, category";
+            ." from tours left join bookings on tours.id_tour=bookings.id_tour "
+            ."group by category";
     return pdo_query($sql);
 }
 
