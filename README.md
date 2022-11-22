@@ -25,9 +25,10 @@
 ### -logout: done
 ### -tour-detail: done
 ### -booking: done
+### -resgiter: done
 ### -filter-home: no
 ### -cart: no
-### -resgiter: done
+### forgot-passWord: no
 
 
 # FIX BUG
