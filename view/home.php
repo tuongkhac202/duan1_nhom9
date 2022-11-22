@@ -1,4 +1,3 @@
-
 <article>
   <!-- ảnh banner -->
   <div class="row m-0 banner">
@@ -41,12 +40,12 @@
 
           </select>
         </div>
-     
+
         <div class="col text-center">
-          <input type="text" placeholder="Địa điểm" class="form-control w-100" name="diadiem"/>
+          <input type="text" placeholder="Địa điểm" class="form-control w-100" name="diadiem" />
         </div>
         <div class="col text-center">
-          <input type="text" placeholder="Giá" class="form-control w-100" name="gia"/>
+          <input type="text" placeholder="Giá" class="form-control w-100" name="gia" />
         </div>
         <div class="col text-center">
           <input type="submit" class="btn btn-danger w-100" value="Tìm kiếm" />
@@ -97,14 +96,14 @@
     <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
       <div class="row m-0 col-8 offset-xl-2 p-xl-0">
-      <?php
+        <?php
         $cate = "Bắc";
-        $tours=load_tour_3($cate);
+        $tours = load_tour_3($cate);
         foreach ($tours as $tour) {
           extract($tour);
           $hinh_tour = "upload/" . $image_tour;
-          
-            echo '
+
+          echo '
     <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
         <a href="index.php?act=ctt&id=' . $id_tour . '">
@@ -117,7 +116,7 @@
         </div>
         <div class="content rounded-bottom bg-light p-3">
           <div class="title-tour text-center">
-                                    <a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning"><h6>' . $name_tour . '</h6></a>
+            <h6> <a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
           </div>
           <div class="add-time justify-content-start">
             <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
@@ -133,7 +132,7 @@
   </div>
     
     ';
-          }
+        }
         ?>
       </div>
     </div>
@@ -153,14 +152,14 @@
     <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
       <div class="row m-0 col-8 offset-xl-2 p-xl-0">
-      <?php
+        <?php
         $cate = "Trung";
-        $tours=load_tour_3($cate);
+        $tours = load_tour_3($cate);
         foreach ($tours as $tour) {
           extract($tour);
           $hinh_tour = "upload/" . $image_tour;
-          
-            echo '
+
+          echo '
     <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
         <a href="index.php?act=ctt&id=' . $id_tour . '">
@@ -173,7 +172,7 @@
         </div>
         <div class="content rounded-bottom bg-light p-3">
           <div class="title-tour text-center">
-                                    <a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning"><h6>' . $name_tour . '</h6></a>
+              <h6><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
           </div>
           <div class="add-time justify-content-start">
             <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
@@ -189,7 +188,7 @@
   </div>
     
     ';
-          }
+        }
         ?>
       </div>
     </div>
@@ -212,12 +211,12 @@
       <div class="row m-0 col-8 offset-xl-2 p-xl-0">
         <?php
         $cate = "Nam";
-        $tours=load_tour_3($cate);
+        $tours = load_tour_3($cate);
         foreach ($tours as $tour) {
           extract($tour);
           $hinh_tour = "upload/" . $image_tour;
-          
-            echo '
+
+          echo '
     <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
         <a href="index.php?act=ctt&id=' . $id_tour . '">
@@ -230,7 +229,7 @@
         </div>
         <div class="content rounded-bottom bg-light p-3">
           <div class="title-tour text-center">
-                                    <a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning"><h6>' . $name_tour . '</h6></a>
+              <h6><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
           </div>
           <div class="add-time justify-content-start">
             <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
@@ -246,7 +245,7 @@
   </div>
     
     ';
-          }
+        }
         ?>
       </div>
     </div>

@@ -113,6 +113,8 @@ foreach ($tthis as $tt) :
 $mota =$tt['tour_detail'];
 $motaa = str_replace('h00:','h00: <br>',$mota);
 $motaaa=str_replace('h30:',' h30: <br>',$motaa);
+$motaaaa=str_replace('sáng:',' sáng: <br>',$motaaa);
+$motaaaaa=str_replace('chiều:','<br> chiều: <br>',$motaaaa);
 ?>
 
 
@@ -128,7 +130,7 @@ $motaaa=str_replace('h30:',' h30: <br>',$motaa);
 
                         <div class="row m-0 col-12 px-0 ">
                             <p class="col-12 px-4 mota" style="text-align: justify;">
-                                <?php echo $motaaa ?>
+                                <?php echo $motaaaaa ?>
                             </p>
                         </div>
                     </div>

@@ -166,7 +166,7 @@ background: var(--bg-main);
     text-align: start !important;
     margin-bottom: 5px !important;
  }
- .title-tour a h6{
+ .title-tour a{
     transition: .3s;
  }
 
