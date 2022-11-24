@@ -10,9 +10,16 @@
     <title>Login to Admin</title>
 </head>
 <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
     body {
+        height: auto;
+        box-sizing: border-box;
         background: url('../upload/2201_w030_n002_290b_p1_290.jpg');
         background-size: cover;
+        background-repeat: no-repeat;
     }
 </style>
 
