@@ -89,6 +89,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
             // book tour trong chi tiết tour
         case 'bo':
+           if(isset($_SESSION['user'])){
             $makh = $_SESSION['user']['id_customer'];
             $matour = $_POST['matour'];
             $songuoi = $_POST['songuoi'];
@@ -96,15 +97,20 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             $ghichu = $_POST['ghichu'];
             insert_booking($makh, $matour, $songuoi, $ngaybook, $ghichu);
             include 'view/cart.php';
+           }else {
+            $id = $_POST['matour'];
+            $tthis = load_tour_one($id);
+            include 'view/tour-detail.php';
+           }
             break;
 
 
-             //lọc tour trang chủ
+            //lọc tour trang chủ
         case 'filter-tour':
             $loai = $_POST['loai'];
             $diadiem = $_POST['diadiem'];
             $gia = $_POST['gia'];
-            $listft=filter_tour($loai,$diadiem,$gia);
+            $listft = filter_tour($loai, $diadiem, $gia);
             include 'view/list-filter-tour.php';
             break;
 

@@ -40,6 +40,9 @@ foreach ($tthis as $tt) :
                     </div>
                 </div>
 
+
+
+                <!-- đặt tour (book) -->
                 <div class="row m-0 col-5 form-book">
                     <form action="index.php?act=bo" method="post" class="bg-light border border-2 rounded-2 border-dark p-3">
                         <div class="row mx-0 my-1 col-12">
@@ -52,8 +55,6 @@ foreach ($tthis as $tt) :
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-calendar-alt"></i></div>
                             <div class="col-11">Ngày khởi hành: <?php echo $tt['day_start']  ?></div>
-
-
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-car-side"></i></div>
@@ -70,22 +71,17 @@ foreach ($tthis as $tt) :
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="col-11">Điểm đến: <?php echo $tt['name_place']  ?></div>
-
-
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-qrcode"></i></div>
                             <div class="col-11">Mã tour: <?php echo $tt['id_tour'] ?></div>
                             <input type="text" hidden value="<?php echo $tt['id_tour'] ?>" name="matour">
-
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-dollar-sign"></i></div>
                             <div class="col-11 text-danger">Giá tour: <?php echo $tt['price'] ?> VNĐ</div>
-
                         </div>
                         <div class="row mx-0 my-1 col-12">
-
                             <div class="col-12 text-danger">
                                 <textarea name="ghichu" id="" cols="30" rows="5" class="w-100 form-control" placeholder="Ghi chú"></textarea>
                             </div>
@@ -95,6 +91,12 @@ foreach ($tthis as $tt) :
                                 <input type="submit" class="btn btn-danger" name="book" value="ĐẶT TOUR">
                             </div>
                         </div>
+                        <?php
+                        if (!isset($_SESSION['user'])) {
+                            echo ' <div class="col-12 text-center">
+                                     Bạn cần đăng nhập để có thể đặt tour !
+                                   </div>';            }
+                        ?>
                     </form>
 
                 </div>
@@ -109,13 +111,11 @@ foreach ($tthis as $tt) :
 
 
 
-<?php
-$mota =$tt['tour_detail'];
-$motaa = str_replace('h00:','h00: <br>',$mota);
-$motaaa=str_replace('h30:',' h30: <br>',$motaa);
-$motaaaa=str_replace('sáng:',' sáng: <br>',$motaaa);
-$motaaaaa=str_replace('chiều:','<br> chiều: <br>',$motaaaa);
-?>
+                <?php
+                $mota = $tt['tour_detail'];
+                $mota2 = str_replace('Sáng:', ' Sáng: <br>', $mota);
+                $mota3 = str_replace('Chiều:', '<br> Chiều: <br>', $mota2);
+                ?>
 
 
 
@@ -128,9 +128,9 @@ $motaaaaa=str_replace('chiều:','<br> chiều: <br>',$motaaaa);
 
                     <div class="row col-12 py-4 m-0 px-0">
 
-                        <div class="row m-0 col-12 px-0 ">
-                            <p class="col-12 px-4 mota" style="text-align: justify;">
-                                <?php echo $motaaaaa ?>
+                        <div class="row m-0 col-12 px-0  mota ">
+                            <p class="col-12 p-0 " style="text-align: justify;">
+                                <?php echo $mota3 ?>
                             </p>
                         </div>
                     </div>
@@ -207,6 +207,7 @@ $motaaaaa=str_replace('chiều:','<br> chiều: <br>',$motaaaa);
                         </div>
 
                     </div>
+
                     <!-- bình luận -->
 
 

@@ -38,7 +38,7 @@
                 <div class="col-5 m-5">
                         <h4 class="text-info">Du lịch Đà Lạt với cẩm nang đầy đủ và súc tích nhất. Cẩm nang du lịch Đà Lạt giới thiệu các điểm đến thú vị, địa điểm ăn uống và nhiều thông tin bổ ích để bạn tham khảo trước khi đến thành phố hoa xinh đẹp này.</h4>
                 </div>
-                
+
         </div>
         <hr class="text-primary">
         <div class="row">
@@ -49,7 +49,7 @@
                 <div class="col-5 m-5">
                         <h4 class="text-info">Du lịch Đà Lạt với cẩm nang đầy đủ và súc tích nhất. Cẩm nang du lịch Đà Lạt giới thiệu các điểm đến thú vị, địa điểm ăn uống và nhiều thông tin bổ ích để bạn tham khảo trước khi đến thành phố hoa xinh đẹp này.</h4>
                 </div>
-                
+
         </div>
         <hr class="text-primary">
         <div class="row">
@@ -60,8 +60,8 @@
                 <div class="col-5 m-5">
                         <h4 class="text-info">Du lịch Đà Lạt với cẩm nang đầy đủ và súc tích nhất. Cẩm nang du lịch Đà Lạt giới thiệu các điểm đến thú vị, địa điểm ăn uống và nhiều thông tin bổ ích để bạn tham khảo trước khi đến thành phố hoa xinh đẹp này.</h4>
                 </div>
-                
+
         </div>
-        
+
 
 </article>

@@ -34,7 +34,7 @@
                                 </div>
                                 <button type="button" class=" btn btn-danger m-5">Thanh toán</button>
                         </div>
-                       
+
 
 
 
