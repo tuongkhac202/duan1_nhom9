@@ -151,6 +151,7 @@ background: var(--bg-main);
  /* chi tiết tour */
  .mota{
     word-wrap: break-word;
+ padding-right: 12px !important;
  }
  .tourr{
     height: 450px;
