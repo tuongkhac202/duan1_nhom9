@@ -70,15 +70,15 @@ if (is_file($hinhpath)) {
               Tên địa điểm
               <br />
               <select name="iddd"  >
-               <option value="<?php echo $_GET['tendd']  ?>"><?php echo $_GET['tendd'] ?></option>
+               <!-- <option value="<?php echo $_GET['tendd']  ?>"><?php echo $_GET['tendd'] ?></option> -->
                 <?php
                   foreach ($listloai as $loai) {
                     extract($loai);
-                    echo '<option value="'.$id_place.'">'.$name_place.'</option>';
+                    echo '<option ';  
+                    echo $loai['id_place']==$hh['id_place']?'selected':''; 
+                    echo ' value="'.$id_place.'">'.$name_place.'</option>';
                   }
                 ?>
-                
-
               </select>
             </div>
             <br />
@@ -121,7 +121,7 @@ if (is_file($hinhpath)) {
       <div class="row mb10">
         Mô tả tour
         <br />
-        <textarea name="mota" id="" cols="30" rows="10">
+        <textarea name="mota" id="editor" cols="30" rows="10">
               <?php echo $tour_detail ?>
               </textarea>
       </div>

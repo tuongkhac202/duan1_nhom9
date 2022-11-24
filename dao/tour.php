@@ -77,13 +77,23 @@ function load_hh_cungloai($mahh,$maloai){
 }
 
 
-function update_tour($ma,$iddd,$ten,$loai,$bd,$kt,$gia,$giamgia,$mota,$hinh){
+function update_tour(   $ma,
+                        $id_place,
+                        $name_tour,
+                        $loai,
+                        $bd,
+                        $kt,
+                        $gia,
+                        $giamgia,
+                        $mota,
+                        $hinh
+){
     if($hinh!==""){
-    $sql = "update tours set name_tour='$ten',id_place = '$iddd', category='$loai', day_start = '$bd', day_end='$kt' , price = '$gia', discount ='$giamgia', tour_detail ='$mota', image_tour ='$hinh' where id_tour = '$ma'";
+        $sql = "update tours set name_tour='$name_tour',id_place = '$id_place', category='$loai', day_start = '$bd', day_end='$kt' , price = '$gia', discount ='$giamgia', tour_detail ='$mota', image_tour ='$hinh' where id_tour = '$ma'";
     }else{
-        $sql = "update tours set name_tour='$ten',id_place = '$iddd', category='$loai', day_start = '$bd', day_end='$kt' , price = '$gia', discount ='$giamgia', tour_detail ='$mota' where id_tour = '$ma'";
+        $sql = "update tours set name_tour='$name_tour',id_place = '$id_place', category='$loai', day_start = '$bd', day_end='$kt' , price = '$gia', discount ='$giamgia', tour_detail ='$mota' where id_tour = '$ma'";
     }
-                pdo_execute($sql);
+    pdo_execute($sql);
 }
 
 function filter_tour($loai,$diadiem,$gia){
