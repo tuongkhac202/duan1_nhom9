@@ -6,6 +6,7 @@ include 'view/header.php';
 include 'dao/khach-hang.php';
 include 'dao/binh-luan.php';
 include 'dao/booking.php';
+include 'dao/handbook.php';
 
 
 
@@ -59,6 +60,16 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case 'handbook':
             include 'view/handbook.php';
             break;
+        case 'handbook-detail':
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                $id = $_GET['id'];
+                $handbook_this = load_tour_one($id);
+                extract($tthis);
+                include 'view/tour-detail.php';
+            } else {
+                include "view/home.php";
+            }
+            break;
 
             // danh sách du lịch 
         case 'dl':
@@ -89,19 +100,19 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
             // book tour trong chi tiết tour
         case 'bo':
-           if(isset($_SESSION['user'])){
-            $makh = $_SESSION['user']['id_customer'];
-            $matour = $_POST['matour'];
-            $songuoi = $_POST['songuoi'];
-            $ngaybook = date('Y/m/d');
-            $ghichu = $_POST['ghichu'];
-            insert_booking($makh, $matour, $songuoi, $ngaybook, $ghichu);
-            include 'view/cart.php';
-           }else {
-            $id = $_POST['matour'];
-            $tthis = load_tour_one($id);
-            include 'view/tour-detail.php';
-           }
+            if (isset($_SESSION['user'])) {
+                $makh = $_SESSION['user']['id_customer'];
+                $matour = $_POST['matour'];
+                $songuoi = $_POST['songuoi'];
+                $ngaybook = date('Y/m/d');
+                $ghichu = $_POST['ghichu'];
+                insert_booking($makh, $matour, $songuoi, $ngaybook, $ghichu);
+                include 'view/cart.php';
+            } else {
+                $id = $_POST['matour'];
+                $tthis = load_tour_one($id);
+                include 'view/tour-detail.php';
+            }
             break;
 
 
