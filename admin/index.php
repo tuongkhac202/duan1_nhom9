@@ -1,17 +1,24 @@
 <?php
 session_start();
 include '../dao/pdo.php';
- include "header.php";
 include '../dao/dia-diem.php';
 include "../dao/khach-hang.php";
 include "../dao/binh-luan.php";
 include "../dao/thong-ke.php";
 include "../dao/tour.php";
 include "../dao/booking.php";
+if (isset($_POST['dn'])) {
+    $name = $_POST['name'];
+    $pass = $_POST['pass'];
+    $_SESSION['admin'] = checkUser($name, $pass);
+}
+if (!isset($_SESSION['admin']) || $_SESSION['admin']['role'] != 1) {
+    header('Location: login-admin.php');
+}
+include "header.php";
 
 
-// done địa điểm, khách hàng, bình luận, 
-// tên địa điểm còn phân ra chưa gộp lại chung vs mã tour
+
 //controller
 if (isset($_GET["act"])) {
     $act = $_GET["act"];
@@ -30,7 +37,7 @@ if (isset($_GET["act"])) {
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                insert_places($tenloai,$diachi,$hinh);
+                insert_places($tenloai, $diachi, $hinh);
                 $thongbao = "thêm thành công";
             }
             include "dia-diem/new.php";
@@ -71,7 +78,7 @@ if (isset($_GET["act"])) {
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                update_places($maloai, $tenloai,$diachi,$hinh);
+                update_places($maloai, $tenloai, $diachi, $hinh);
             }
             $listloai = load_list();
             include 'dia-diem/list.php';
@@ -83,11 +90,11 @@ if (isset($_GET["act"])) {
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $tentour = $_POST['tentour'];
                 $iddd = $_POST['iddd'];
-                $loaitour =$_POST['cate'];
-                $start =$_POST['start'];
-                $end =$_POST['end'];
+                $loaitour = $_POST['cate'];
+                $start = $_POST['start'];
+                $end = $_POST['end'];
                 $gia = $_POST['gia'];
-                $giamgia =$_POST['giamgia'];
+                $giamgia = $_POST['giamgia'];
                 $mota = $_POST['mota'];
                 $hinh = $_FILES['hinhhh']['name'];
                 $target_dir = "../upload/";
@@ -101,7 +108,7 @@ if (isset($_GET["act"])) {
 
 
 
-                insert_tour( $tentour,$iddd, $loaitour, $start, $end, $gia, $giamgia, $mota, $hinh);
+                insert_tour($tentour, $iddd, $loaitour, $start, $end, $gia, $giamgia, $mota, $hinh);
                 $thongbao = "thêm thành công";
             }
             $listloai = load_list();
@@ -142,12 +149,12 @@ if (isset($_GET["act"])) {
             if (isset($_POST['capnhathh']) && ($_POST['capnhathh'])) {
                 $matour = $_POST['matour'];
                 $tentour = $_POST['tentour'];
-                $loaitour =$_POST['cate'];
+                $loaitour = $_POST['cate'];
                 $iddd = $_POST['iddd'];
-                $start =$_POST['start'];
-                $end =$_POST['end'];
+                $start = $_POST['start'];
+                $end = $_POST['end'];
                 $gia = $_POST['gia'];
-                $giamgia =$_POST['giamgia'];
+                $giamgia = $_POST['giamgia'];
                 $mota = $_POST['mota'];
                 $hinh = $_FILES['hinhhh']['name'];
                 $target_dir = "../upload/";
@@ -158,7 +165,7 @@ if (isset($_GET["act"])) {
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                update_tour($matour,$iddd, $tentour, $loaitour, $start, $end, $gia, $giamgia, $mota, $hinh);
+                update_tour($matour, $iddd, $tentour, $loaitour, $start, $end, $gia, $giamgia, $mota, $hinh);
             }
             $listhh = load_list_tour();
             include 'tour/list.php';
@@ -182,7 +189,7 @@ if (isset($_GET["act"])) {
             $listkh = listkh();
             $_SESSION['kh'] = $listkh;
             include "khach-hang/list.php";
-        
+
 
             break;
 
@@ -202,8 +209,8 @@ if (isset($_GET["act"])) {
                 $email = $_POST['email'];
                 $sdt = $_POST['sdt'];
                 $vaitro = $_POST['vaitro'];
-             
-                update_kh_admin($makh,$tenkh,$email,$sdt,$vaitro);
+
+                update_kh_admin($makh, $tenkh, $email, $sdt, $vaitro);
             }
             $listkh = listkh();
             $_SESSION['kh'] = $listkh;
@@ -236,34 +243,38 @@ if (isset($_GET["act"])) {
             $_SESSION['bl'] = $listbl;
             include "binh-luan/list.php";
             break;
-// booking
+            // booking
 
-case 'listbook':
-    $listbook = select_all_booking();
-    include "booking/list.php";
-    break;
-case 'xoabook':
-    if (isset($_GET['mabook']) && ($_GET['mabook'] > 0)) {
-        booking_delete($_GET['mabook']);
-    }
-    $listbook = select_all_booking();
-    $_SESSION['book'] = $listbook;
-    include "booking/list.php";
-    break;
-
-
+        case 'listbook':
+            $listbook = select_all_booking();
+            include "booking/list.php";
+            break;
+        case 'xoabook':
+            if (isset($_GET['mabook']) && ($_GET['mabook'] > 0)) {
+                booking_delete($_GET['mabook']);
+            }
+            $listbook = select_all_booking();
+            $_SESSION['book'] = $listbook;
+            include "booking/list.php";
+            break;
 
 
 
-// thống kê
+
+
+            // thống kê
         case 'tk':
             $listtk = thong_ke_tour();
             include "thong-ke/list.php";
             break;
-case 'bdtk':
-    $listtk = thong_ke_tour();
-    include "thong-ke/bieudo.php";
-    break;
+        case 'bdtk':
+            $listtk = thong_ke_tour();
+            include "thong-ke/bieudo.php";
+            break;
+            // logout admin
+        case 'logout-admin':
+            session_destroy();
+            break;
 
 
 
@@ -277,4 +288,3 @@ case 'bdtk':
 }
 
 include "footer.php";
-?>

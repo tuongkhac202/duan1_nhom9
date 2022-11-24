@@ -56,4 +56,5 @@ function checkUser($name,$pass){
     return $user;
 
 }
+
 ?>
