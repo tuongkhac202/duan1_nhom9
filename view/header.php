@@ -70,16 +70,14 @@
 
                   ?>
                   <?php
-                   if (isset($_SESSION['user'])) {
-                    if($_SESSION['user']['role']==1){
-                      echo'<a href="admin/index.php" class="text-white" >Đăng nhập Admin</a>';
-
+                  if (isset($_SESSION['user'])) {
+                    if ($_SESSION['user']['role'] == 1) {
+                      echo '<a href="admin/index.php" class="text-white" >Đăng nhập Admin</a>';
                     }
+                  }
+                  ?>
 
-                   }
-                ?>
-                  
-                  
+
 
                 </div>
               </div>

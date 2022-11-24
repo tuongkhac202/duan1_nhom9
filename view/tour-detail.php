@@ -109,13 +109,13 @@ foreach ($tthis as $tt) :
 
 
 
-<?php
-$mota =$tt['tour_detail'];
-$motaa = str_replace('h00:','h00: <br>',$mota);
-$motaaa=str_replace('h30:',' h30: <br>',$motaa);
-$motaaaa=str_replace('sáng:',' sáng: <br>',$motaaa);
-$motaaaaa=str_replace('chiều:','<br> chiều: <br>',$motaaaa);
-?>
+                <?php
+                $mota = $tt['tour_detail'];
+                $motaa = str_replace('h00:', 'h00: <br>', $mota);
+                $motaaa = str_replace('h30:', ' h30: <br>', $motaa);
+                $motaaaa = str_replace('sáng:', ' sáng: <br>', $motaaa);
+                $motaaaaa = str_replace('chiều:', '<br> chiều: <br>', $motaaaa);
+                ?>
 
 
 
@@ -207,7 +207,7 @@ $motaaaaa=str_replace('chiều:','<br> chiều: <br>',$motaaaa);
                         </div>
 
                     </div>
-                 
+
                     <!-- bình luận -->
 
 

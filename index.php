@@ -99,12 +99,12 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
 
 
-             //lọc tour trang chủ
+            //lọc tour trang chủ
         case 'filter-tour':
             $loai = $_POST['loai'];
             $diadiem = $_POST['diadiem'];
             $gia = $_POST['gia'];
-            $listft=filter_tour($loai,$diadiem,$gia);
+            $listft = filter_tour($loai, $diadiem, $gia);
             include 'view/list-filter-tour.php';
             break;
 
