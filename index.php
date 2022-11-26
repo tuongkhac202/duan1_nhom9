@@ -63,9 +63,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case 'handbook-detail':
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $id = $_GET['id'];
-                $handbook_this = load_tour_one($id);
-                extract($tthis);
-                include 'view/tour-detail.php';
+                $handbook_this = load_handbook_one($id);
+                extract($handbook_this);
+                include 'view/handbook-detail.php';
             } else {
                 include "view/home.php";
             }

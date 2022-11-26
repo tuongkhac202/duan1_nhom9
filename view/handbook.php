@@ -3,12 +3,27 @@
                 <h1 class="text-danger">CẨM NANG DU LỊCH</h1>
 
         </div>
+        <?php
+        $handbook = load_handbook_all();
+        foreach ($handbook as $handbooks) {
+          extract($handbooks);
+          $hinh_handbook = "upload/" . $img;
+          echo'<div class="row">
+          <div class="col-8">
+                        <div class="col-4 m-5">
+                                <img class="rounded " src="'.$hinh_handbook.'">
+                                <p class=" text-danger">Cẩm nang du lịch</p>
+                                <h4 class="text-info"><a href="index.php?act=handbook&id=">'.$title.'</a></h4>
+                        </div>
+                </div>
+          </div>';
+?>
         <div class="row">
                 <div class="col-8">
                         <div class="col-4 m-5">
                                 <img class="rounded " src="upload/khoanh-khac-lu-hanh.png" alt="" width="800" height="400">
                                 <p class=" text-danger">Cẩm nang du lịch</p>
-                                <h4 class="text-info">18 mẹo tiết kiệm tiền đi du lịch dễ dàng hơn lúc nào hết</h4>
+                                <h4 class="text-info"><a href="index.php?act=handbook&id=">18 mẹo tiết kiệm tiền đi du lịch dễ dàng hơn lúc nào hết</h4>
                         </div>
                 </div>
                 <div class="col-4 ">
