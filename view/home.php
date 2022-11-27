@@ -255,9 +255,9 @@
 
 
 
-  <div class="row m-0 py-4  khoanh-khac-lu-hanh justify-content-center">
-    <div class="col-12 col-xl-12 p-4 text-center lu-hanh-title">
-      <h1><i class="text-white font-thu-phap">Khoảnh Khắc Lữ Hành</i></h1>
+  <div class="row m-0 py-5  khoanh-khac-lu-hanh justify-content-center">
+    <div class="col-12 col-xl-12 p-2 text-center lu-hanh-title">
+      <h1><i class="text-white font-thu-phap mb-0">Khoảnh Khắc Lữ Hành</i></h1>
     </div>
     <div class="row col-12 col-xl-10 g-4  m-0 anh-lu-hanh">
       <div class="col-6 col-xl-4"><img class="img-fluid" src="upload/lu-hanh-1.png" alt=""></div>
