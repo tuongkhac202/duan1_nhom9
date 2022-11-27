@@ -85,7 +85,7 @@
   </div>
 
   <!-- tour bắc -->
-  <div class="mien mien-nam">
+  <div class="mien mien-bac">
     <div class="contentt text-center text-white py-4">
       <p class="pt-2 mb-1">
       <h5> <i> Khám phá lịch sử, văn hóa, con người miền Bắc với</i></h5>
@@ -141,7 +141,7 @@
 
 
   <!-- tour trung -->
-  <div class="mien mien-nam">
+  <div class="mien mien-trung">
     <div class="contentt text-center text-white py-4">
       <p class="pt-2 mb-1">
       <h5> <i> Khám phá lịch sử, văn hóa, con người miền Trung với</i></h5>

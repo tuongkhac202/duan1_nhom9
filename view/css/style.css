@@ -58,10 +58,12 @@ background: var(--bg-main);
 .mien-trung .tour{
     background: url('../../upload/mien-trung-bg.png');
     background-size: cover !important;
+    
 }
 .mien-nam .tour{
     background: url('../../upload/mien-nam.png');
       background-size: cover !important;
+      
 }
 .image-tour{
     overflow: hidden;

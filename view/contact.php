@@ -1,6 +1,7 @@
 <article>
     <h1 class="font-thu-phap color-main text-center my-4">Liên Hệ Với Chúng Tôi</h1>
-    <div class="row m-0 justify-contents-center">
+    <div class="row m-0 d-flex justify-content-center">
+        <div class="row m-0 p-0 col-10 offset-1 ">
         <div class="col text-center px-4">
             <i class="fas fa-phone-alt fa-5x col-12"></i>
             <div class="content-contact row-12 ">
@@ -28,10 +29,12 @@
                 </b>
             </div>
         </div>
+        </div>
     </div>
-    <div class="row form-contact p-5 m-0 g-5 bg-light">
+    <div class="row form-contact p-5 m-0 g-5 bg-light d-flex justify-content-center">
         <h1 class="font-thu-phap color-main text-center my-4">Ý Kiến Đóng Góp Của Khách Hàng</h1>
-        <div class="row col formm">
+      <div class="row col-10 m-0 p-0 ">
+      <div class="row col formm">
             <form action="" class="text-center">
                 <div class="col-12 w-100">
                     <input class="col form-control  mt-2" type="text" placeholder="Họ và tên">
@@ -47,5 +50,6 @@
         <div class="col mapp m-0">
             <iframe class="w-100" src="https://www.google.com/maps/d/u/0/embed?mid=1eIhsIxjAULUyG7JLJvJvb765jE-MbN2j&ehbc=2E312F" width="640" height="480"></iframe>
         </div>
+      </div>
     </div>
 </article>
