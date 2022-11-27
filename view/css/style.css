@@ -20,10 +20,10 @@
 .nav .logo img{ 
     height: 80px;
 }
-.nav .menu h4{
+.nav .menu h2{
     transition: .5s;
 }
-.nav .menu h4:hover{
+.nav .menu h2:hover{
 color: rgb(37, 13, 122);
 
 }
