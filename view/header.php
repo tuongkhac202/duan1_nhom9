@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Công ty Yến Tường</title>
+  <link rel="icon" href="upload/logo150.png"  sizes="16x16">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <!-- link font thư pháp -->
@@ -25,12 +26,6 @@
           <a href="index.php" class="text-decoration-none text-white">
             <img class="img-fluid" src="upload/logo150.png" alt="" /></a>
         </div>
-
-
-
-
-
-
       <?php if(isset($_SESSION['user'])): ?>
         <div class="col-xl-10 col-12 text-center">
           <div class="row col-xl-11 col-md-12 text-center menu">
@@ -124,13 +119,5 @@
           </div>
         </div>
       <?php endif ?>
-
-
-
-
-
-
-
       </div>
-
     </header>

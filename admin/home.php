@@ -1,7 +1,7 @@
 
 <div id="layoutSidenav_content">
   <main>
-    <div class="container-fluid px-4" style="background: url('../upload/pexels-foc-foodoncam-58597.jpg');background-size: cover;">
+    <div class="container-fluid px-4" style="background: url('../upload/halong-bay-4646615.jpg');background-size: cover !important;">
      
         <div class="card-body" style="height: 999px;">
 
