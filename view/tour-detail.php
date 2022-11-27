@@ -148,7 +148,7 @@ foreach ($tthis as $tt) :
                             <h4>BÌNH LUẬN CỦA KHÁCH HÀNG</h4>
                         </div>
                         <div class="row m-0 col-12 p-0 boxcontent2">
-                            <table class="table text-center w-100 p-3">
+                            <table class="table text-center w-100 p-3 bg-light mb-1">
                                 <tr>
                                     <th>Mã tour</th>
                                     <th>Nội dung bình luận</th>

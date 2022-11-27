@@ -26,7 +26,7 @@
 ### -tour-detail: done
 ### -booking: done
 ### -resgiter: done
-### -filter-home: no
+### -filter-home: done
 ### -cart: no
 ### forgot-passWord: no
 

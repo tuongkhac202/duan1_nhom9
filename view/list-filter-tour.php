@@ -1,6 +1,6 @@
 <article>
   <div class="row tourtim m-0 p-0">
-    <h1>Danh sách tour phù hợp với yêu cầu của quý khách </h1>
+    <center><h1 class="font-thu-phap text-danger m-0 py-3">Danh sách tour phù hợp với yêu cầu của quý khách </h1></center>
   </div>
   <!-- miền bắc -->
   <div class="mien mien-bac">
