@@ -30,34 +30,7 @@
                  $hinh_handbook = "upload/" . $img;
                  echo'
 =======
-                        }
-                        ?>
-                        <div class="row">
-                                <div class="col-8">
-                                        <div class="col-4 m-5">
-                                                <img class="rounded " src="upload/khoanh-khac-lu-hanh.png" alt="" width="800" height="400">
-                                                <p class=" text-danger">Cẩm nang du lịch</p>
-                                                <h4 class="text-info"><a href="index.php?act=handbook&id=">18 mẹo tiết kiệm tiền đi du lịch dễ dàng hơn lúc nào hết</h4>
-                                        </div>
-                                </div>
-                                <div class="col-4 ">
-                                        <div class="col-4 m-5">
-                                                <img class="rounded" src="upload/mien-bac-bg.png" alt="" width="300">
-                                                <p class=" text-danger">Cẩm nang du lịch</p>
-                                                <h6 class="text-info">Những lưu ý dành cho khách du lịch Tây Bắc lần đầu</h6>
-                                        </div>
-                                        <div class="col-4 m-5">
-                                                <img class="rounded" src="upload/mien-bac-bg.png" alt="" width="300">
-                                                <p class=" text-danger">Cẩm nang du lịch</p>
-                                                <h6 class="text-info">Những lưu ý dành cho khách du lịch Tây Bắc lần đầu</h6>
-                                        </div>
-                                        <div class="col-4 m-5">
-                                                <img class="rounded" src="upload/mien-bac-bg.png" alt="" width="300">
-                                                <p class=" text-danger">Cẩm nang du lịch</p>
-                                                <h6 class="text-info">Những lưu ý dành cho khách du lịch Tây Bắc lần đầu</h6>
-                                        </div>
-                                </div>
-                        </div>
+
                         <?php
                         $handbook = load_handbook_all2();
                         foreach ($handbook as $handbooks) {
