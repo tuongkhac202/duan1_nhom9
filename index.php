@@ -56,10 +56,11 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
 
 
-            // tin tức
+            // cẩm nang
         case 'handbook':
             include 'view/handbook.php';
             break;
+            //chi tiết cẩm nang
         case 'handbook-detail':
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $id = $_GET['id'];

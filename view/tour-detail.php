@@ -95,7 +95,8 @@ foreach ($tthis as $tt) :
                         if (!isset($_SESSION['user'])) {
                             echo ' <div class="col-12 text-center">
                                      Bạn cần đăng nhập để có thể đặt tour !
-                                   </div>';            }
+                                   </div>';
+                        }
                         ?>
                     </form>
 
