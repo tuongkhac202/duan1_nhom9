@@ -16,7 +16,7 @@
                         <div class="col-12 m-5">
                                 <img class="rounded  "  src="' . $hinh_handbook . '" width="800" height="400">
                                 <p class=" text-danger">Cẩm nang du lịch</p>
-                                <h4 class="text-info"><a href="index.php?act=handbook&id="></a>' . $title . '</a></h4>
+                                <h4 class="text-info"><a href="index.php?act=handbook-detail&id="></a>' . $title . '</a></h4>
                         </div>
               
                 
@@ -35,7 +35,7 @@
    <div class="col-4 m-5">
            <img class="rounded" src="' . $hinh_handbook . '" alt="" width="300">
            <p class=" text-danger">Cẩm nang du lịch</p>
-           <h6 class="text-info"><a href="index.php?act=handbook&id="></a>' . $title . '</h6>
+           <h6 class="text-info"><a href="index.php?act=handbook-detail&id="></a>' . $title . '</h6>
    </div>
 ';
         }
@@ -54,7 +54,7 @@
                                  <p class=" text-danger">Cẩm nang du lịch</p>
                          </div>
                          <div class="col-5 m-5">
-                                 <h4 class="text-info"><a href="index.php?act=handbook&id="></a>' . $title .'</h4>
+                                 <h4 class="text-info"><a href="index.php?act=handbook-detail&id="></a>' . $title .'</h4>
                          </div>
          
                  </div>';
