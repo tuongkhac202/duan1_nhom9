@@ -19,71 +19,116 @@
 <body>
   <div class="container-fluid p-0 bao">
     <header>
-      <div class="row m-0 g-2 nav p-1 align-items-center">
+      <div class="row m-0 g-2 nav p-1 d-flex justify-content-center align-items-center">
 
-        <div class="col-xl-1 offset-xl-2 d-none d-xl-block logo">
+        <div class="col-xl-1 offset-xl-1 d-none d-xl-block logo">
           <a href="index.php" class="text-decoration-none text-white">
             <img class="img-fluid" src="upload/logo150.png" alt="" /></a>
         </div>
 
-        <div class="col-xl-8 offset-xl-1 col-12">
-          <div class="row col-xl-10 col-md-12 text-center menu">
-            <div class="row menu">
+
+
+
+
+
+      <?php if(isset($_SESSION['user'])): ?>
+        <div class="col-xl-10 col-12 text-center">
+          <div class="row col-xl-11 col-md-12 text-center menu">
+            <div class="row menu align-items-center d-flex">
               <div class="col text-center">
-                <a class="text-decoration-none text-white" href="index.php">
-                  <h4 class="font-thu-phap">Trang Chủ</h4>
+                <a class="text-decoration-none text-white " href="index.php">
+                  <h2 class="font-thu-phap m-0">Trang Chủ</h2>
                 </a>
               </div>
               <div class="col text-center">
                 <a class="text-decoration-none text-white" href="index.php?act=dl">
-                  <h4 class="font-thu-phap">Du Lịch</h4>
+                  <h2 class="font-thu-phap m-0">Du Lịch</h2>
                 </a>
               </div>
               <div class="col text-center">
                 <a class="text-decoration-none text-white" href="index.php?act=gt">
-                  <h4 class="font-thu-phap">Giới Thiệu</h4>
+                  <h2 class="font-thu-phap m-0">Giới Thiệu</h2>
                 </a>
               </div>
               <div class="col text-center">
                 <a class="text-decoration-none text-white" href="index.php?act=lh">
-                  <h4 class="font-thu-phap">Liên hệ</h4>
+                  <h2 class="font-thu-phap m-0">Liên hệ</h2>
                 </a>
               </div>
               <div class="col text-center">
                 <a class="text-decoration-none text-white" href="index.php?act=handbook">
-                  <h4 class="font-thu-phap">Cẩm Nang</h4>
+                  <h2 class="font-thu-phap m-0">Cẩm Nang</h2>
+                </a>
+              </div>
+              <div class="col text-center text-white">
+                <a href="index.php?act=dn" class="text-white"><i class="fas fa-user"></i></a> &nbsp; |&nbsp;
+                <a href="index.php?act=cart" class="text-white"><i class="fas fa-shopping-cart"></i></a>
+                <br>
+              </div>
+              
+              <div class="col">
+              <div class="text-start text-white">
+                  <?php
+                    echo 'Xin chào: '. $_SESSION['user']['name'] . "<br> ";
+                  ?>
+                  <?php
+                    if ($_SESSION['user']['role'] == 1) {
+                      echo '<a href="admin/index.php" class="text-white text-decoration-none link-info" >Đăng nhập Admin</a>';
+                    }
+                  ?>
+                    <?php
+                    echo '<a href="index.php?act=dx" class="text-white text-decoration-none link-danger">Đăng xuất <i class="fas fa-sign-out-alt"></i></a>';
+                  ?>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+        <?php else: ?>
+          <div class="col-xl-10 col-12 text-center">
+          <div class="row col-xl-11 col-md-12 text-center menu">
+            <div class="row menu align-items-center d-flex">
+              <div class="col text-center">
+                <a class="text-decoration-none text-white " href="index.php">
+                  <h2 class="font-thu-phap m-0">Trang Chủ</h2>
+                </a>
+              </div>
+              <div class="col text-center">
+                <a class="text-decoration-none text-white" href="index.php?act=dl">
+                  <h2 class="font-thu-phap m-0">Du Lịch</h2>
+                </a>
+              </div>
+              <div class="col text-center">
+                <a class="text-decoration-none text-white" href="index.php?act=gt">
+                  <h2 class="font-thu-phap m-0">Giới Thiệu</h2>
+                </a>
+              </div>
+              <div class="col text-center">
+                <a class="text-decoration-none text-white" href="index.php?act=lh">
+                  <h2 class="font-thu-phap m-0">Liên hệ</h2>
+                </a>
+              </div>
+              <div class="col text-center">
+                <a class="text-decoration-none text-white" href="index.php?act=handbook">
+                  <h2 class="font-thu-phap m-0">Cẩm Nang</h2>
                 </a>
               </div>
 
               <div class="col text-center text-white">
-
-
                 <a href="index.php?act=dn" class="text-white"><i class="fas fa-user"></i></a> &nbsp; |&nbsp;
                 <a href="index.php?act=cart" class="text-white"><i class="fas fa-shopping-cart"></i></a>
                 <br>
-                <div class="d-inline">
-                  <?php
-                  if (isset($_SESSION['user'])) {
-                    echo $_SESSION['user']['name'] . " ";
-                    echo '<a href="index.php?act=dx" class="text-white text-decoration-none link-danger">Đăng xuất <i class="fas fa-sign-out-alt"></i></a>';
-                  }
-
-                  ?>
-                  <?php
-                  if (isset($_SESSION['user'])) {
-                    if ($_SESSION['user']['role'] == 1) {
-                      echo '<a href="admin/index.php" class="text-white" >Đăng nhập Admin</a>';
-                    }
-                  }
-                  ?>
-
-
-
-                </div>
               </div>
             </div>
           </div>
         </div>
+      <?php endif ?>
+
+
+
+
+
 
 
       </div>
