@@ -19,8 +19,7 @@
                                 <h4 class="text-info "><a class="text-decoration-none" href="index.php?act=handbook-detail&id=' . $id_handbook . '">' . $title . '</a></h4>
                         </div>
                 </div>
-          </div>';
-<<<<<<< Updated upstream
+          </div>';    
         }
 ?>
         <?php
@@ -29,15 +28,6 @@
                  extract($handbooks);
                  $hinh_handbook = "upload/" . $img;
                  echo'
-=======
-
-                        <?php
-                        $handbook = load_handbook_all2();
-                        foreach ($handbook as $handbooks) {
-                                extract($handbooks);
-                                $hinh_handbook = "upload/" . $img;
-                                echo '
->>>>>>> Stashed changes
                  <hr class="text-primary">
                  <div class="row">
                          <div class=" col-4 m-5">
