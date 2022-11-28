@@ -177,32 +177,17 @@ foreach ($tthis as $tt) :
 
 
                         <div class="boxfooter p-0">
-                            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+                            <form action="index.php?act=binh-luan-tour&id=<?php echo $id_tour ?>" method="post">
                                 <input type="text" hidden name="idtour" value="<?php echo $_GET['id'] ?>">
                                 <input type="text" placeholder="Nhập nội dung bình luận" name="ndbl" class="form-control w-100" style="margin-bottom: 5px;">
                                 <input type="submit" value="Gửi bình luận" name="bl" class="btn btn-danger w-25">
                             </form>
 
                         </div>
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            if (isset($_POST['bl'])) {
-                                $makh = $_SESSION['user']['id_customer'];
-                                $nd = $_POST['ndbl'];
-                                $matour = $_POST['idtour'];
-                                $ngay = date('Y/m/d');
-
-                                binh_luan_insert($makh, $matour, $nd, $ngay);
-                            }
-                        } else {
-                            $tb = "Bạn cần đăng nhập để có thể bình luận !";
-                        }
-
-                        ?>
                         <div class="div p-0 text-center">
                             <?php
                             if (!isset($_SESSION['user'])) {
-                                echo $tb;
+                                echo "Bạn cần đăng nhập để có thể bình luận !";
                             }
                             ?>
                         </div>

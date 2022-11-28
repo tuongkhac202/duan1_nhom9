@@ -94,6 +94,28 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             break;
 
+
+
+
+            // bình luận tour
+        case 'binh-luan-tour':
+            $id = $_GET['id'];
+                $tthis = load_tour_one($id);
+            if (isset($_SESSION['user'])) {
+                if (isset($_POST['bl'])) {
+                    $makh = $_SESSION['user']['id_customer'];
+                    $nd = $_POST['ndbl'];
+                    $matour = $_POST['idtour'];
+                    $ngay = date('Y/m/d');
+                    binh_luan_insert($makh, $matour, $nd, $ngay);
+                }
+            }
+            include 'view/tour-detail.php';
+            break;
+
+
+
+
             //giới thiệu
         case 'gt':
             include 'view/introduce.php';
