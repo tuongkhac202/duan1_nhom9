@@ -1,4 +1,12 @@
-
+<style>
+  table td p{
+    width: 300px !important;
+    height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
 
 <div id="layoutSidenav_content">
   <main>
@@ -34,7 +42,7 @@
           <tr>
           <td><input type="checkbox"></td>
           <td>'.$id_comment.'</td>
-          <td>'.$content.'</td>
+          <td><p>'.$content.'</p></td>
           <td>'.$id_customer.'</td>
           <td>'.$id_tour.'</td>
           <td>'.$day_comment.'</td>
