@@ -190,8 +190,6 @@ if (isset($_GET["act"])) {
             $listkh = listkh();
             $_SESSION['kh'] = $listkh;
             include "khach-hang/list.php";
-
-
             break;
 
         case 'suakh':
