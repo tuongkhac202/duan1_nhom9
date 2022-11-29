@@ -1,8 +1,6 @@
 <?php
-if (is_array($tt)) {
-  extract($tt);
-}
-$hinhpath = "../upload/" . $img;
+
+$hinhpath = "../upload/" . $tt[0]['img'];
 if (is_file($hinhpath)) {
   $img = "<img src='" . $hinhpath . "' height='60'>";
 } else {
@@ -18,21 +16,21 @@ if (is_file($hinhpath)) {
       <div class="card mb-4">
         <div class="card-body">
     <form action="index.php?act=update_tintuc" method="post" class="formcontent mt" enctype="multipart/form-data">
-      <input hidden type="text" name="matt" value="<?php echo $id_handbook ?>">
+      <input hidden type="text" name="matt" value="<?php echo $tt[0]['id_handbook'] ?>">
       <br />
 
       <div class="row mb10">
         Tiêu đề
         <br />
-        <input type="text" name="tentour" value="<?php echo $title ?>" />
+        <input type="text" name="tieude" value="<?php echo $tt[0]['title'] ?>" />
       </div>
       <br />
       <div class="row mb10">
         Nội dung
         <br />
-        <textarea name="mota" id="editor" cols="30" rows="10">
-              <?php echo $content ?>
-              </textarea>
+        <textarea name="noidung" id="editor" cols="30" rows="10" value="">
+          <?php echo $tt[0]['content'] ?>
+        </textarea>
       </div>
       <br />
       <div class="row mb10">

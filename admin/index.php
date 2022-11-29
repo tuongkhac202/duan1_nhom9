@@ -291,8 +291,8 @@ if (isset($_GET["act"])) {
             break;
 
         case 'suatt':
-            if (isset($_GET['matt']) && ($_GET['matt'] > 0)) {
-                $dm = load_one($_GET['matt']);
+            if (isset($_GET['matt'])){
+                $tt = load_handbook_one($_GET['matt']);
             }
             include "tin-tuc/edit.php";
             break;
@@ -303,12 +303,12 @@ if (isset($_GET["act"])) {
                 $matintuc = $_POST['matt'];
                 $tieude = $_POST['tieude'];
                 $noidung = $_POST['noidung'];
-                $hinh = $_FILES['hinh']['name'];
+                $hinh = $_FILES['anh']['name'];
                 $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
-              move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file);
-               
-                update_places($matintuc, $tenloai, $diachi, $hinh);
+                $target_file = $target_dir . basename($_FILES["anh"]["name"]);
+                move_uploaded_file($_FILES["anh"]["tmp_name"], $target_file);
+
+                update_handbook($matintuc, $tieude, $noidung, $hinh);
             }
             $list_tintuc = load_handbook_all0();
             include 'tin-tuc/list.php';

@@ -1,3 +1,12 @@
+<style>
+  table td p{
+    width: 300px !important;
+    height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
 
 <div id="layoutSidenav_content">
   <main>
@@ -37,7 +46,7 @@
           <td><input type="checkbox"></td>
           <td>' . $id_handbook . '</td>
           <td>' . $title . '</td>
-          <td>' . $content . '</td>
+          <td style="width: 300px;">' . $content . '</td>
           <td>' . $img . '</td>
 
 

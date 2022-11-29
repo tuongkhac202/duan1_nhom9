@@ -6,7 +6,7 @@ function insert_handbook($title, $content, $img)
 }
 function load_handbook_one($id)
 {
-    $sql = "select* from handbooks where id_handbook='$id'";
+    $sql = "select * from handbooks where id_handbook= ". $id;
     return pdo_query($sql);
 }
 function load_handbook_all0()
