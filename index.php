@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 session_start();
 include 'dao/pdo.php';
 include 'dao/tour.php';
@@ -7,8 +8,7 @@ include 'dao/khach-hang.php';
 include 'dao/binh-luan.php';
 include 'dao/booking.php';
 include 'dao/handbook.php';
-
-
+include 'dao/forgotpassword.php';
 
 // code dưới này
 if (isset($_GET['act']) && $_GET['act'] != "") {
@@ -55,7 +55,6 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include 'view/home.php';
             break;
 
-
             // cẩm nang
         case 'handbook':
             include 'view/handbook.php';
@@ -72,7 +71,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             break;
 
-            // danh sách du lịch 
+            // danh sách du lịch
         case 'dl':
             include 'view/list-tour.php';
             break;
@@ -94,13 +93,10 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             break;
 
-
-
-
             // bình luận tour
         case 'binh-luan-tour':
             $id = $_GET['id'];
-                $tthis = load_tour_one($id);
+            $tthis = load_tour_one($id);
             if (isset($_SESSION['user'])) {
                 if (isset($_POST['bl'])) {
                     $makh = $_SESSION['user']['id_customer'];
@@ -112,9 +108,6 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             include 'view/tour-detail.php';
             break;
-
-
-
 
             //giới thiệu
         case 'gt':
@@ -138,7 +131,6 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             break;
 
-
             //lọc tour trang chủ
         case 'filter-tour':
             $loai = $_POST['loai'];
@@ -147,13 +139,71 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             $listft = filter_tour($loai, $diadiem, $gia);
             include 'view/list-filter-tour.php';
             break;
+            //quên mật khẩu
+        case 'forgot_password':
+            if (isset($_POST['send_code']) && ($_POST['send_code'])) {
+                $email = $_POST['email'];
+                var_dump($email);
 
+                $check_email = check_email($email);
+                var_dump($check_email);
+                $user_id = $check_email['id_customer'];
+                $user_name = $check_email['name'];
+                $code = random_int(100000, 999999);
+                $ex_code = date("Y-m-d H:i:s", strtotime("+10 minutes"));
+                $date = date("Y-m-d H:i:s");
+                $sql = "insert into get_code(id_customer,expiry,date,code) values(?,?,?,?)";
+                pdo_execute($sql, $user_id, $ex_code, $date, $code);
+                send_email($email, $code, $user_name);
+                echo "<script>
+                alert('Gửi mail thành công');
+                window.location.href='index.php?act=update_password';
+                </script>";
+            }
 
+            include 'view/forgot_pass.php';
+            break;
 
+        case 'update_password':
+            if (isset($_POST['update_pass']) && ($_POST['update_pass'])) {
+                $code = $_POST['code'];
+                $check_code = get_code($code);
+                $get_code_id = $check_code['get_code_id'];
+                $user_id = $check_code['id_customer'];
+                $newpass = $_POST['new_password'];
+                $renewpass = $_POST['renew_password'];
+                $date = date("Y-m-d H:i:s");
+                $ex_code = $check_code['expiry'];
+                $status = $check_code['status'];
+                if ($date > $ex_code) {
+                    echo "<script>
+                alert('Mã code đã hết hạn');
+                window.location.href='index.php?act=update_password';
+                </script>";
+                } else if ($status == 1) {
+                    echo "<script>
+                alert('Mã đã được sử dụng');
+                window.location.href='index.php?act=update_password';
+                </script>";
+                } else if ($newpass != $renewpass) {
+                    echo "<script>
+                alert('Mật khẩu không khớp');
+                window.location.href='index.php?act=update_password';
+                </script>";
+                }
 
+                if (is_array($check_code)) {
+                    update_status($get_code_id);
+                    update_password($newpass, $user_id);
+                    echo "<script>
+                            alert('Cập nhật thành công');
+                            window.location.href='index.php?act=dn';
+                            </script>";
+                }
+            }
+            include 'view/update_password.php';
 
-
-
+            break;
 
         default:
             include 'view/home.php';
@@ -162,15 +212,5 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 } else {
     include 'view/home.php';
 }
-
-
-
-
-
-
-
-
-
-
 
 include 'view/footer.php';
