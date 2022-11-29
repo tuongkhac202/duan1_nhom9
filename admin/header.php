@@ -78,10 +78,15 @@
                             <div class="sb-nav-link-icon"><i class="far fa-comment-alt"></i></div>
                             BÌNH LUẬN
                         </a>
+                        <a class="nav-link" href="index.php?act=list-tintuc">
+                            <div class="sb-nav-link-icon"><i class="far fa-newspaper"></i></div>
+                            TIN TỨC
+                        </a>
                         <a class="nav-link" href="index.php?act=tk">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             THỐNG KÊ
                         </a>
+                       
                         <a class="nav-link" href="index.php?act=logout-admin">
                         <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
                             ĐĂNG XUẤT ADMIN

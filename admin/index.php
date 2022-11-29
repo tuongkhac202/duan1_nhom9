@@ -7,6 +7,7 @@ include "../dao/binh-luan.php";
 include "../dao/thong-ke.php";
 include "../dao/tour.php";
 include "../dao/booking.php";
+include "../dao/handbook.php";
 if (isset($_POST['dn'])) {
     $name = $_POST['name'];
     $pass = $_POST['pass'];
@@ -23,7 +24,7 @@ include "header.php";
 if (isset($_GET["act"])) {
     $act = $_GET["act"];
     switch ($act) {
-            // địa điểm done
+            // địa điểm 
         case 'addloai':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $tenloai = $_POST['tenloai'];
@@ -184,7 +185,7 @@ if (isset($_GET["act"])) {
 
 
 
-            //khách hàng done da1
+            //khách hàng
         case 'dskh':
             $listkh = listkh();
             $_SESSION['kh'] = $listkh;
@@ -230,7 +231,7 @@ if (isset($_GET["act"])) {
 
 
 
-            // bình luận done
+            // bình luận
         case 'dsbl':
             $listbl = select_all_binh_luan();
             include "binh-luan/list.php";
@@ -243,6 +244,8 @@ if (isset($_GET["act"])) {
             $_SESSION['bl'] = $listbl;
             include "binh-luan/list.php";
             break;
+
+
             // booking
 
         case 'listbook':
@@ -257,6 +260,63 @@ if (isset($_GET["act"])) {
             $_SESSION['book'] = $listbook;
             include "booking/list.php";
             break;
+
+
+            // Tin tức
+        case 'add-tintuc':
+            if (isset($_POST['themmoi-tintuc']) && ($_POST['themmoi-tintuc'])) {
+                $tieude = $_POST['tieuDe'];
+                $noidung = $_POST['noiDung'];
+                $hinh = $_FILES['anh']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES["anh"]["name"]);
+                move_uploaded_file($_FILES["anh"]["tmp_name"], $target_file);
+                insert_handbook($tieude, $noidung, $hinh);
+                $thongbao = "thêm thành công";
+            }
+            include "tin-tuc/new.php";
+            break;
+
+        case 'list-tintuc':
+            $list_tintuc = load_handbook_all0();
+            include "tin-tuc/list.php";
+            break;
+
+        case 'xoatt':
+            if (isset($_GET['matt']) && ($_GET['matt'] > 0)) {
+                delete_handbook($_GET['matt']);
+            }
+            $list_tintuc = load_handbook_all0();
+            include "tin-tuc/list.php";
+            break;
+
+        case 'suatt':
+            if (isset($_GET['matt']) && ($_GET['matt'] > 0)) {
+                $dm = load_one($_GET['matt']);
+            }
+            include "tin-tuc/edit.php";
+            break;
+
+
+        case 'update_tintuc':
+            if (isset($_POST['capnhattt']) && ($_POST['capnhattt'])) {
+                $matintuc = $_POST['matt'];
+                $tieude = $_POST['tieude'];
+                $noidung = $_POST['noidung'];
+                $hinh = $_FILES['hinh']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+              move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file);
+               
+                update_places($matintuc, $tenloai, $diachi, $hinh);
+            }
+            $list_tintuc = load_handbook_all0();
+            include 'tin-tuc/list.php';
+            break;
+
+
+
+
 
 
 
