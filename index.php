@@ -78,7 +78,8 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
             //giỏ hàng
         case 'cart':
-            $loadbooking = booking_cart($_SESSION['user']['id_customer']);
+            if(isset($_SESSION['user'])){
+            $loadbooking = booking_cart($_SESSION['user']['id_customer']);}
             include 'view/cart.php';
             break;
             // xóa tour cho khách hàng

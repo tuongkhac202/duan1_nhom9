@@ -27,7 +27,33 @@
 
                 </div>
         </div>
+ <!-- lọc tour -->
+ <div class="row d-none d-xl-block p-3 filter">
+                <div class="row col-xl-8 offset-xl-2 text-center filter-chirld">
+                        <form action="index.php?act=filter-tour" method="post" class="row form-filter">
+                                <div class="col text-center">
+                                        <select name="loai" id="loaitour" class="form-select w-100">
+                                                <option value="">Loại tour</option>
+                                                <option value="Bắc">Bắc</option>
+                                                <option value="Trung">Trung</option>
+                                                <option value="Nam">Nam</option>
+                                                <option value="all">Tất cả</option>
+                                        </select>
+                                </div>
 
+                                <div class="col text-center">
+                                        <input type="text" placeholder="Địa điểm" class="form-control w-100"
+                                                name="diadiem" />
+                                </div>
+                                <div class="col text-center">
+                                        <input type="text" placeholder="Giá" class="form-control w-100" name="gia" />
+                                </div>
+                                <div class="col text-center">
+                                        <input type="submit" class="btn btn-danger w-100" value="Tìm kiếm" />
+                                </div>
+                        </form>
+                </div>
+        </div>
 
         <!-- miền bắc -->
 
