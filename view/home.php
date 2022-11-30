@@ -71,7 +71,7 @@
                         </div>
                         <div class="col text-center justify-content-center">
                                 <a href="" class="text-white link-primary text-decoration-none">
-                                        <img src="upload/tour-hh.png" alt="" />
+                                        <img src="upload/tour-tour.png" alt="" />
                                         <h6 class="mt-1">TOUR HÀNH HƯƠNG</h6>
                                 </a>
                         </div>

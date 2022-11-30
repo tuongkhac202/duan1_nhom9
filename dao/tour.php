@@ -19,9 +19,9 @@ function load_tour_one($id)
     return $tour;
 }
 
-function insert_tour($ten, $iddd, $loai, $batdau, $ketthuc, $gia, $giamgia, $mota, $hinh)
+function insert_tour($ten, $iddd, $diaDiem, $batdau, $ketthuc, $gia, $giamgia, $mota, $hinh)
 {
-    $sql = "insert into tours(name_tour,id_place, category, day_start, day_end, price, discount, tour_detail, image_tour) values ('$ten','$iddd','$loai','$batdau','$ketthuc','$gia', '$giamgia', '$mota', '$hinh')";
+    $sql = "insert into tours(name_tour,id_place, category, day_start, day_end, price, discount, tour_detail, image_tour) values ('$ten','$iddd','$diaDiem','$batdau','$ketthuc','$gia', '$giamgia', '$mota', '$hinh')";
     pdo_execute($sql);
 }
 
@@ -52,7 +52,7 @@ function update_tour(
     $ma,
     $id_place,
     $name_tour,
-    $loai,
+    $diaDiem,
     $batdau,
     $ketthuc,
     $gia,
@@ -61,20 +61,20 @@ function update_tour(
     $hinh
 ) {
     if ($hinh !== "") {
-        $sql = "update tours set name_tour='$name_tour',id_place = '$id_place', category='$loai', day_start = '$batdau', day_end='$ketthuc' , price = '$gia', discount ='$giamgia', tour_detail ='$mota', image_tour ='$hinh' where id_tour = '$ma'";
+        $sql = "update tours set name_tour='$name_tour',id_place = '$id_place', category='$diaDiem', day_start = '$batdau', day_end='$ketthuc' , price = '$gia', discount ='$giamgia', tour_detail ='$mota', image_tour ='$hinh' where id_tour = '$ma'";
     } else {
-        $sql = "update tours set name_tour='$name_tour',id_place = '$id_place', category='$loai', day_start = '$batdau', day_end='$ketthuc' , price = '$gia', discount ='$giamgia', tour_detail ='$mota' where id_tour = '$ma'";
+        $sql = "update tours set name_tour='$name_tour',id_place = '$id_place', category='$diaDiem', day_start = '$batdau', day_end='$ketthuc' , price = '$gia', discount ='$giamgia', tour_detail ='$mota' where id_tour = '$ma'";
     }
     pdo_execute($sql);
 }
 
-function filter_tour($loai, $diadiem, $gia)
+function filter_tour($diaDiem, $diadiem, $gia)
 {
     $sql = "select tours.*, places.name_place 
     from tours join places on tours.id_place = places.id_place 
     where 1 ";
-    if ($loai == "Bắc" || $loai == "Trung" || $loai == "Nam") {
-        $sql .= " and category = '$loai' ";
+    if ($diaDiem == "Bắc" || $diaDiem == "Trung" || $diaDiem == "Nam") {
+        $sql .= " and category = '$diaDiem' ";
     }
     if ($diadiem !== "") {
         $sql .= " and name_place like N'%$diadiem%' ";

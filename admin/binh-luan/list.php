@@ -30,10 +30,10 @@ table td p {
                                                 </thead>
 
                                                 <?php
-          foreach ($listbl as $bl) {
+          foreach ($listBinhLuan as $bl) {
             extract($bl);
 
-            $xoabl="index.php?act=xoabl&mabl=".$id_comment;
+            $xoaBinhLuan="index.php?act=xoaBinhLuan&mabl=".$id_comment;
             
           echo '
           <tr>
@@ -44,7 +44,7 @@ table td p {
           <td>'.$id_tour.'</td>
           <td>'.$day_comment.'</td>
           <td>
-           <a href="'.$xoabl.'" class="xoabtn"><input type="button" class="btn btn-danger" value="Xóa"></a>
+           <a href="'.$xoaBinhLuan.'" class="xoabtn"><input type="button" class="btn btn-danger" value="Xóa"></a>
           </td>
           </tr>
           ';

@@ -32,8 +32,8 @@ table td p {
         foreach ($list_tintuc as $tt) {
           extract($tt);
 
-          $suatt = "index.php?act=suatt&matt=" . $id_handbook;
-          $xoatt = "index.php?act=xoatt&matt=" . $id_handbook;
+          $suatintuc = "index.php?act=sua-tintuc&matt=" . $id_handbook;
+          $xoatintuc = "index.php?act=xoa-tintuc&matt=" . $id_handbook;
           $hinhpath = "../upload/" . $img;
           if (is_file($hinhpath)) {
             $img = "<img src='" . $hinhpath . "' height='60' width='100'>";
@@ -51,8 +51,8 @@ table td p {
 
 
           <td>
-           <a href="' . $suatt . '"  class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
-           <a href="' . $xoatt . '"   class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger"></a>
+           <a href="' . $suatintuc . '"  class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
+           <a href="' . $xoatintuc . '"   class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger"></a>
           </td>
           </tr>
           ';

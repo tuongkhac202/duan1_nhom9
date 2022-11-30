@@ -78,12 +78,12 @@
                                                         BOOKING
                                                 </a>
 
-                                                <a class="nav-link" href="index.php?act=dskh">
+                                                <a class="nav-link" href="index.php?act=danhSachKhachHang">
                                                         <div class="sb-nav-link-icon"><i
                                                                         class="fas fa-address-book"></i></div>
                                                         KHÁCH HÀNG
                                                 </a>
-                                                <a class="nav-link" href="index.php?act=dsbl">
+                                                <a class="nav-link" href="index.php?act=danhSachBinhLuan">
                                                         <div class="sb-nav-link-icon"><i class="far fa-comment-alt"></i>
                                                         </div>
                                                         BÌNH LUẬN
@@ -93,7 +93,7 @@
                                                         </div>
                                                         CẨM NANG
                                                 </a>
-                                                <a class="nav-link" href="index.php?act=tk">
+                                                <a class="nav-link" href="index.php?act=thongKe">
                                                         <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i>
                                                         </div>
                                                         THỐNG KÊ

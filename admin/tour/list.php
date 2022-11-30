@@ -7,11 +7,11 @@
                                         <!-- <form action="index.php?act=listtour" method="post" class="mt" style="margin-bottom: 10px;">
 
       <input type="text" name="kw">
-      <select name="maloai" id="">
+      <select name="madiaDiem" id="">
         <option value="0" selected>Tất cả</option>
         < ? php
-        foreach ($listDiaDiem as $loai) {
-          extract($loai);
+        foreach ($listDiaDiem as $diaDiem) {
+          extract($diaDiem);
           echo '<option value="' . $category . '">' . $category . '</option>';
         }
         ?>
@@ -42,7 +42,7 @@
         foreach ($listtour as $tour) {
           extract($tour);
 
-          $suatour = "index.php?act=suatour&matour=" . $id_tour ."&tendd=".$name_place;
+          $suatour = "index.php?act=suatour&matour=" . $id_tour ."&tenDiaDiem=".$name_place;
           $xoatour = "index.php?act=xoatour&matour=" . $id_tour;
           $hinhpath = "../upload/" . $image_tour;
           if (is_file($hinhpath)) {

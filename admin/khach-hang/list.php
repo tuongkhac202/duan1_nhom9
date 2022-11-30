@@ -21,11 +21,11 @@
                                                 </thead>
 
                                                 <?php
-        foreach ($_SESSION['kh'] as $khachHang) {
-          extract($khachHang);
+        foreach ($_SESSION['khachHang'] as $KhachHangactourang) {
+          extract($KhachHangactourang);
 
-          $suakh = "index.php?act=suakh&makh=" . $id_customer;
-          $xoakh = "index.php?act=xoakh&makh=" . $id_customer;
+          $suaKhachHang = "index.php?act=suaKhachHang&makh=" . $id_customer;
+          $xoaKhachHang = "index.php?act=xoaKhachHang&makh=" . $id_customer;
 
           echo '
           <tr>
@@ -40,8 +40,8 @@
           <td>' . $role . '</td>
 
           <td>
-           <a href="' . $suakh . '"  ><input type="button" value="Sửa" class="btn btn-warning"></a>
-           <a href="' . $xoakh . '"  ><input type="button" value="Xóa"  class="btn btn-danger"></a>
+           <a href="' . $suaKhachHang . '"  ><input type="button" value="Sửa" class="btn btn-warning"></a>
+           <a href="' . $xoaKhachHang . '"  ><input type="button" value="Xóa"  class="btn btn-danger"></a>
           </td>
           </tr>
           ';

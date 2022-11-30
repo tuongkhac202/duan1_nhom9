@@ -1,8 +1,8 @@
 <?php
 
-function insert_booking($maKhachHang, $matour, $songuoi, $ngaybook, $ghichu)
+function insert_booking($maKhactourang, $matour, $songuoi, $ngaybook, $ghichu)
 {
-    $sql = "insert into bookings(id_customer,id_tour,number_customers,day_booking,note) values ('$maKhachHang','$matour','$songuoi','$ngaybook','$ghichu')";
+    $sql = "insert into bookings(id_customer,id_tour,number_customers,day_booking,note) values ('$maKhactourang','$matour','$songuoi','$ngaybook','$ghichu')";
     pdo_execute($sql);
 }
 

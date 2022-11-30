@@ -21,8 +21,8 @@
                                                         <br />
                                                         <select name="iddd">
                                                                 <?php
-                  foreach ($listDiaDiem as $loai) {
-                    extract($loai);
+                  foreach ($listDiaDiem as $diaDiem) {
+                    extract($diaDiem);
                     echo '<option value="'.$id_place.'">'.$name_place.'</option>';
                   }
                 ?>

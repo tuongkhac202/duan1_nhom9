@@ -45,7 +45,7 @@
                         </div>
                         <br>
                         <form action="" class="mtt">
-                                <button class="btn btn-success"><a href="index.php?act=bdtk">Biểu đồ thống
+                                <button class="btn btn-success"><a href="index.php?act=bieuDoThongKe">Biểu đồ thống
                                                 kê</a></button>
                         </form>
 

@@ -3,7 +3,7 @@
 
 $tours = load_tour_goiy();
 
-$dsbl = select_all_binh_luan();
+$danhSachBinhLuan = select_all_binh_luan();
 
 
 foreach ($tthis as $tt) :
@@ -168,7 +168,7 @@ foreach ($tthis as $tt) :
                                                         </tr>
                                                         <?php
 
-                                foreach ($dsbl as $bl) {
+                                foreach ($danhSachBinhLuan as $bl) {
                                     extract($bl);
                                     echo '
                              <tr ">

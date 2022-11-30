@@ -22,9 +22,9 @@ if (is_file($hinhpath)) {
 
 
 
-                                        <form action="index.php?act=updateDiaDiem" method="post" class="formcontent mt"
+                                        <form action="index.php?act=updatediaDiem" method="post" class="formcontent mt"
                                                 enctype="multipart/form-data">
-                                                <input hidden type="text" name="maloai" value="<?php echo $id_place ?>">
+                                                <input hidden type="text" name="madiaDiem" value="<?php echo $id_place ?>">
                                                 <div class=" mb10">
                                                         Mã địa điểm
                                                         <br />
@@ -34,7 +34,7 @@ if (is_file($hinhpath)) {
                                                 <div class=" mb10">
                                                         Tên địa điểm
                                                         <br />
-                                                        <input type="text" name="tenloai"
+                                                        <input type="text" name="tendiaDiem"
                                                                 value="<?php echo $name_place  ?>" />
                                                 </div>
                                                 <br />

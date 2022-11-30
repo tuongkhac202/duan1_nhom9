@@ -31,26 +31,6 @@ if (is_file($hinhpath)) {
                                                 <input hidden type="text" name="matour" value="<?php echo $id_tour ?>">
 
 
-                                                <!-- <br>
-      <div class="row mb10">
-        <select name="maloai" id="">
-          <option value="0" selected>Tất cả</option>
-          < ?php
-          foreach ($listDiaDiem as $loai) {
-            extract($loai);
-            if ($ma_loai == $ma_Loai) {
-              $s = "selected";
-            } else {
-              $s = "";
-            }
-            echo '<option value="' . $ma_loai . '"'.$s.'>' . $ten_loai . '</option>';
-          }
-          ?>
-
-        </select>
-
-      </div> -->
-
 
                                                 <br />
 
@@ -73,12 +53,12 @@ if (is_file($hinhpath)) {
                                                         Tên địa điểm
                                                         <br />
                                                         <select name="iddd">
-                                                                <!-- <option value="<?php echo $_GET['tendd']  ?>"><?php echo $_GET['tendd'] ?></option> -->
+                                                                <!-- <option value="<?php echo $_GET['tenDiaDiem']  ?>"><?php echo $_GET['tenDiaDiem'] ?></option> -->
                                                                 <?php
-                  foreach ($listDiaDiem as $loai) {
-                    extract($loai);
+                  foreach ($listDiaDiem as $diaDiem) {
+                    extract($diaDiem);
                     echo '<option ';  
-                    echo $loai['id_place']==$tour['id_place']?'selected':''; 
+                    echo $diaDiem['id_place']==$tour['id_place']?'selected':''; 
                     echo ' value="'.$id_place.'">'.$name_place.'</option>';
                   }
                 ?>

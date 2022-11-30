@@ -10,7 +10,7 @@
             </tr>
             <?php
 
-            foreach ($dsbl as $bl) {
+            foreach ($danhSachBinhLuan as $bl) {
                 extract($bl);
                 echo '
    <tr>
@@ -37,12 +37,12 @@
     </div>
     <?php
     if (isset($_POST['bl']) && ($_POST['bl'])) {
-        $maKhachHang = $_SESSION['user']['id_customer'];
+        $maKhactourang = $_SESSION['user']['id_customer'];
         $nd = $_POST['ndbl'];
         $matour = $_POST['idtour'];
-        echo $maKhachHang;
+        echo $maKhactourang;
         $ngay = date('Y/m/d');
-        binh_luan_insert($maKhachHang, $matour, $nd, $ngay);
+        binh_luan_insert($maKhactourang, $matour, $nd, $ngay);
         header("Location: " . $_SERVER['HTTP_REFERER']);
     }
     ?>

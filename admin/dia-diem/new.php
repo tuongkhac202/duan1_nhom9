@@ -15,7 +15,7 @@
                                                 <div class=" mb10">
                                                         Tên địa điểm
                                                         <br />
-                                                        <input type="text" name="tenloai" required />
+                                                        <input type="text" name="tendiaDiem" required />
                                                 </div>
                                                 <br />
                                                 <div class=" mb10">

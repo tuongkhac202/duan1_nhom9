@@ -6,8 +6,8 @@
                                 <div class="card-body">
 
                                         <?php
-if (is_array($khachHang)) {
-  extract($khachHang);
+if (is_array($KhachHang)) {
+  extract($KhachHang);
 }
 ?>
 
@@ -15,7 +15,7 @@ if (is_array($khachHang)) {
 
 
 
-                                        <form action="index.php?act=updatekh" method="post" class="formcontent mt"
+                                        <form action="index.php?act=updateKhachHang" method="post" class="formcontent mt"
                                                 enctype="multipart/form-data">
                                                 <input hidden type="text" name="makh"
                                                         value="<?php echo $id_customer ?>">
@@ -66,7 +66,7 @@ if (is_array($khachHang)) {
                                                 <input value="Cập nhật" type="submit" name="capnhatkh"
                                                         class="btn btn-success"></input>
                                                 <button type="reset" class="btn btn-warning">Nhập lại</button>
-                                                <button class="btn btn-info"><a href="index.php?act=dskh"
+                                                <button class="btn btn-info"><a href="index.php?act=danhSachKhachHang"
                                                                 style="text-decoration: none;">Danh sách khách
                                                                 hàng</a></button>
                                                 <?php

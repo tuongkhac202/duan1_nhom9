@@ -1,16 +1,16 @@
 <?php
 require_once 'pdo.php';
 
-function binh_luan_insert($ma_khachHang, $ma_tour, $noi_dung, $ngay_bl)
+function binh_luan_insert($ma_khactourang, $ma_tour, $noi_dung, $ngay_bl)
 {
     $sql = "INSERT INTO comments(id_customer,id_tour,content,day_comment) VALUES (?,?,?,?)";
-    pdo_execute($sql, $ma_khachHang, $ma_tour, $noi_dung, $ngay_bl);
+    pdo_execute($sql, $ma_khactourang, $ma_tour, $noi_dung, $ngay_bl);
 }
 function select_all_binh_luan()
 {
     $sql = "select * from comments order by id_comment desc ";
-    $listbl = pdo_query($sql);
-    return $listbl;
+    $listBinhLuan = pdo_query($sql);
+    return $listBinhLuan;
 }
 
 

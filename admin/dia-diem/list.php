@@ -19,11 +19,11 @@
 
                                                 <tbody>
                                                         <?php
-        foreach ($listDiaDiem as $loai) {
-          extract($loai);
+        foreach ($listDiaDiem as $diaDiem) {
+          extract($diaDiem);
 
-          $suaDiaDiem = "index.php?act=suaDiaDiem&maloai=" . $id_place;
-          $xoaDiaDiem = "index.php?act=xoaDiaDiem&maloai=" . $id_place;
+          $suaDiaDiem = "index.php?act=suaDiaDiem&madiaDiem=" . $id_place;
+          $xoaDiaDiem = "index.php?act=xoaDiaDiem&madiaDiem=" . $id_place;
           $hinhpath = "../upload/" . $image_place;
           if (is_file($hinhpath)) {
             $image_place = "<img src='" . $hinhpath . "' height='60' width='100'>";

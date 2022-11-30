@@ -1,7 +1,7 @@
 <?php
-function insert_places($tenloai, $diachi, $hinh)
+function insert_places($tendiaDiem, $diachi, $hinh)
 {
-    $sql = "insert into places(name_place, address_place, image_place) values ('$tenloai','$diachi','$hinh')";
+    $sql = "insert into places(name_place, address_place, image_place) values ('$tendiaDiem','$diachi','$hinh')";
     pdo_execute($sql);
 }
 
@@ -25,8 +25,8 @@ function load_one($id)
     return $dm;
 }
 
-function update_places($maloai, $tenloai, $diachi, $hinh)
+function update_places($madiaDiem, $tendiaDiem, $diachi, $hinh)
 {
-    $sql = "update places set name_place = '$tenloai', address_place ='$diachi', image_place = '$hinh' where id_place = '$maloai'";
+    $sql = "update places set name_place = '$tendiaDiem', address_place ='$diachi', image_place = '$hinh' where id_place = '$madiaDiem'";
     pdo_execute($sql);
 }
