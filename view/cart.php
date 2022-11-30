@@ -23,29 +23,43 @@
                                 <div class="py-2 m-3 bg-light">
                                         <h3 class="text-center color-main">Thông tin dịch vụ</h3>
                                 </div>
+                                <?php
+                                       foreach($loadbooking as $cart){
+                                        extract($cart);
+                                        $hinh_tour = "upload/" . $image_tour;
+                                echo '
                                 <div class="m-3">
-                                        <img class="rounded w-100" src="upload/khoanh-khac-lu-hanh.png" alt="" width="300">
-                                        <h6 class="text-danger">Du Lịch Ninh Bình - Hạ Long: Tuyệt Tình Cốc - Bái Đính - Tràng An - Hạ Long - Yên Tử</h6>
-                                        <b>Ngày khởi hành:20/11/2022</b>
+                                        <img class="rounded w-100" src="'.$hinh_tour.'" alt="" height="300">
+                                        <h6 class="text-danger">' . $name_tour . '</h6>
+                                        <b>Ngày khởi hành: ' . $day_start . '</b>
+                                        <br>
+                                        <b>Số người: </b>
+                                        <input class=" w-25 form-control" type="number" value="' . $number_customers . '">
+                                        <b>Ghi chú: </b>
+                                        <br>
+                                        <textarea class="w-100" name="" id="" cols="30" rows="5">
+                                        ' . $note . '
+                                        </textarea>
+                                        <br>
+                                        <b >Giá tour:  <b class="text-danger giatien">' . number_format($price,0,'','.') . ' VNĐ</b></b>
+                                        <br>
+                                        <b>Trạng thái: ' . $status . '</b>
                                         <br>
                                         <br>
-                                        <b>Số người:</b>
-                                        <input class=" w-25 form-control" type="number">
-                                        <br>
-                                        <b>Ghi chú:</b>
-                                        <br>
-                                        <textarea class="w-100" name="" id="" cols="30" rows="10"></textarea>
-                                        <br>
-                                        <b>Giá tour:</b>
-                                        <br>
-                                        <b>Trạng thái:</b>
-                                        <br>
-                                        <center><button type="button" class=" btn btn-danger m-5">Xóa</button></center>
-                                        <hr>
-                                        <h4 class="text-danger">Tổng tiền:</h4>
-                                        <center><button type="button" class=" btn btn-success m-5">Thanh toán</button></center>
+                                        <center><a href="index.php?act=xoaBookingCart&idBook='.$id_booking.'" class="xoabtn"><input class="btn btn-danger" type="button" value="Xóa"></a></center>
 
+                                        <hr>
+                                       
                                 </div>
+                               ';
+
+                                       }
+
+
+
+                                ?>
+                                 <h4 class="text-danger">Tổng tiền: <b id="tongtien"></b></h4>
+                                 <center><button type="button" class=" btn btn-success m-5">Thanh toán</button></center>
 
                         </div>
 
@@ -57,3 +71,7 @@
 
         </div>
 </article>
+<script>
+        var gia = document.querySelectorAll('giatien');
+        console.log(gia);
+</script>

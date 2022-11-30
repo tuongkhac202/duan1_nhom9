@@ -79,7 +79,7 @@ foreach ($tthis as $tt) :
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-1"><i class="fas fa-dollar-sign"></i></div>
-                            <div class="col-11 text-danger">Giá tour: <?php echo $tt['price'] ?> VNĐ</div>
+                            <div class="col-11 text-danger">Giá tour: <?php echo number_format($tt['price'],0,',','.') ?> VNĐ</div>
                         </div>
                         <div class="row mx-0 my-1 col-12">
                             <div class="col-12 text-danger">
