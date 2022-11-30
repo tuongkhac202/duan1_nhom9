@@ -17,7 +17,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3 font-thu-phap" href="index.php"><img src="../upload/logo.png" alt="" height="60"> Yến Tường</a>
+        <a class="navbar-brand ps-3 font-thu-phap" href="../index.php"><img src="../upload/logo.png" alt="" height="60"> Yến Tường</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -80,7 +80,7 @@
                         </a>
                         <a class="nav-link" href="index.php?act=list-tintuc">
                             <div class="sb-nav-link-icon"><i class="far fa-newspaper"></i></div>
-                            TIN TỨC
+                            CẨM NANG
                         </a>
                         <a class="nav-link" href="index.php?act=tk">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
