@@ -10,7 +10,7 @@
         <input class="col form-control mt-2" type="email" name="email" required input placeholder="Email">
         <input class="col form-control mt-2" type="date" name="birth" id="" required placeholder="Ngày sinh">
         <input class="col form-control mt-2" type="text" name="phone" required input placeholder="Số điện thoại">
-        <p>Đã có tài khoản? <a href="index.php?act=dn">Đăng nhập</a></p>
+        <p>Đã có tài khoản? <a class="text-decoration-none" href="index.php?act=dn">Đăng nhập</a></p>
         <button type="submit" class="btn btn-warning w-25 mt-2" name="dangky">Đăng ký </button>
     </form>
     <?php
