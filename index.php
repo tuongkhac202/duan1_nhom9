@@ -131,6 +131,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $ngaybook = date('Y/m/d');
                 $ghichu = $_POST['ghichu'];
                 insert_booking($makh, $matour, $songuoi, $ngaybook, $ghichu);
+                $loadbooking = booking_cart($_SESSION['user']['id_customer']);
                 include 'view/cart.php';
             } else {
                 $id = $_POST['matour'];
