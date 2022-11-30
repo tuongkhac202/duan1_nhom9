@@ -6,7 +6,7 @@ function insert_handbook($title, $content, $img)
 }
 function load_handbook_one($id)
 {
-    $sql = "select * from handbooks where id_handbook= ". $id;
+    $sql = "select * from handbooks where id_handbook= " . $id;
     return pdo_query($sql);
 }
 function load_handbook_all0()
@@ -30,7 +30,7 @@ function load_handbook_all2()
     $sql = "select* from handbooks limit 8,13";
     return pdo_query($sql);
 }
-function update_handbook($id,$tieude,$noidung,$anh)
+function update_handbook($id, $tieude, $noidung, $anh)
 {
     $sql = "update handbooks set title = '$tieude', content = '$noidung', img = '$anh' where id_handbook = '$id'";
     pdo_execute($sql);

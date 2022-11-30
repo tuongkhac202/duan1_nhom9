@@ -22,37 +22,15 @@
                         ?>
 
                 </div>
-                
-
-                <div class="row col-4 py-0 px-5 m-0">
-                        <?php
-                        $handbook = load_handbook_all1();
-                        foreach ($handbook as $handbooks) {
-                                extract($handbooks);
-                                $hinh_handbook = "upload/" . $img;
-                                echo '
-       
-                        <div class="col-12">
-                                <img class="rounded  "  src="' . $hinh_handbook . '" width="100%" height="200">
-                                <p class=" text-danger">Cẩm nang du lịch</p>
-                                <h4 class="text-info "><a class="text-decoration-none" href="index.php?act=handbook-detail&id=' . $id_handbook . '">' . $title . '</a></h4>
-                        </div>
-                ';
-                        }
-                        ?>
-
-                </div>
-
-
-
-                
-
-                <?php
-                $handbook = load_handbook_all2();
-                foreach ($handbook as $handbooks) {
-                        extract($handbooks);
-                        $hinh_handbook = "upload/" . $img;
-                        echo '
+          </div>';    
+        }
+?>
+        <?php
+         $handbook = load_handbook_all2();
+         foreach ($handbook as $handbooks) {
+                 extract($handbooks);
+                 $hinh_handbook = "upload/" . $img;
+                 echo'
                  <hr class="text-primary">
                  <div class="row col-12">
                          <div class=" col-4 m-5">

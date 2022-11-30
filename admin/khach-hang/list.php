@@ -1,33 +1,26 @@
 <div id="layoutSidenav_content">
-  <main>
-    <div class="container-fluid px-4">
-      <h4 class="mt-4">DANH SÁCH KHÁCH HÀNG</h4>
-      <div class="card mb-4">
-        <div class="card-body">
+        <main>
+                <div class="container-fluid px-4">
+                        <h4 class="mt-4">DANH SÁCH KHÁCH HÀNG</h4>
+                        <div class="card mb-4">
+                                <div class="card-body">
+                                        <table class="table table-bordered table-striped table-hover">
+                                                <thead>
+                                                        <tr>
+                                                                <th></th>
+                                                                <th>Mã khách hàng</th>
+                                                                <th>Tên khách hàng</th>
+                                                                <th>Mật khẩu</th>
+                                                                <th>Ngày sinh</th>
+                                                                <th>Số điện thoại</th>
+                                                                <th>Email</th>
+                                                                <th>Tích điểm</th>
+                                                                <th>Vai trò</th>
+                                                                <th>Actions</th>
+                                                        </tr>
+                                                </thead>
 
-
-
-
-
- 
-    
-      <table class="table table-bordered table-striped table-hover">
-        <thead>
-        <tr>
-          <th></th>
-          <th>Mã khách hàng</th>
-          <th>Tên khách hàng</th>
-          <th>Mật khẩu</th>
-          <th>Ngày sinh</th>
-          <th>Số điện thoại</th>
-          <th>Email</th>
-          <th>Tích điểm</th>
-          <th>Vai trò</th>
-          <th>Actions</th>
-        </tr>
-        </thead>
-
-        <?php
+                                                <?php
         foreach ($_SESSION['kh'] as $kh) {
           extract($kh);
 
@@ -55,20 +48,19 @@
         }
         ?>
 
-      </table>
-   
-     
-    </div>
-    </div>
+                                        </table>
 
 
-    <form action="" class="mtt">
-        <input type="button" value="Chọn tất cả  " class="btn btn-success">
-        <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
-        <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger">
-      </form>
+                                </div>
+                        </div>
 
-      </div>
-  </main>
-      </div>
-    
+
+                        <form action="" class="mtt">
+                                <input type="button" value="Chọn tất cả  " class="btn btn-success">
+                                <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
+                                <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger">
+                        </form>
+
+                </div>
+        </main>
+</div>

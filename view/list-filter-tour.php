@@ -1,44 +1,48 @@
 <article>
-  
-  <div class="row tourtim m-0 p-0">
-    <center><h1 class="font-thu-phap text-danger m-0 py-3">Danh sách tour phù hợp với yêu cầu của quý khách </h1></center>
-  </div>
-  <!-- lọc tour -->
-  <div class="row d-none d-xl-block p-3 filter">
-    <div class="row col-xl-8 offset-xl-2 text-center filter-chirld">
-      <form action="index.php?act=filter-tour" method="post" class="row form-filter">
-        <div class="col text-center">
-          <select name="loai" id="loaitour" class="form-select w-100">
-            <option value="">Loại tour</option>
-            <option value="Bắc">Bắc</option>
-            <option value="Trung">Trung</option>
-            <option value="Nam">Nam</option>
-            <option value="all">Tất cả</option>
-          </select>
-        </div>
 
-        <div class="col text-center">
-          <input type="text" placeholder="Địa điểm" class="form-control w-100" name="diadiem" />
+        <div class="row tourtim m-0 p-0">
+                <center>
+                        <h1 class="font-thu-phap text-danger m-0 py-3">Danh sách tour phù hợp với yêu cầu của quý khách
+                        </h1>
+                </center>
         </div>
-        <div class="col text-center">
-          <input type="text" placeholder="Giá" class="form-control w-100" name="gia" />
-        </div>
-        <div class="col text-center">
-          <input type="submit" class="btn btn-danger w-100" value="Tìm kiếm" />
-        </div>
-      </form>
-    </div>
-  </div>
-  <!-- miền bắc -->
-  <div class="mien mien-bac">
-    <div class="contentt text-center text-white">
-      <h3 class="py-4 m-0 font-thu-phap">Tour Miền Bắc</h3>
-    </div>
+        <!-- lọc tour -->
+        <div class="row d-none d-xl-block p-3 filter">
+                <div class="row col-xl-8 offset-xl-2 text-center filter-chirld">
+                        <form action="index.php?act=filter-tour" method="post" class="row form-filter">
+                                <div class="col text-center">
+                                        <select name="loai" id="loaitour" class="form-select w-100">
+                                                <option value="">Loại tour</option>
+                                                <option value="Bắc">Bắc</option>
+                                                <option value="Trung">Trung</option>
+                                                <option value="Nam">Nam</option>
+                                                <option value="all">Tất cả</option>
+                                        </select>
+                                </div>
 
-    <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
+                                <div class="col text-center">
+                                        <input type="text" placeholder="Địa điểm" class="form-control w-100"
+                                                name="diadiem" />
+                                </div>
+                                <div class="col text-center">
+                                        <input type="text" placeholder="Giá" class="form-control w-100" name="gia" />
+                                </div>
+                                <div class="col text-center">
+                                        <input type="submit" class="btn btn-danger w-100" value="Tìm kiếm" />
+                                </div>
+                        </form>
+                </div>
+        </div>
+        <!-- miền bắc -->
+        <div class="mien mien-bac">
+                <div class="contentt text-center text-white">
+                        <h3 class="py-4 m-0 font-thu-phap">Tour Miền Bắc</h3>
+                </div>
 
-      <div class="row m-0 col-8 offset-xl-2 p-xl-0">
-        <?php
+                <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
+
+                        <div class="row m-0 col-8 offset-xl-2 p-xl-0">
+                                <?php
         foreach ($listft as $tour) {
           extract($tour);
           $hinh_tour = "upload/" . $image_tour;
@@ -75,21 +79,21 @@
           }
         }
         ?>
-      </div>
-    </div>
-  </div>
+                        </div>
+                </div>
+        </div>
 
-  <!-- miền trung -->
-  <div class="mien mien-trung">
-    <div class="contentt text-center text-white">
+        <!-- miền trung -->
+        <div class="mien mien-trung">
+                <div class="contentt text-center text-white">
 
-      <h3 class="py-4 m-0 font-thu-phap">Tour Miền Trung</h3>
-    </div>
+                        <h3 class="py-4 m-0 font-thu-phap">Tour Miền Trung</h3>
+                </div>
 
-    <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
+                <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-      <div class="row m-0 col-8 offset-xl-2 p-xl-0">
-        <?php
+                        <div class="row m-0 col-8 offset-xl-2 p-xl-0">
+                                <?php
         foreach ($listft as $tour) {
           extract($tour);
           $hinh_tour = "upload/" . $image_tour;
@@ -126,22 +130,22 @@
           }
         }
         ?>
-      </div>
-    </div>
-  </div>
+                        </div>
+                </div>
+        </div>
 
 
-  <!-- miền nam -->
-  <div class="mien mien-nam">
-    <div class="contentt text-center text-white">
+        <!-- miền nam -->
+        <div class="mien mien-nam">
+                <div class="contentt text-center text-white">
 
-      <h3 class="py-4 m-0 font-thu-phap">Tour Miền Nam</h3>
-    </div>
+                        <h3 class="py-4 m-0 font-thu-phap">Tour Miền Nam</h3>
+                </div>
 
-    <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
+                <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-      <div class="row m-0 col-8 offset-xl-2 p-xl-0">
-        <?php
+                        <div class="row m-0 col-8 offset-xl-2 p-xl-0">
+                                <?php
         foreach ($listft as $tour) {
           extract($tour);
           $hinh_tour = "upload/" . $image_tour;
@@ -178,8 +182,8 @@
           }
         }
         ?>
-      </div>
-    </div>
-  </div>
+                        </div>
+                </div>
+        </div>
 
 </article>

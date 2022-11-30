@@ -2,24 +2,31 @@
            <div class="row m-0 p-0">
 
 
-                   <div class="row m-0 col-12 px-5 d-none d-xl-block email-footer bg-main align-items-center justify-content-center py-0">
+                   <div
+                           class="row m-0 col-12 px-5 d-none d-xl-block email-footer bg-main align-items-center justify-content-center py-0">
                            <div class="row col-12 justify-content-center">
                                    <div class="row col-12 text-white">
-                                           <div class="row m-0 color-main col-12 p-0 email-footer bg-main align-items-center p-4">
-                                                   <div class="row m-0 col-12 py-0 email-footer bg-main align-items-center px-4">
+                                           <div
+                                                   class="row m-0 color-main col-12 p-0 email-footer bg-main align-items-center p-4">
+                                                   <div
+                                                           class="row m-0 col-12 py-0 email-footer bg-main align-items-center px-4">
                                                            <div class="col-1 text-start text-white">
                                                                    <i class="fas fa-envelope-square fa-4x"></i>
                                                            </div>
                                                            <div class="col-7 text-white text-start">
                                                                    <b>Đăng ký nhận bản tin</b>
-                                                                   <p>Nhập email để nhận các chương trình khuyến mãi kèm nhiều ưu đãi hấp dẫn </p>
+                                                                   <p>Nhập email để nhận các chương trình khuyến mãi kèm
+                                                                           nhiều ưu đãi hấp dẫn </p>
 
                                                            </div>
 
-                                                           <div class="col-4 d-flex align-items-center justify-content-evenly text-end">
+                                                           <div
+                                                                   class="col-4 d-flex align-items-center justify-content-evenly text-end">
 
-                                                                   <input id="email" type="email" placeholder="Email" class=" form-control w-75 d-inline">
-                                                                   <input id="submit" type="submit" value="Đăng ký" class="btn btn-danger d-inline">
+                                                                   <input id="email" type="email" placeholder="Email"
+                                                                           class=" form-control w-75 d-inline">
+                                                                   <input id="submit" type="submit" value="Đăng ký"
+                                                                           class="btn btn-danger d-inline">
                                                            </div>
                                                    </div>
                                            </div>
@@ -66,22 +73,22 @@
    <!-- Trần Tường thêm -->
    <!-- js slider -->
    <script>
-           let slideIndex = 0;
-           showSlides();
+let slideIndex = 0;
+showSlides();
 
-           function showSlides() {
-                   let i;
-                   let slides = document.getElementsByClassName("mySlides");
-                   for (i = 0; i < slides.length; i++) {
-                           slides[i].style.display = "none";
-                   }
-                   slideIndex++;
-                   if (slideIndex > slides.length) {
-                           slideIndex = 1
-                   }
-                   slides[slideIndex - 1].style.display = "block";
-                   setTimeout(showSlides, 4000); // Change image every 2 seconds
-           }
+function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+                slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
    </script>
    <!--end js slider -->
 
