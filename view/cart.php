@@ -46,7 +46,7 @@
                                         <b>Trạng thái: ' . $status . '</b>
                                         <br>
                                         <br>
-                                        <center><a href="index.php?act=xoaBookingCart&idBook='.$id_booking.'" class="xoabtn"><input class="btn btn-danger" type="button" value="Xóa"></a></center>
+                                        <center><a href="index.php?act=xoaBookingCart&idBook='.$id_booking.'" class="xoabtn btn btn-danger"><i class="fas fa-trash-alt"></i></a></center>
 
                                         <hr>
                                        
