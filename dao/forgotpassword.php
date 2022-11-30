@@ -12,8 +12,8 @@ function send_email($user, $code, $user_name)
         $mail->CharSet = "utf-8";
         $mail->Host = 'smtp.gmail.com'; //SMTP servers
         $mail->SMTPAuth = true; // Enable authentication
-        $nguoigui = 'yenttbpc03450@fpt.edu.vn';
-        $matkhau = 'yenyen12a';
+        $nguoigui = 'yentuong1166@gmail.com';
+        $matkhau = 'congtyyentuong';
         $tennguoigui = 'Công ty Yến Tường';
         $mail->Username = $nguoigui; // SMTP username
         $mail->Password = $matkhau; // SMTP password
@@ -25,8 +25,8 @@ function send_email($user, $code, $user_name)
 
         $mail->addAddress($to, $to_name); //mail và tên người nhận
         $mail->isHTML(true); // Set email format to HTML
-        $mail->Subject = '';
-        $noidungthu = "<span>Xin chào ,$user_name</span><br><br><span>Mã lấy lại mật khẩu của:$code</span>";
+        $mail->Subject = 'Mã xác minh mật khẩu của bạn';
+        $noidungthu = "<span>Xin chào ,$user_name</span><br><br><span>Mã lấy lại mật khẩu của bạn là:$code</span>";
         $mail->Body = $noidungthu;
         $mail->smtpConnect(array(
             "ssl" => array(
