@@ -26,8 +26,10 @@
                                         <h3 class="text-center color-main">Thông tin dịch vụ</h3>
                                 </div>
                                 <?php
+                                $tongtien = 0;
                                        foreach($loadbooking as $cart){
                                         extract($cart);
+                                        $tongtien += (float)$price;
                                         $hinh_tour = "upload/" . $image_tour;
                                 echo '
                                 <div class="m-3">
@@ -60,7 +62,7 @@
 
 
                                 ?>
-                                 <h4 class="text-danger">Tổng tiền: <b id="tongtien"></b></h4>
+                                 <h4 class="text-danger">Tổng tiền: <?php echo number_format($tongtien,0,'','.') ?> VNĐ</b></h4>
                                  <center><button type="button" class=" btn btn-success m-5">Thanh toán</button></center>
 
                         </div>
@@ -73,7 +75,3 @@
 
         </div>
 </article>
-<script>
-        var gia = document.querySelectorAll('giatien');
-        console.log(gia);
-</script>
