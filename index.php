@@ -154,22 +154,33 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case 'forgot_password':
             if (isset($_POST['send_code']) && ($_POST['send_code'])) {
                 $email = $_POST['email'];
-                var_dump($email);
-
+                if (empty($email)) {
+                    echo "<script>
+                    alert('Không được để trống email');
+                    history.back();
+                    </script>";
+                    die;
+                }   
                 $check_email = check_email($email);
-                var_dump($check_email);
-                $user_id = $check_email['id_customer'];
-                $user_name = $check_email['name'];
-                $code = random_int(100000, 999999);
-                $ex_code = date("Y-m-d H:i:s", strtotime("+10 minutes"));
-                $date = date("Y-m-d H:i:s");
-                $sql = "insert into get_code(id_customer,expiry,date,code) values(?,?,?,?)";
-                pdo_execute($sql, $user_id, $ex_code, $date, $code);
-                send_email($email, $code, $user_name);
-                echo "<script>
-                alert('Gửi mail thành công');
-                window.location.href='index.php?act=update_password';
-                </script>";
+                if (is_array($check_email)) {
+                    $user_id = $check_email['id_customer'];
+                    $user_name = $check_email['name'];
+                    $code = random_int(100000, 999999);
+                    $ex_code = date("Y-m-d H:i:s", strtotime("+10 minutes"));
+                    $date = date("Y-m-d H:i:s");
+                    $sql = "insert into get_code(id_customer,expiry,date,code) values(?,?,?,?)";
+                    pdo_execute($sql, $user_id, $ex_code, $date, $code);
+                    send_email($email, $code, $user_name);
+                    echo "<script>
+                    alert('Gửi mail thành công');
+                    window.location.href='index.php?act=update_password';
+                    </script>";
+                }else{
+                    echo "<script>
+                    alert('Email không tồn tại');
+                    </script>";
+                }
+               
             }
 
             include 'view/forgot_pass.php';
