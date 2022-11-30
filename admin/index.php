@@ -1,348 +1,228 @@
 <?php
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 session_start();
-include '../dao/pdo.php';
-include '../dao/dia-diem.php';
-include "../dao/khach-hang.php";
-include "../dao/binh-luan.php";
-include "../dao/thong-ke.php";
-include "../dao/tour.php";
-include "../dao/booking.php";
-include "../dao/handbook.php";
-if (isset($_POST['dn'])) {
-    $name = $_POST['name'];
-    $pass = $_POST['pass'];
-    $_SESSION['admin'] = checkUser($name, $pass);
-}
-if (!isset($_SESSION['admin']) || $_SESSION['admin']['role'] != 1) {
-    header('Location: login-admin.php');
-}
-include "header.php";
+include 'dao/pdo.php';
+include 'dao/tour.php';
+include 'view/header.php';
+include 'dao/khach-hang.php';
+include 'dao/binh-luan.php';
+include 'dao/booking.php';
+include 'dao/handbook.php';
+include 'dao/forgotpassword.php';
 
-
-
-//controller
-if (isset($_GET["act"])) {
-    $act = $_GET["act"];
+// code dưới này
+if (isset($_GET['act']) && $_GET['act'] != "") {
+    $act = $_GET['act'];
     switch ($act) {
-            // địa điểm 
-        case 'addloai':
-            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                $tenloai = $_POST['tenloai'];
-                $diachi = $_POST['diachi'];
-                $hinh = $_FILES['hinh']['name'];
-                $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
-
-                if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
-                    // echo "The file ". htmlspecialchars( basename( $_FILES["hinhhh"]["name"])). " has been uploaded.";
-                } else {
-                    // echo "Sorry, there was an error uploading your file.";
-                }
-                insert_places($tenloai, $diachi, $hinh);
-                $thongbao = "thêm thành công";
-            }
-            include "dia-diem/new.php";
+            // liên hệ
+        case 'lh':
+            include 'view/contact.php';
             break;
+            // đăng ký
+        case 'dk':
+            if (isset($_POST['dangky'])) {
 
-        case 'listloai':
-            $listloai = load_list();
-            include "dia-diem/list.php";
-            break;
-
-        case 'xoaloai':
-            if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
-                delete_places($_GET['maloai']);
-            }
-            $listloai = load_list();
-            include "dia-diem/list.php";
-            break;
-
-        case 'sualoai':
-            if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
-                $dm = load_one($_GET['maloai']);
-            }
-            include "dia-diem/edit.php";
-            break;
-
-
-        case 'updateloai':
-            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                $tenloai = $_POST['tenloai'];
-                $maloai = $_POST['maloai'];
-                $diachi = $_POST['diachi'];
-                $hinh = $_FILES['hinh']['name'];
-                $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
-
-                if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
-                    // echo "The file ". htmlspecialchars( basename( $_FILES["hinhhh"]["name"])). " has been uploaded.";
-                } else {
-                    // echo "Sorry, there was an error uploading your file.";
-                }
-                update_places($maloai, $tenloai, $diachi, $hinh);
-            }
-            $listloai = load_list();
-            include 'dia-diem/list.php';
-            break;
-
-
-            // tour
-        case 'addhh':
-            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                $tentour = $_POST['tentour'];
-                $iddd = $_POST['iddd'];
-                $loaitour = $_POST['cate'];
-                $start = $_POST['start'];
-                $end = $_POST['end'];
-                $gia = $_POST['gia'];
-                $giamgia = $_POST['giamgia'];
-                $mota = $_POST['mota'];
-                $hinh = $_FILES['hinhhh']['name'];
-                $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES["hinhhh"]["name"]);
-
-                if (move_uploaded_file($_FILES["hinhhh"]["tmp_name"], $target_file)) {
-                    // echo "The file ". htmlspecialchars( basename( $_FILES["hinhhh"]["name"])). " has been uploaded.";
-                } else {
-                    // echo "Sorry, there was an error uploading your file.";
-                }
-
-
-
-                insert_tour($tentour, $iddd, $loaitour, $start, $end, $gia, $giamgia, $mota, $hinh);
-                $thongbao = "thêm thành công";
-            }
-            $listloai = load_list();
-            include "tour/new.php";
-            break;
-
-
-        case 'listhh':
-            if (isset($_POST['listok']) && ($_POST['listok'])) {
-                $kw = $_POST['kw'];
-                $maloai = $_POST['maloai'];
-            } else {
-                $kw = "";
-                $maloai = 0;
-            }
-
-            $listhh = load_list_tour();
-            include "tour/list.php";
-            break;
-
-        case 'xoahh':
-            if (isset($_GET['mahh']) && ($_GET['mahh'] > 0)) {
-                delete_tour($_GET['mahh']);
-            }
-            $listhh = load_list_tour();
-            include "tour/list.php";
-            break;
-
-        case 'suahh':
-            if (isset($_GET['mahh']) && ($_GET['mahh'] > 0)) {
-                $hh = load_onehh($_GET['mahh']);
-            }
-            $listloai = load_list();
-            include "tour/edit.php";
-            break;
-
-        case 'updatehh':
-            if (isset($_POST['capnhathh']) && ($_POST['capnhathh'])) {
-                $matour = $_POST['matour'];
-                $tentour = $_POST['tentour'];
-                $loaitour = $_POST['cate'];
-                $iddd = $_POST['iddd'];
-                $start = $_POST['start'];
-                $end = $_POST['end'];
-                $gia = $_POST['gia'];
-                $giamgia = $_POST['giamgia'];
-                $mota = $_POST['mota'];
-                $hinh = $_FILES['hinhhh']['name'];
-                $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES["hinhhh"]["name"]);
-
-                if (move_uploaded_file($_FILES["hinhhh"]["tmp_name"], $target_file)) {
-                    // echo "The file ". htmlspecialchars( basename( $_FILES["hinhhh"]["name"])). " has been uploaded.";
-                } else {
-                    // echo "Sorry, there was an error uploading your file.";
-                }
-                update_tour($matour, $iddd, $tentour, $loaitour, $start, $end, $gia, $giamgia, $mota, $hinh);
-            }
-            $listhh = load_list_tour();
-            include 'tour/list.php';
-            break;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //khách hàng
-        case 'dskh':
-            $listkh = listkh();
-            $_SESSION['kh'] = $listkh;
-            include "khach-hang/list.php";
-            break;
-
-        case 'suakh':
-            if (isset($_GET['makh']) && ($_GET['makh'] > 0)) {
-                $kh = select_kh($_GET['makh']);
-            }
-            $listkh = listkh();
-            include "khach-hang/edit.php";
-            break;
-
-
-        case 'updatekh':
-            if (isset($_POST['capnhatkh']) && ($_POST['capnhatkh'])) {
-                $makh = $_POST['makh'];
-                $tenkh = $_POST['tenkh'];
+                $name = $_POST['name'];
+                $pass = $_POST['pass'];
+                $birth = $_POST['birth'];
+                $phone = $_POST['phone'];
                 $email = $_POST['email'];
-                $sdt = $_POST['sdt'];
-                $vaitro = $_POST['vaitro'];
-
-                update_kh_admin($makh, $tenkh, $email, $sdt, $vaitro);
+                insert_customers($name, $pass, $birth, $phone, $email);
+                $tb = "Đăng ký thành công";
             }
-            $listkh = listkh();
-            $_SESSION['kh'] = $listkh;
-            include 'khach-hang/list.php';
+            include 'view/register.php';
             break;
+            //  dăng nhập
+        case 'dn':
+            if (isset($_POST['dn'])) {
+                $name = $_POST['name'];
+                $pass = $_POST['pass'];
+                $check = checkUser($name, $pass);
+                if (is_array($check)) {
+                    $_SESSION['user'] = $check;
 
-
-        case 'xoakh':
-            if (isset($_GET['makh']) && ($_GET['makh'] > 0)) {
-                delete_customers($_GET['makh']);
+                    header('Location:index.php');
+                } else {
+                    header('Location:index.php?act=dn');
+                }
             }
-            $listkh = listkh();
-            $_SESSION['kh'] = $listkh;
-            include "khach-hang/list.php";
+            include 'view/login.php';
             break;
 
-
-
-
-            // bình luận
-        case 'dsbl':
-            $listbl = select_all_binh_luan();
-            include "binh-luan/list.php";
+            // đăng xuất
+        case 'dx':
+            session_unset();
+            include 'view/home.php';
             break;
-        case 'xoabl':
-            if (isset($_GET['mabl']) && ($_GET['mabl'] > 0)) {
-                binh_luan_delete($_GET['mabl']);
+
+            // cẩm nang
+        case 'handbook':
+            include 'view/handbook.php';
+            break;
+            //chi tiết cẩm nang
+        case 'handbook-detail':
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                $id = $_GET['id'];
+                $handbook_this = load_handbook_one($id);
+                extract($handbook_this);
+                include 'view/handbook-detail.php';
+            } else {
+                include "view/home.php";
             }
-            $listbl = select_all_binh_luan();
-            $_SESSION['bl'] = $listbl;
-            include "binh-luan/list.php";
             break;
 
-
-            // booking
-
-        case 'listbook':
-            $listbook = select_all_booking();
-            include "booking/list.php";
+            // danh sách du lịch
+        case 'dl':
+            include 'view/list-tour.php';
             break;
-        case 'xoabook':
-            if (isset($_GET['mabook']) && ($_GET['mabook'] > 0)) {
-                booking_delete($_GET['mabook']);
+
+            //giỏ hàng
+        case 'cart':
+            $loadbooking = booking_cart($_SESSION['user']['id_customer']);
+            include 'view/cart.php';
+            break;
+            // xóa tour cho khách hàng
+            case 'xoaBookingCart':
+                $idBook = $_GET['idBook'];
+                booking_delete_cart($_SESSION['user']['id_customer'],$idBook);
+                $loadbooking = booking_cart($_SESSION['user']['id_customer']);
+                include 'view/cart.php';
+                break;
+
+            // chi tiết tour du lịch
+        case 'ctt':
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                $id = $_GET['id'];
+                $tthis = load_tour_one($id);
+                extract($tthis);
+                include 'view/tour-detail.php';
+            } else {
+                include "view/home.php";
             }
-            $listbook = select_all_booking();
-            $_SESSION['book'] = $listbook;
-            include "booking/list.php";
             break;
 
-
-            // Tin tức
-        case 'add-tintuc':
-            if (isset($_POST['themmoi-tintuc']) && ($_POST['themmoi-tintuc'])) {
-                $tieude = $_POST['tieuDe'];
-                $noidung = $_POST['noiDung'];
-                $hinh = $_FILES['anh']['name'];
-                $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES["anh"]["name"]);
-                move_uploaded_file($_FILES["anh"]["tmp_name"], $target_file);
-                insert_handbook($tieude, $noidung, $hinh);
-                $thongbao = "thêm thành công";
+            // bình luận tour
+        case 'binh-luan-tour':
+            $id = $_GET['id'];
+            $tthis = load_tour_one($id);
+            if (isset($_SESSION['user'])) {
+                if (isset($_POST['bl'])) {
+                    $makh = $_SESSION['user']['id_customer'];
+                    $nd = $_POST['ndbl'];
+                    $matour = $_POST['idtour'];
+                    $ngay = date('Y/m/d');
+                    binh_luan_insert($makh, $matour, $nd, $ngay);
+                }
             }
-            include "tin-tuc/new.php";
+            include 'view/tour-detail.php';
             break;
 
-        case 'list-tintuc':
-            $list_tintuc = load_handbook_all0();
-            include "tin-tuc/list.php";
+            //giới thiệu
+        case 'gt':
+            include 'view/introduce.php';
             break;
 
-        case 'xoatt':
-            if (isset($_GET['matt']) && ($_GET['matt'] > 0)) {
-                delete_handbook($_GET['matt']);
+            // book tour trong chi tiết tour
+        case 'bo':
+            if (isset($_SESSION['user'])) {
+                $makh = $_SESSION['user']['id_customer'];
+                $matour = $_POST['matour'];
+                $songuoi = $_POST['songuoi'];
+                $ngaybook = date('Y/m/d');
+                $ghichu = $_POST['ghichu'];
+                insert_booking($makh, $matour, $songuoi, $ngaybook, $ghichu);
+                $loadbooking = booking_cart($_SESSION['user']['id_customer']);
+                include 'view/cart.php';
+            } else {
+                $id = $_POST['matour'];
+                $tthis = load_tour_one($id);
+                include 'view/tour-detail.php';
             }
-            $list_tintuc = load_handbook_all0();
-            include "tin-tuc/list.php";
             break;
 
-        case 'suatt':
-            if (isset($_GET['matt'])){
-                $tt = load_handbook_one($_GET['matt']);
+
+            //lọc tour 
+            case 'filter-tour':
+            $loai = $_POST['loai'];
+            $diadiem = $_POST['diadiem'];
+            $gia = $_POST['gia'];
+            $listft = filter_tour($loai, $diadiem, $gia);
+            include 'view/list-filter-tour.php';
+            break;
+
+            //quên mật khẩu
+        case 'forgot_password':
+            if (isset($_POST['send_code']) && ($_POST['send_code'])) {
+                $email = $_POST['email'];
+                var_dump($email);
+
+                $check_email = check_email($email);
+                var_dump($check_email);
+                $user_id = $check_email['id_customer'];
+                $user_name = $check_email['name'];
+                $code = random_int(100000, 999999);
+                $ex_code = date("Y-m-d H:i:s", strtotime("+10 minutes"));
+                $date = date("Y-m-d H:i:s");
+                $sql = "insert into get_code(id_customer,expiry,date,code) values(?,?,?,?)";
+                pdo_execute($sql, $user_id, $ex_code, $date, $code);
+                send_email($email, $code, $user_name);
+                echo "<script>
+                alert('Gửi mail thành công');
+                window.location.href='index.php?act=update_password';
+                </script>";
             }
-            include "tin-tuc/edit.php";
+
+            include 'view/forgot_pass.php';
             break;
 
 
-        case 'update_tintuc':
-            if (isset($_POST['capnhattt']) && ($_POST['capnhattt'])) {
-                $matintuc = $_POST['matt'];
-                $tieude = $_POST['tieude'];
-                $noidung = $_POST['noidung'];
-                $hinh = $_FILES['anh']['name'];
-                $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES["anh"]["name"]);
-                move_uploaded_file($_FILES["anh"]["tmp_name"], $target_file);
+        case 'update_password':
+            if (isset($_POST['update_pass']) && ($_POST['update_pass'])) {
+                $code = $_POST['code'];
+                $check_code = get_code($code);
+                $get_code_id = $check_code['get_code_id'];
+                $user_id = $check_code['id_customer'];
+                $newpass = $_POST['new_password'];
+                $renewpass = $_POST['renew_password'];
+                $date = date("Y-m-d H:i:s");
+                $ex_code = $check_code['expiry'];
+                $status = $check_code['status'];
+                if ($date > $ex_code) {
+                    echo "<script>
+                alert('Mã code đã hết hạn');
+                window.location.href='index.php?act=update_password';
+                </script>";
+                } else if ($status == 1) {
+                    echo "<script>
+                alert('Mã đã được sử dụng');
+                window.location.href='index.php?act=update_password';
+                </script>";
+                } else if ($newpass != $renewpass) {
+                    echo "<script>
+                alert('Mật khẩu không khớp');
+                window.location.href='index.php?act=update_password';
+                </script>";
+                }
 
-                update_handbook($matintuc, $tieude, $noidung, $hinh);
+                if (is_array($check_code)) {
+                    update_status($get_code_id);
+                    update_password($newpass, $user_id);
+                    echo "<script>
+                            alert('Cập nhật thành công');
+                            window.location.href='index.php?act=dn';
+                            </script>";
+                }
             }
-            $list_tintuc = load_handbook_all0();
-            include 'tin-tuc/list.php';
+            include 'view/update_password.php';
+
             break;
-
-
-
-
-
-
-
-
-
-            // thống kê
-        case 'tk':
-            $listtk = thong_ke_tour();
-            include "thong-ke/list.php";
-            break;
-        case 'bdtk':
-            $listtk = thong_ke_tour();
-            include "thong-ke/bieudo.php";
-            break;
-            // logout admin
-        case 'logout-admin':
-            session_destroy();
-            break;
-
-
-
 
         default:
-            include "home.php";
+            include 'view/home.php';
             break;
     }
 } else {
-    include "home.php";
+    include 'view/home.php';
 }
 
-include "footer.php";
+include 'view/footer.php';

@@ -1,6 +1,6 @@
 <?php
-if (is_array($hh)) {
-  extract($hh);
+if (is_array($tour)) {
+  extract($tour);
 }
 $hinhpath = "../upload/" . $image_tour;
 if (is_file($hinhpath)) {
@@ -26,7 +26,7 @@ if (is_file($hinhpath)) {
 
 
 
-                                        <form action="index.php?act=updatehh" method="post" class="formcontent mt"
+                                        <form action="index.php?act=updatetour" method="post" class="formcontent mt"
                                                 enctype="multipart/form-data">
                                                 <input hidden type="text" name="matour" value="<?php echo $id_tour ?>">
 
@@ -36,7 +36,7 @@ if (is_file($hinhpath)) {
         <select name="maloai" id="">
           <option value="0" selected>Tất cả</option>
           < ?php
-          foreach ($listloai as $loai) {
+          foreach ($listDiaDiem as $loai) {
             extract($loai);
             if ($ma_loai == $ma_Loai) {
               $s = "selected";
@@ -75,10 +75,10 @@ if (is_file($hinhpath)) {
                                                         <select name="iddd">
                                                                 <!-- <option value="<?php echo $_GET['tendd']  ?>"><?php echo $_GET['tendd'] ?></option> -->
                                                                 <?php
-                  foreach ($listloai as $loai) {
+                  foreach ($listDiaDiem as $loai) {
                     extract($loai);
                     echo '<option ';  
-                    echo $loai['id_place']==$hh['id_place']?'selected':''; 
+                    echo $loai['id_place']==$tour['id_place']?'selected':''; 
                     echo ' value="'.$id_place.'">'.$name_place.'</option>';
                   }
                 ?>
@@ -118,7 +118,7 @@ if (is_file($hinhpath)) {
                                                 <div class="row mb10">
                                                         Ảnh
                                                         <br />
-                                                        <input type="file" name="hinhhh" value="" />
+                                                        <input type="file" name="hintour" value="" />
                                                         <?php echo $image_tour ?>
                                                 </div>
                                                 <br />
@@ -137,9 +137,9 @@ if (is_file($hinhpath)) {
 
                                                 <br />
                                                 <input class="btn btn-success" value="Cập nhật" type="submit"
-                                                        name="capnhathh"></input>
+                                                        name="capnhattour"></input>
                                                 <button class="btn btn-warning" type="reset">Nhập lại</button>
-                                                <button class="btn btn-info"><a href="index.php?act=listhh"
+                                                <button class="btn btn-info"><a href="index.php?act=listtour"
                                                                 style="text-decoration: none;">Danh sách
                                                                 tour</a></button>
                                                 <?php

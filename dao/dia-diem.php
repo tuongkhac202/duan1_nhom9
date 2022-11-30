@@ -11,11 +11,11 @@ function delete_places($id)
     pdo_execute($sql);
 }
 
-function load_list()
+function load_list_diaDiem()
 {
     $sql = "select * from places";
-    $listloai = pdo_query($sql);
-    return $listloai;
+    $listDiaDiem = pdo_query($sql);
+    return $listDiaDiem;
 }
 
 function load_one($id)

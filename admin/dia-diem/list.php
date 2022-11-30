@@ -19,11 +19,11 @@
 
                                                 <tbody>
                                                         <?php
-        foreach ($listloai as $loai) {
+        foreach ($listDiaDiem as $loai) {
           extract($loai);
 
-          $sualoai = "index.php?act=sualoai&maloai=" . $id_place;
-          $xoaloai = "index.php?act=xoaloai&maloai=" . $id_place;
+          $suaDiaDiem = "index.php?act=suaDiaDiem&maloai=" . $id_place;
+          $xoaDiaDiem = "index.php?act=xoaDiaDiem&maloai=" . $id_place;
           $hinhpath = "../upload/" . $image_place;
           if (is_file($hinhpath)) {
             $image_place = "<img src='" . $hinhpath . "' height='60' width='100'>";
@@ -39,8 +39,8 @@
           <td>' . $address_place . '</td>
           <td>' . $image_place . '</td>
           <td>
-           <a href="' . $sualoai . '" class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
-           <a href="' . $xoaloai . '" class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger"></a>
+           <a href="' . $suaDiaDiem . '" class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
+           <a href="' . $xoaDiaDiem . '" class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger"></a>
           </td>
           </tr>
           ';
@@ -64,7 +64,7 @@
                                 <input type="button" value="Chọn tất cả  " class="btn btn-success">
                                 <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
                                 <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger">
-                                <button class="btn btn-warning"><a href="index.php?act=addloai">Nhập thêm</a></button>
+                                <button class="btn btn-warning"><a href="index.php?act=addDiaDiem">Nhập thêm</a></button>
                         </form>
 
 

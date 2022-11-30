@@ -37,12 +37,12 @@
     </div>
     <?php
     if (isset($_POST['bl']) && ($_POST['bl'])) {
-        $makh = $_SESSION['user']['id_customer'];
+        $maKhachHang = $_SESSION['user']['id_customer'];
         $nd = $_POST['ndbl'];
         $matour = $_POST['idtour'];
-        echo $makh;
+        echo $maKhachHang;
         $ngay = date('Y/m/d');
-        binh_luan_insert($makh, $matour, $nd, $ngay);
+        binh_luan_insert($maKhachHang, $matour, $nd, $ngay);
         header("Location: " . $_SERVER['HTTP_REFERER']);
     }
     ?>
