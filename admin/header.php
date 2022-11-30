@@ -37,7 +37,7 @@
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    <li><a class="dropdown-item" href="index.php?act=logout-admin">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -87,12 +87,12 @@
                             THỐNG KÊ
                         </a>
                        
-                        <a class="nav-link" href="index.php?act=logout-admin">
+                        <!-- <a class="nav-link" href="index.php?act=logout-admin">
                         <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
                             ĐĂNG XUẤT ADMIN
                             
                         </a>
-                    </div>
+                    </div> -->
                 </div>
 
             </nav>
