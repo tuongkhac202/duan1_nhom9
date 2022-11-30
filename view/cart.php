@@ -1,5 +1,5 @@
 <article>
-        <div class="w-75 h-50 border border-primaryk m-5 d-block mx-auto">
+        <div class="w-75 border border-primaryk m-5 d-block mx-auto">
                 <div class="row">
                         <div class="col-6">
 
