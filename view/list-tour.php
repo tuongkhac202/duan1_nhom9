@@ -69,7 +69,7 @@
             <p><i class="far fa-clock"></i> &ensp;' . $day_start . ' - ' . $day_end . '</p>
           </div>
           <div class="row m-0 footer-tour">
-            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . $price . ' đ</p></div>
+            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
             <div class="col text-center">
               <button class="btn btn-danger"><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
             </div>
@@ -125,7 +125,7 @@
             <p><i class="far fa-clock"></i> &ensp;' . $day_start . ' - ' . $day_end . '</p>
           </div>
           <div class="row m-0 footer-tour">
-            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . $price . ' đ</p></div>
+            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
             <div class="col text-center">
               <button class="btn btn-danger"><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
             </div>
@@ -181,7 +181,7 @@
             <p><i class="far fa-clock"></i> &ensp;' . $day_start . ' - ' . $day_end . '</p>
           </div>
           <div class="row m-0 footer-tour">
-            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . $price . ' đ</p></div>
+            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
             <div class="col text-center">
               <button class="btn btn-danger"><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
             </div>
