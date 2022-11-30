@@ -58,7 +58,7 @@
 
 
                                 ?>
-                                 <h4 class="text-danger">Tổng tiền: <b id="tongtien"></b></h4>
+                                 <h4 class="text-danger">Tổng tiền: <b id="tongtien">33.000.000 vnđ</b></h4>
                                  <center><button type="button" class=" btn btn-success m-5">Thanh toán</button></center>
 
                         </div>
@@ -72,6 +72,6 @@
         </div>
 </article>
 <script>
-        var gia = document.querySelectorAll('giatien');
+        var gia = document.querySelectorAll('.giatien');
         console.log(gia);
 </script>
