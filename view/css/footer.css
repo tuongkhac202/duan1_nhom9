@@ -1,12 +1,11 @@
-
- /* footer yến */
- .footer{
+/* footer yến */
+.footer {
     background: url('../../upload/banner_footer.png');
     background-size: cover;
     position: relative;
-   
-}
-.email-footer{
-    background: #3AA88E;
+
 }
 
+.email-footer {
+    background: #3AA88E;
+}

@@ -10,8 +10,10 @@
 
                 <input class="col  form-control mt-2" type="password" name="pass" required input placeholder="Mật khẩu">
 
-                <p>Chưa có tài khoản? <a class="text-decoration-none text-warning" href="index.php?act=dk">Đăng ký</a></p>
-                <p><a class="text-decoration-none text-warning" href="index.php?act=forgot_password">Quên mật khẩu</a></p>
+                <p>Chưa có tài khoản? <a class="text-decoration-none text-warning" href="index.php?act=dk">Đăng ký</a>
+                </p>
+                <p><a class="text-decoration-none text-warning" href="index.php?act=forgot_password">Quên mật khẩu</a>
+                </p>
                 <button type="submit" class="btn btn-warning w-25 mt-2" name="dn">Đăng nhập </button>
 
         </form>

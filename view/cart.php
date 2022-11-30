@@ -7,8 +7,10 @@
 
                                         <h3 class="text-center color-main ">Thông tin người đặt</h3>
                                 </div>
-                                <div class="py-2 m-3 bg-light px-4 py-5"> <br><input class="rounded form-control" type="text" placeholder="Họ và tên">
-                                        <br><input class="rounded  form-control" type="phone" placeholder="Số điện thoại">
+                                <div class="py-2 m-3 bg-light px-4 py-5"> <br><input class="rounded form-control"
+                                                type="text" placeholder="Họ và tên">
+                                        <br><input class="rounded  form-control" type="phone"
+                                                placeholder="Số điện thoại">
                                         <br><input class="rounded  form-control" type="email" placeholder="Email">
                                         <br><input class="rounded  form-control" type="text" placeholder="Mã giảm giá">
                                         <br>
@@ -58,8 +60,8 @@
 
 
                                 ?>
-                                 <h4 class="text-danger">Tổng tiền: <b id="tongtien"></b></h4>
-                                 <center><button type="button" class=" btn btn-success m-5">Thanh toán</button></center>
+                                <h4 class="text-danger">Tổng tiền: <b id="tongtien"></b></h4>
+                                <center><button type="button" class=" btn btn-success m-5">Thanh toán</button></center>
 
                         </div>
 
@@ -72,6 +74,6 @@
         </div>
 </article>
 <script>
-        var gia = document.querySelectorAll('giatien');
-        console.log(gia);
+var gia = document.querySelectorAll('giatien');
+console.log(gia);
 </script>

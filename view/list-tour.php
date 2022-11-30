@@ -1,48 +1,48 @@
 <article>
 
-  <!-- ảnh banner -->
-  <div class="row m-0 banner">
-    <div class="col-12 p-0">
-      <!-- Slideshow container -->
-      <div class="slideshow-container m-0">
+        <!-- ảnh banner -->
+        <div class="row m-0 banner">
+                <div class="col-12 p-0">
+                        <!-- Slideshow container -->
+                        <div class="slideshow-container m-0">
 
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-          <img src="upload/BANNER1.jpg" style="width:100%">
+                                <!-- Full-width images with number and caption text -->
+                                <div class="mySlides fade">
+                                        <img src="upload/BANNER1.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides fade">
+                                        <img src="upload/BANNER2.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides fade">
+                                        <img src="upload/BANNER3.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides fade">
+                                        <img src="upload/BANNER4.jpg" style="width:100%">
+                                </div>
+
+                        </div>
+
+                </div>
         </div>
 
-        <div class="mySlides fade">
-          <img src="upload/BANNER2.jpg" style="width:100%">
-        </div>
 
-        <div class="mySlides fade">
-          <img src="upload/BANNER3.jpg" style="width:100%">
-        </div>
+        <!-- miền bắc -->
 
-        <div class="mySlides fade">
-          <img src="upload/BANNER4.jpg" style="width:100%">
-        </div>
+        <div class="mien mien-bac">
+                <div class="contentt text-center text-white">
+                        <p class="pt-2 mb-1">
+                                Khám phá lịch sử, văn hóa, con người miền Bắc với
+                        </p>
+                        <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Bắc</h3>
+                </div>
 
-      </div>
+                <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-    </div>
-  </div>
-
-
-  <!-- miền bắc -->
-
-  <div class="mien mien-bac">
-    <div class="contentt text-center text-white">
-      <p class="pt-2 mb-1">
-        Khám phá lịch sử, văn hóa, con người miền Bắc với
-      </p>
-      <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Bắc</h3>
-    </div>
-
-    <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
-
-      <div class="row m-0 col-8 offset-xl-2 p-xl-0">
-        <?php
+                        <div class="row m-0 col-8 offset-xl-2 p-xl-0">
+                                <?php
         $cate = "Bắc";
         $tours = load_tour($cate);
         foreach ($tours as $tour) {
@@ -81,23 +81,23 @@
         }
 
         ?>
-      </div>
-    </div>
-  </div>
+                        </div>
+                </div>
+        </div>
 
-  <!-- miền trung -->
-  <div class="mien mien-trung">
-    <div class="contentt text-center text-white">
-      <p class="pt-2 mb-1">
-        Khám phá lịch sử, văn hóa, con người miền Trung với
-      </p>
-      <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Trung</h3>
-    </div>
+        <!-- miền trung -->
+        <div class="mien mien-trung">
+                <div class="contentt text-center text-white">
+                        <p class="pt-2 mb-1">
+                                Khám phá lịch sử, văn hóa, con người miền Trung với
+                        </p>
+                        <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Trung</h3>
+                </div>
 
-    <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
+                <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-      <div class="row m-0 col-8 offset-xl-2 p-xl-0">
-        <?php
+                        <div class="row m-0 col-8 offset-xl-2 p-xl-0">
+                                <?php
         $cate = "Trung";
         $tours = load_tour($cate);
         foreach ($tours as $tour) {
@@ -137,24 +137,24 @@
         }
 
         ?>
-      </div>
-    </div>
-  </div>
+                        </div>
+                </div>
+        </div>
 
 
-  <!-- miền nam -->
-  <div class="mien mien-nam">
-    <div class="contentt text-center text-white">
-      <p class="pt-2 mb-1">
-        Khám phá lịch sử, văn hóa, con người miền Nam với
-      </p>
-      <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Nam</h3>
-    </div>
+        <!-- miền nam -->
+        <div class="mien mien-nam">
+                <div class="contentt text-center text-white">
+                        <p class="pt-2 mb-1">
+                                Khám phá lịch sử, văn hóa, con người miền Nam với
+                        </p>
+                        <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Nam</h3>
+                </div>
 
-    <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
+                <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
 
-      <div class="row m-0 col-8 offset-xl-2 p-xl-0">
-        <?php
+                        <div class="row m-0 col-8 offset-xl-2 p-xl-0">
+                                <?php
         $cate = "Nam";
         $tours = load_tour($cate);
         foreach ($tours as $tour) {
@@ -193,9 +193,9 @@
         }
 
         ?>
-      </div>
-    </div>
-  </div>
+                        </div>
+                </div>
+        </div>
 
 
 

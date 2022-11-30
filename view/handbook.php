@@ -22,7 +22,7 @@
           </div>';    
         }
 ?>
-        <?php
+                        <?php
          $handbook = load_handbook_all2();
          foreach ($handbook as $handbooks) {
                  extract($handbooks);

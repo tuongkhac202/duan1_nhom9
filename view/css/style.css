@@ -1,93 +1,112 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.font-thu-phap{
+
+.font-thu-phap {
     font-family: 'Great Vibes', cursive;
 }
-:root{
+
+:root {
     --bg-main: #3AA88E;
 }
 
-.color-main{
+.color-main {
     color: #3AA88E;
 }
-.nav{
+
+.nav {
     background: var(--bg-main);
 }
-.nav .logo img{ 
+
+.nav .logo img {
     height: 80px;
 }
-.nav .menu h2{
+
+.nav .menu h2 {
     transition: .5s;
 }
-.nav .menu h2:hover{
-color: rgb(37, 13, 122);
+
+.nav .menu h2:hover {
+    color: rgb(37, 13, 122);
 
 }
-article .filter{
-background: var(--bg-main);
+
+article .filter {
+    background: var(--bg-main);
 }
-.form-filter{
+
+.form-filter {
     display: flex;
     justify-content: space-evenly;
 }
-.chon-tour{
+
+.chon-tour {
     background: #64B899;
     color: white;
     display: flex;
 }
-.chon-tour h6{
+
+.chon-tour h6 {
     text-align: center;
     transition: .2s;
 }
 
-.chon-tour img{
+.chon-tour img {
     height: 100px;
     width: 70%;
 }
-.mien .contentt{
+
+.mien .contentt {
     background-color: var(--bg-main);
 }
-.mien-bac .tour{
+
+.mien-bac .tour {
     background: url('../../upload/mien-bac-bg.png');
     background-size: cover !important;
 }
-.mien-trung .tour{
+
+.mien-trung .tour {
     background: url('../../upload/mien-trung-bg.png');
     background-size: cover !important;
-    
+
 }
-.mien-nam .tour{
+
+.mien-nam .tour {
     background: url('../../upload/mien-nam.png');
-      background-size: cover !important;
-      
+    background-size: cover !important;
+
 }
-.image-tour{
+
+.image-tour {
     overflow: hidden;
     height: 200px;
 }
-.image-tour img{
+
+.image-tour img {
     transition: .3s;
     transform: rotate(0deg);
 }
-.tourr:hover img{
+
+.tourr:hover img {
     transform: scale(1.3);
 }
-.khoanh-khac-lu-hanh{
+
+.khoanh-khac-lu-hanh {
     background: url('../../upload/khoanh-khac-lu-hanh.png');
 }
+
 /* Slideshow container */
 .slideshow-container {
     max-width: 100%;
     position: relative;
     margin: auto;
-  }
-  
-  /* Caption text */
-  .text {
+}
+
+/* Caption text */
+.text {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -95,19 +114,19 @@ background: var(--bg-main);
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
+}
+
+/* The dots/bullets/indicators */
+.dot {
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -115,30 +134,38 @@ background: var(--bg-main);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-  
-  .active {
+}
+
+.active {
     background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
+}
+
+/* Fading animation */
+.fade {
     animation-name: fade;
     animation-duration: 5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .7} 
-    to {opacity: 1}
-  }
-  
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .text {font-size: 11px}
-  }
-  /* end slide show */
+}
+
+@keyframes fade {
+    from {
+        opacity: .7
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+/* end slide show */
 /* gioi thieu */
-.baoimg .img{
+.baoimg .img {
     max-width: 220px;
     height: 220px;
     border-radius: 50%;
@@ -147,40 +174,46 @@ background: var(--bg-main);
     justify-content: center;
     align-items: center;
 
- }
+}
 
- .baoimg .img img{
+.baoimg .img img {
     max-width: 220px;
-  
- }
- /* chi tiết tour */
- .mota{
+
+}
+
+/* chi tiết tour */
+.mota {
     word-wrap: break-word;
- padding-right: 12px !important;
- }
- .tourr{
+    padding-right: 12px !important;
+}
+
+.tourr {
     height: 450px;
- }
- .tourr .content{
-   
+}
+
+.tourr .content {
+
     height: 250px;
- }
- .title-tour{
-  
+}
+
+.title-tour {
+
     height: 80px;
     text-overflow: ellipsis;
     text-align: start !important;
     margin-bottom: 5px !important;
- }
- .title-tour a{
+}
+
+.title-tour a {
     transition: .3s;
- }
+}
 
 /* bình luận */
-.boxtitle{
+.boxtitle {
     vertical-align: middle;
 }
-.tour-suggest .img-suggest img{
-height: 100px;
-width: 100%;
+
+.tour-suggest .img-suggest img {
+    height: 100px;
+    width: 100%;
 }

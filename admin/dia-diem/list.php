@@ -1,27 +1,24 @@
-
 <div id="layoutSidenav_content">
-  <main>
-    <div class="container-fluid px-4">
-      <h4 class="mt-4">DANH SÁCH ĐỊA ĐIỂM DU LỊCH</h4>
-      <div class="card mb-4">
-        <div class="card-body">
+        <main>
+                <div class="container-fluid px-4">
+                        <h4 class="mt-4">DANH SÁCH ĐỊA ĐIỂM DU LỊCH</h4>
+                        <div class="card mb-4">
+                                <div class="card-body">
+                                        <table id="datatablesSimple"
+                                                class="table table-bordered table-striped table-hover">
+                                                <thead>
+                                                        <tr>
+                                                                <th></th>
+                                                                <th>Mã địa điểm</th>
+                                                                <th>Tên địa điểm</th>
+                                                                <th>Địa chỉ</th>
+                                                                <th>Hình ảnh</th>
+                                                                <th>Action</th>
+                                                        </tr>
+                                                </thead>
 
-
-
-          <table id="datatablesSimple"  class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Mã địa điểm</th>
-                <th>Tên địa điểm</th>
-                <th>Địa chỉ</th>
-                <th>Hình ảnh</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-          
-            <tbody>
-            <?php
+                                                <tbody>
+                                                        <?php
         foreach ($listloai as $loai) {
           extract($loai);
 
@@ -50,28 +47,28 @@
         }
         ?>
 
-            </tbody>
-          </table>
-         
+                                                </tbody>
+                                        </table>
 
 
 
 
 
 
-        </div> 
-      </div>
+
+                                </div>
+                        </div>
 
 
-      <form action="" class="mtt" >
-      <input type="button" value="Chọn tất cả  " class="btn btn-success">
-        <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
-        <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger">
-        <button class="btn btn-warning"><a href="index.php?act=addloai" >Nhập thêm</a></button>
-      </form>
+                        <form action="" class="mtt">
+                                <input type="button" value="Chọn tất cả  " class="btn btn-success">
+                                <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
+                                <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger">
+                                <button class="btn btn-warning"><a href="index.php?act=addloai">Nhập thêm</a></button>
+                        </form>
 
 
-      
-    </div>
-  </main>
+
+                </div>
+        </main>
 </div>
