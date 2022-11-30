@@ -69,7 +69,7 @@ foreach ($tthis as $tt) :
                                         </div>
                                         <div class="row mx-0 my-1 col-12">
                                                 <div class="col-1"><i class="fas fa-users"></i></div>
-                                                <div class="col-11">Số người: <input type="number" name="songuoi"
+                                                <div class="col-11">Số người: <input min="1" max="99"  type="number" name="songuoi"
                                                                 class="form-control w-50 d-inline"></div>
                                         </div>
                                         <div class="row mx-0 my-1 col-12">
