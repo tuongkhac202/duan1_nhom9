@@ -79,8 +79,16 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
             //giỏ hàng
         case 'cart':
+            $loadbooking = booking_cart($_SESSION['user']['id_customer']);
             include 'view/cart.php';
             break;
+            // xóa tour cho khách hàng
+            case 'xoaBookingCart':
+                $idBook = $_GET['idBook'];
+                booking_delete_cart($_SESSION['user']['id_customer'],$idBook);
+                $loadbooking = booking_cart($_SESSION['user']['id_customer']);
+                include 'view/cart.php';
+                break;
 
             // chi tiết tour du lịch
         case 'ctt':
@@ -138,17 +146,17 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             break;
 
-
-            //lọc tour trang chủ
-        case 'filter-tour':
+            //lọc tour 
+            case 'filter-tour':
             $loai = $_POST['loai'];
             $diadiem = $_POST['diadiem'];
             $gia = $_POST['gia'];
             $listft = filter_tour($loai, $diadiem, $gia);
             include 'view/list-filter-tour.php';
             break;
+        
 
-
+        
 
 
 
