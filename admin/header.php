@@ -64,12 +64,12 @@
                                                 </a>
                                                 <div class="sb-sidenav-menu-heading">Quản trị</div>
 
-                                                <a class="nav-link" href="index.php?act=listloai">
+                                                <a class="nav-link" href="index.php?act=listDiaDiem">
                                                         <div class="sb-nav-link-icon"><i
                                                                         class="fas fa-location-arrow"></i></div>
                                                         ĐỊA ĐIỂM
                                                 </a>
-                                                <a class="nav-link" href="index.php?act=listhh">
+                                                <a class="nav-link" href="index.php?act=listtour">
                                                         <div class="sb-nav-link-icon"><i class="fas fa-plane"></i></div>
                                                         TOUR DU LỊCH
                                                 </a>

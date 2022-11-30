@@ -6,8 +6,8 @@
                                 <div class="card-body">
 
                                         <?php
-if (is_array($kh)) {
-  extract($kh);
+if (is_array($khachHang)) {
+  extract($khachHang);
 }
 ?>
 

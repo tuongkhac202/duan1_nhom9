@@ -22,7 +22,7 @@ if (is_file($hinhpath)) {
 
 
 
-                                        <form action="index.php?act=updateloai" method="post" class="formcontent mt"
+                                        <form action="index.php?act=updateDiaDiem" method="post" class="formcontent mt"
                                                 enctype="multipart/form-data">
                                                 <input hidden type="text" name="maloai" value="<?php echo $id_place ?>">
                                                 <div class=" mb10">
@@ -56,7 +56,7 @@ if (is_file($hinhpath)) {
                                                 <input value="Cập nhật" type="submit" name="capnhat"
                                                         class="btn btn-success"></input>
                                                 <button type="reset" class="btn btn-warning">Nhập lại</button>
-                                                <button class="btn btn-info"><a href="index.php?act=listloai"
+                                                <button class="btn btn-info"><a href="index.php?act=listDiaDiem"
                                                                 style="text-decoration: none;">Danh sách địa
                                                                 điểm</a></button>
                                                 <?php

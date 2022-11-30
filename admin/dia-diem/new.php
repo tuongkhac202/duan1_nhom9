@@ -4,7 +4,7 @@
                         <h4 class="mt-4">THÊM MỚI ĐỊA ĐIỂM</h4>
                         <div class="card mb-4">
                                 <div class="card-body">
-                                        <form action="index.php?act=addloai" method="post" class="formcontent mt"
+                                        <form action="index.php?act=addDiaDiem" method="post" class="formcontent mt"
                                                 enctype="multipart/form-data">
                                                 <div class=" mb10">
                                                         Mã địa điểm (tự động)
@@ -34,7 +34,7 @@
                                                 <input value="Thêm mới" type="submit" name="themmoi"
                                                         class="btn btn-success"></input>
                                                 <button type="reset" class="btn btn-warning">Nhập lại</button>
-                                                <button class="btn btn-info"><a href="index.php?act=listloai"
+                                                <button class="btn btn-info"><a href="index.php?act=listDiaDiem"
                                                                 style="text-decoration: none;">Danh sách địa
                                                                 điểm</a></button>
                                                 <?php

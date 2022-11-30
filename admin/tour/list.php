@@ -4,13 +4,13 @@
                         <h4 class="mt-4">DANH SÁCH TOUR</h4>
                         <div class="card mb-4">
                                 <div class="card-body">
-                                        <!-- <form action="index.php?act=listhh" method="post" class="mt" style="margin-bottom: 10px;">
+                                        <!-- <form action="index.php?act=listtour" method="post" class="mt" style="margin-bottom: 10px;">
 
       <input type="text" name="kw">
       <select name="maloai" id="">
         <option value="0" selected>Tất cả</option>
         < ? php
-        foreach ($listloai as $loai) {
+        foreach ($listDiaDiem as $loai) {
           extract($loai);
           echo '<option value="' . $category . '">' . $category . '</option>';
         }
@@ -39,11 +39,11 @@
                                                 </thead>
 
                                                 <?php
-        foreach ($listhh as $hh) {
-          extract($hh);
+        foreach ($listtour as $tour) {
+          extract($tour);
 
-          $suahh = "index.php?act=suahh&mahh=" . $id_tour ."&tendd=".$name_place;
-          $xoahh = "index.php?act=xoahh&mahh=" . $id_tour;
+          $suatour = "index.php?act=suatour&matour=" . $id_tour ."&tendd=".$name_place;
+          $xoatour = "index.php?act=xoatour&matour=" . $id_tour;
           $hinhpath = "../upload/" . $image_tour;
           if (is_file($hinhpath)) {
             $image_tour = "<img src='" . $hinhpath . "' height='60' width='100'>";
@@ -65,8 +65,8 @@
           <td>' . $discount . '</td>
 
           <td>
-           <a href="' . $suahh . '"  class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
-           <a href="' . $xoahh . '"   class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger"></a>
+           <a href="' . $suatour . '"  class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
+           <a href="' . $xoatour . '"   class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger"></a>
           </td>
           </tr>
           ';
@@ -82,7 +82,7 @@
                                 <input type="button" value="Chọn tất cả  " class="btn btn-success">
                                 <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
                                 <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger">
-                                <button class="btn btn-warning"><a href="index.php?act=addhh">Nhập thêm</a></button>
+                                <button class="btn btn-warning"><a href="index.php?act=addtour">Nhập thêm</a></button>
                         </form>
 
 

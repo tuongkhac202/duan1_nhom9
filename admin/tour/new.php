@@ -4,7 +4,7 @@
                         <h4 class="mt-4">THÊM MỚI TOUR DU LỊCH</h4>
                         <div class="card mb-4">
                                 <div class="card-body">
-                                        <form action="index.php?act=addhh" method="post" class="formcontent mt"
+                                        <form action="index.php?act=addtour" method="post" class="formcontent mt"
                                                 enctype="multipart/form-data">
                                                 <br>
 
@@ -21,7 +21,7 @@
                                                         <br />
                                                         <select name="iddd">
                                                                 <?php
-                  foreach ($listloai as $loai) {
+                  foreach ($listDiaDiem as $loai) {
                     extract($loai);
                     echo '<option value="'.$id_place.'">'.$name_place.'</option>';
                   }
@@ -70,7 +70,7 @@
                                                 <div class="row mb10">
                                                         Ảnh
                                                         <br />
-                                                        <input type="file" name="hinhhh" value="" />
+                                                        <input type="file" name="hintour" value="" />
 
                                                 </div>
                                                 <br />
@@ -90,7 +90,7 @@
                                                 <input class="btn btn-success" value="Thêm mới" type="submit"
                                                         name="themmoi"></input>
                                                 <button class="btn btn-warning" type="reset">Nhập lại</button>
-                                                <button class="btn btn-info"><a href="index.php?act=listhh"
+                                                <button class="btn btn-info"><a href="index.php?act=listtour"
                                                                 style="text-decoration: none;">Danh sách
                                                                 tour</a></button>
                                                 <?php

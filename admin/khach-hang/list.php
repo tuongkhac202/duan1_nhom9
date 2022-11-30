@@ -21,8 +21,8 @@
                                                 </thead>
 
                                                 <?php
-        foreach ($_SESSION['kh'] as $kh) {
-          extract($kh);
+        foreach ($_SESSION['kh'] as $khachHang) {
+          extract($khachHang);
 
           $suakh = "index.php?act=suakh&makh=" . $id_customer;
           $xoakh = "index.php?act=xoakh&makh=" . $id_customer;
