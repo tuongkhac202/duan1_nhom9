@@ -27,8 +27,8 @@
 ### -booking: done
 ### -resgiter: done
 ### -filter-home: done
-### -cart: no
-### forgot-passWord: no
+### -cart: done
+### forgot-passWord: done
 
 
 # FIX BUG

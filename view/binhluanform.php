@@ -10,16 +10,16 @@
             </tr>
             <?php
 
-            foreach ($dsbl as $bl) {
-                extract($bl);
+            foreach ($danhSachBinhLuan as $binhLuan) {
+                extract($binhLuan);
                 echo '
-   <tr>
-   <td>' . $id_tour . '</td>
-   <td>' . $content . '</td>
-   <td>' . $id_customer . '</td>
-   <td>' . $day_comment . '</td>
-   </tr>
-   ';
+                <tr>
+                <td>' . $id_tour . '</td>
+                <td>' . $content . '</td>
+                <td>' . $id_customer . '</td>
+                <td>' . $day_comment . '</td>
+                </tr>
+                ';
             }
             ?>
         </table>
@@ -37,14 +37,13 @@
     </div>
     <?php
     if (isset($_POST['bl']) && ($_POST['bl'])) {
-        $makh = $_SESSION['user']['id_customer'];
+        $makhachHang = $_SESSION['user']['id_customer'];
         $nd = $_POST['ndbl'];
         $matour = $_POST['idtour'];
-        echo $makh;
+        echo $makhachHang;
         $ngay = date('Y/m/d');
-        binh_luan_insert($makh, $matour, $nd, $ngay);
+        binh_luan_insert($makhachHang, $matour, $nd, $ngay);
         header("Location: " . $_SERVER['HTTP_REFERER']);
     }
     ?>
-
 </div>

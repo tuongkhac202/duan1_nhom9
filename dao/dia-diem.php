@@ -1,30 +1,33 @@
 <?php
-function insert_places($tenloai,$diachi,$hinh){
-    $sql = "insert into places(name_place, address_place, image_place) values ('$tenloai','$diachi','$hinh')";
+// thêm địa điểm
+function insert_places($tendiaDiem, $diachi, $hinh)
+{
+    $sql = "insert into places(name_place, address_place, image_place) values ('$tendiaDiem','$diachi','$hinh')";
     pdo_execute($sql);
 }
-
-function delete_places($id){
-    $sql ="delete from places where id_place =".$id;
+// xóa địa điểm
+function delete_places($id)
+{
+    $sql = "delete from places where id_place =" . $id;
     pdo_execute($sql);
 }
-
-function load_list(){
-    $sql="select * from places";
-    $listloai=pdo_query($sql);
-    return $listloai;
+// danh sách địa điểm
+function load_list_diaDiem()
+{
+    $sql = "select * from places";
+    $listDiaDiem = pdo_query($sql);
+    return $listDiaDiem;
 }
-
-function load_one($id){
-    $sql="select * from places where id_place=".$id;
-    $dm=pdo_query_one($sql);
-    return $dm;
+// load một địa điểm
+function load_one($id)
+{
+    $sql = "select * from places where id_place=" . $id;
+    $diaDiem = pdo_query_one($sql);
+    return $diaDiem;
 }
-
-
-function update_places($maloai,$tenloai,$diachi,$hinh){
-    $sql = "update places set name_place = '$tenloai', address_place ='$diachi', image_place = '$hinh' where id_place = '$maloai'";
-                pdo_execute($sql);
+// cập nhật địa điểm
+function update_places($madiaDiem, $tendiaDiem, $diachi, $hinh)
+{
+    $sql = "update places set name_place = '$tendiaDiem', address_place ='$diachi', image_place = '$hinh' where id_place = '$madiaDiem'";
+    pdo_execute($sql);
 }
-
-?>

@@ -25,150 +25,150 @@ if (isset($_GET["act"])) {
     $act = $_GET["act"];
     switch ($act) {
             // địa điểm 
-        case 'addloai':
+        case 'addDiaDiem':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                $tenloai = $_POST['tenloai'];
+                $tendiaDiem = $_POST['tendiaDiem'];
                 $diachi = $_POST['diachi'];
                 $hinh = $_FILES['hinh']['name'];
                 $target_dir = "../upload/";
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
 
                 if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
-                    // echo "The file ". htmlspecialchars( basename( $_FILES["hinhhh"]["name"])). " has been uploaded.";
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["hintour"]["name"])). " has been uploaded.";
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                insert_places($tenloai, $diachi, $hinh);
+                insert_places($tendiaDiem, $diachi, $hinh);
                 $thongbao = "thêm thành công";
             }
             include "dia-diem/new.php";
             break;
 
-        case 'listloai':
-            $listloai = load_list();
+        case 'listDiaDiem':
+            $listDiaDiem = load_list_diaDiem();
             include "dia-diem/list.php";
             break;
 
-        case 'xoaloai':
-            if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
-                delete_places($_GET['maloai']);
+        case 'xoaDiaDiem':
+            if (isset($_GET['madiaDiem']) && ($_GET['madiaDiem'] > 0)) {
+                delete_places($_GET['madiaDiem']);
             }
-            $listloai = load_list();
+            $listDiaDiem = load_list_diaDiem();
             include "dia-diem/list.php";
             break;
 
-        case 'sualoai':
-            if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
-                $dm = load_one($_GET['maloai']);
+        case 'suaDiaDiem':
+            if (isset($_GET['madiaDiem']) && ($_GET['madiaDiem'] > 0)) {
+                $diaDiem = load_one($_GET['madiaDiem']);
             }
             include "dia-diem/edit.php";
             break;
 
 
-        case 'updateloai':
+        case 'updatediaDiem':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                $tenloai = $_POST['tenloai'];
-                $maloai = $_POST['maloai'];
+                $tendiaDiem = $_POST['tendiaDiem'];
+                $madiaDiem = $_POST['madiaDiem'];
                 $diachi = $_POST['diachi'];
                 $hinh = $_FILES['hinh']['name'];
                 $target_dir = "../upload/";
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
 
                 if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
-                    // echo "The file ". htmlspecialchars( basename( $_FILES["hinhhh"]["name"])). " has been uploaded.";
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["hintour"]["name"])). " has been uploaded.";
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                update_places($maloai, $tenloai, $diachi, $hinh);
+                update_places($madiaDiem, $tendiaDiem, $diachi, $hinh);
             }
-            $listloai = load_list();
+            $listDiaDiem = load_list_diaDiem();
             include 'dia-diem/list.php';
             break;
 
 
             // tour
-        case 'addhh':
+        case 'addtour':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $tentour = $_POST['tentour'];
                 $iddd = $_POST['iddd'];
-                $loaitour = $_POST['cate'];
+                $diaDiemtour = $_POST['cate'];
                 $start = $_POST['start'];
                 $end = $_POST['end'];
                 $gia = $_POST['gia'];
                 $giamgia = $_POST['giamgia'];
                 $mota = $_POST['mota'];
-                $hinh = $_FILES['hinhhh']['name'];
+                $hinh = $_FILES['hintour']['name'];
                 $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES["hinhhh"]["name"]);
+                $target_file = $target_dir . basename($_FILES["hintour"]["name"]);
 
-                if (move_uploaded_file($_FILES["hinhhh"]["tmp_name"], $target_file)) {
-                    // echo "The file ". htmlspecialchars( basename( $_FILES["hinhhh"]["name"])). " has been uploaded.";
+                if (move_uploaded_file($_FILES["hintour"]["tmp_name"], $target_file)) {
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["hintour"]["name"])). " has been uploaded.";
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
 
 
 
-                insert_tour($tentour, $iddd, $loaitour, $start, $end, $gia, $giamgia, $mota, $hinh);
+                insert_tour($tentour, $iddd, $diaDiemtour, $start, $end, $gia, $giamgia, $mota, $hinh);
                 $thongbao = "thêm thành công";
             }
-            $listloai = load_list();
+            $listDiaDiem = load_list_diaDiem();
             include "tour/new.php";
             break;
 
 
-        case 'listhh':
+        case 'listtour':
             if (isset($_POST['listok']) && ($_POST['listok'])) {
                 $kw = $_POST['kw'];
-                $maloai = $_POST['maloai'];
+                $madiaDiem = $_POST['madiaDiem'];
             } else {
                 $kw = "";
-                $maloai = 0;
+                $madiaDiem = 0;
             }
 
-            $listhh = load_list_tour();
+            $listtour = load_list_tour();
             include "tour/list.php";
             break;
 
-        case 'xoahh':
-            if (isset($_GET['mahh']) && ($_GET['mahh'] > 0)) {
-                delete_tour($_GET['mahh']);
+        case 'xoatour':
+            if (isset($_GET['matour']) && ($_GET['matour'] > 0)) {
+                delete_tour($_GET['matour']);
             }
-            $listhh = load_list_tour();
+            $listtour = load_list_tour();
             include "tour/list.php";
             break;
 
-        case 'suahh':
-            if (isset($_GET['mahh']) && ($_GET['mahh'] > 0)) {
-                $hh = load_onehh($_GET['mahh']);
+        case 'suatour':
+            if (isset($_GET['matour']) && ($_GET['matour'] > 0)) {
+                $tour = load_one_tour($_GET['matour']);
             }
-            $listloai = load_list();
+            $listDiaDiem = load_list_diaDiem();
             include "tour/edit.php";
             break;
 
-        case 'updatehh':
-            if (isset($_POST['capnhathh']) && ($_POST['capnhathh'])) {
+        case 'updatetour':
+            if (isset($_POST['capnhattour']) && ($_POST['capnhattour'])) {
                 $matour = $_POST['matour'];
                 $tentour = $_POST['tentour'];
-                $loaitour = $_POST['cate'];
+                $diaDiemtour = $_POST['cate'];
                 $iddd = $_POST['iddd'];
                 $start = $_POST['start'];
                 $end = $_POST['end'];
                 $gia = $_POST['gia'];
                 $giamgia = $_POST['giamgia'];
                 $mota = $_POST['mota'];
-                $hinh = $_FILES['hinhhh']['name'];
+                $hinh = $_FILES['hintour']['name'];
                 $target_dir = "../upload/";
-                $target_file = $target_dir . basename($_FILES["hinhhh"]["name"]);
+                $target_file = $target_dir . basename($_FILES["hintour"]["name"]);
 
-                if (move_uploaded_file($_FILES["hinhhh"]["tmp_name"], $target_file)) {
-                    // echo "The file ". htmlspecialchars( basename( $_FILES["hinhhh"]["name"])). " has been uploaded.";
+                if (move_uploaded_file($_FILES["hintour"]["tmp_name"], $target_file)) {
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["hintour"]["name"])). " has been uploaded.";
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                update_tour($matour, $iddd, $tentour, $loaitour, $start, $end, $gia, $giamgia, $mota, $hinh);
+                update_tour($matour, $iddd, $tentour, $diaDiemtour, $start, $end, $gia, $giamgia, $mota, $hinh);
             }
-            $listhh = load_list_tour();
+            $listtour = load_list_tour();
             include 'tour/list.php';
             break;
 
@@ -186,24 +186,22 @@ if (isset($_GET["act"])) {
 
 
             //khách hàng
-        case 'dskh':
-            $listkh = listkh();
-            $_SESSION['kh'] = $listkh;
+        case 'danhSachKhachHang':
+            $listKhachHang = listKhachHang();
+            $_SESSION['khachHang'] = $listKhachHang;
             include "khach-hang/list.php";
-
-
             break;
 
-        case 'suakh':
+        case 'suaKhachHang':
             if (isset($_GET['makh']) && ($_GET['makh'] > 0)) {
-                $kh = select_kh($_GET['makh']);
+                $KhachHang = select_khachHang($_GET['makh']);
             }
-            $listkh = listkh();
+            $listKhachHang = listKhachHang();
             include "khach-hang/edit.php";
             break;
 
 
-        case 'updatekh':
+        case 'updateKhachHang':
             if (isset($_POST['capnhatkh']) && ($_POST['capnhatkh'])) {
                 $makh = $_POST['makh'];
                 $tenkh = $_POST['tenkh'];
@@ -211,20 +209,20 @@ if (isset($_GET["act"])) {
                 $sdt = $_POST['sdt'];
                 $vaitro = $_POST['vaitro'];
 
-                update_kh_admin($makh, $tenkh, $email, $sdt, $vaitro);
+                update_khachHang_admin($makh, $tenkh, $email, $sdt, $vaitro);
             }
-            $listkh = listkh();
-            $_SESSION['kh'] = $listkh;
+            $listKhachHang = listKhachHang();
+            $_SESSION['khachHang'] = $listKhachHang;
             include 'khach-hang/list.php';
             break;
 
 
-        case 'xoakh':
+        case 'xoaKhachHang':
             if (isset($_GET['makh']) && ($_GET['makh'] > 0)) {
                 delete_customers($_GET['makh']);
             }
-            $listkh = listkh();
-            $_SESSION['kh'] = $listkh;
+            $listKhachHang = listKhachHang();
+            $_SESSION['khachHang'] = $listKhachHang;
             include "khach-hang/list.php";
             break;
 
@@ -232,16 +230,16 @@ if (isset($_GET["act"])) {
 
 
             // bình luận
-        case 'dsbl':
-            $listbl = select_all_binh_luan();
+        case 'danhSachBinhLuan':
+            $listBinhLuan = select_all_binh_luan();
             include "binh-luan/list.php";
             break;
-        case 'xoabl':
+        case 'xoaBinhLuan':
             if (isset($_GET['mabl']) && ($_GET['mabl'] > 0)) {
                 binh_luan_delete($_GET['mabl']);
             }
-            $listbl = select_all_binh_luan();
-            $_SESSION['bl'] = $listbl;
+            $listBinhLuan = select_all_binh_luan();
+            $_SESSION['bl'] = $listBinhLuan;
             include "binh-luan/list.php";
             break;
 
@@ -282,7 +280,7 @@ if (isset($_GET["act"])) {
             include "tin-tuc/list.php";
             break;
 
-        case 'xoatt':
+        case 'xoa-tintuc':
             if (isset($_GET['matt']) && ($_GET['matt'] > 0)) {
                 delete_handbook($_GET['matt']);
             }
@@ -290,7 +288,7 @@ if (isset($_GET["act"])) {
             include "tin-tuc/list.php";
             break;
 
-        case 'suatt':
+        case 'sua-tintuc':
             if (isset($_GET['matt'])){
                 $tt = load_handbook_one($_GET['matt']);
             }
@@ -323,11 +321,11 @@ if (isset($_GET["act"])) {
 
 
             // thống kê
-        case 'tk':
+        case 'thongKe':
             $listtk = thong_ke_tour();
             include "thong-ke/list.php";
             break;
-        case 'bdtk':
+        case 'bieuDoThongKe':
             $listtk = thong_ke_tour();
             include "thong-ke/bieudo.php";
             break;

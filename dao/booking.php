@@ -1,31 +1,44 @@
 <?php
-
-
-
-// function book_insert($ma_kh, $ma_hh, $noi_dung, $ngay_bl){
-//     $sql = "INSERT INTO comments(id_customer, id_tour, content, day_comment) VALUES ('$ma_kh','$ma_hh','$noi_dung','$ngay_bl')";
-//     pdo_execute($sql);
-// }
-function insert_booking($makh,$matour,$songuoi,$ngaybook,$ghichu){
-    $sql ="insert into bookings(id_customer,id_tour,number_customers,day_booking,note) values ('$makh','$matour','$songuoi','$ngaybook','$ghichu')";
+// thêm booing
+function insert_booking($makhachHang, $matour, $songuoi, $ngaybook, $ghichu)
+{
+    $sql = "insert into bookings(id_customer,id_tour,number_customers,day_booking,note) values ('$makhachHang','$matour','$songuoi','$ngaybook','$ghichu')";
     pdo_execute($sql);
 }
-
-function select_all_booking(){
-$sql ="select * from bookings order by id_booking ";
-$listbook = pdo_query($sql);
-return $listbook;
+// load danh sách booking
+function select_all_booking()
+{
+    $sql = "select * from bookings order by id_booking ";
+    $listbook = pdo_query($sql);
+    return $listbook;
 }
-
-function booking_delete($ma_book){
+// xóa booking
+function booking_delete($ma_book)
+{
     $sql = "DELETE FROM bookings WHERE id_booking=?";
-    if(is_array($ma_book)){
+    if (is_array($ma_book)) {
         foreach ($ma_book as $ma) {
             pdo_execute($sql, $ma);
         }
-    }
-    else{
+    } else {
         pdo_execute($sql, $ma_book);
     }
 }
-?>
+// lấy thông tin booking trong trang cart
+function booking_cart($id)
+{
+    $sql = "select b.*, t.price, t.day_start,t.name_tour,t.image_tour, c.id_customer 
+    from bookings b 
+    join tours t on b.id_tour=t.id_tour 
+    join customers c on b.id_customer=c.id_customer
+    where b.id_customer = '$id'
+    group by b.id_booking
+    ";
+    return pdo_query($sql);
+}
+// xóa booking trong cart
+function booking_delete_cart($id, $idBook)
+{
+    $sql = "delete from bookings where id_customer ='$id' and id_booking = '$idBook'";
+    pdo_execute($sql);
+}

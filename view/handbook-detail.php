@@ -8,9 +8,6 @@
                 <div class="col-8 justify-content-center mx-auto">
                         <?php echo '<img src="upload/' . $hand["img"] . '" alt="" class="mx-auto d-block img-fluid">' ?>
                         <p><?php echo $hand['content'] ?></p>
-
                 </div>
-
-
         </div>
 </article>
