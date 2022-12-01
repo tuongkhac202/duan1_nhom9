@@ -1,5 +1,5 @@
 <?php
-if (is_array($tour)) {
+     if (is_array($tour)) {
         extract($tour);
 }
 $hinhpath = "../upload/" . $image_tour;
@@ -8,7 +8,6 @@ if (is_file($hinhpath)) {
 } else {
         $image_tour = "ko tìm thấy ảnh";
 }
-
 ?>
 
 <div id="layoutSidenav_content">
@@ -40,13 +39,13 @@ if (is_file($hinhpath)) {
                             <select name="iddd">
                                 <!-- <option value="<?php echo $_GET['tenDiaDiem']  ?>"><?php echo $_GET['tenDiaDiem'] ?></option> -->
                                 <?php
-                                                                foreach ($listDiaDiem as $diaDiem) {
-                                                                        extract($diaDiem);
-                                                                        echo '<option ';
-                                                                        echo $diaDiem['id_place'] == $tour['id_place'] ? 'selected' : '';
-                                                                        echo ' value="' . $id_place . '">' . $name_place . '</option>';
-                                                                }
-                                                                ?>
+                                    foreach ($listDiaDiem as $diaDiem) {
+                                        extract($diaDiem);
+                                        echo '<option ';
+                                        echo $diaDiem['id_place'] == $tour['id_place'] ? 'selected' : '';
+                                        echo ' value="' . $id_place . '">' . $name_place . '</option>';
+                                }
+                                ?>
                             </select>
                         </div>
                         <br />
@@ -101,10 +100,11 @@ if (is_file($hinhpath)) {
                                 style="text-decoration: none;">Danh sách
                                 tour</a></button>
                         <?php
-                                                if (isset($thongbao) && ($thongbao != "")) {
-                                                        echo "<br>" . $thongbao;
-                                                }
-                                                ?>
+                            if (isset($thongbao) && ($thongbao != "")) 
+                            {
+                                echo "<br>" . $thongbao;
+                            }
+                        ?>
                     </form>
                 </div>
             </div>

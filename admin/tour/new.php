@@ -19,10 +19,11 @@
                             <br />
                             <select name="iddd">
                                 <?php
-                                 foreach ($listDiaDiem as $diaDiem) {
+                                 foreach ($listDiaDiem as $diaDiem) 
+                                 {
                                         extract($diaDiem);
                                         echo '<option value="' . $id_place . '">' . $name_place . '</option>';
-                                }
+                                 }
                                 ?>
                             </select>
                         </div>
@@ -84,10 +85,10 @@
                                 style="text-decoration: none;">Danh sách
                                 tour</a></button>
                         <?php
-                          if (isset($thongbao) && ($thongbao != "")) {
+                          if (isset($thongbao) && ($thongbao != "")) 
+                          {
                                 echo "<br>" . $thongbao;
-                        }
-
+                          }
                         ?>
                     </form>
                 </div>

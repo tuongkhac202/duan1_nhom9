@@ -29,8 +29,8 @@ table td p {
                         </thead>
 
                         <?php
-                        foreach ($listBinhLuan as $bl) {
-                                extract($bl);
+                        foreach ($listBinhLuan as $binhLuan) {
+                                extract($binhLuan);
                                 $xoaBinhLuan = "index.php?act=xoaBinhLuan&mabl=" . $id_comment;
                                 echo '
                                 <tr>

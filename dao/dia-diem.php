@@ -22,8 +22,8 @@ function load_list_diaDiem()
 function load_one($id)
 {
     $sql = "select * from places where id_place=" . $id;
-    $dm = pdo_query_one($sql);
-    return $dm;
+    $diaDiem = pdo_query_one($sql);
+    return $diaDiem;
 }
 // cập nhật địa điểm
 function update_places($madiaDiem, $tendiaDiem, $diachi, $hinh)

@@ -1,6 +1,6 @@
 <?php
-     if(is_array($dm)){
-        extract($dm);
+     if(is_array($diaDiem)){
+        extract($diaDiem);
     }
     $hinhpath = "../upload/" . $image_place;
     if (is_file($hinhpath)) {

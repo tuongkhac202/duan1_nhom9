@@ -59,7 +59,7 @@ if (isset($_GET["act"])) {
 
         case 'suaDiaDiem':
             if (isset($_GET['madiaDiem']) && ($_GET['madiaDiem'] > 0)) {
-                $dm = load_one($_GET['madiaDiem']);
+                $diaDiem = load_one($_GET['madiaDiem']);
             }
             include "dia-diem/edit.php";
             break;

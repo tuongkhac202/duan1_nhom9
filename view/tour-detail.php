@@ -129,8 +129,8 @@ foreach ($tthis as $tt) :
                                                                         <th>Ngày bình luận</th>
                                                                 </tr>
                                                                 <?php
-                                                                foreach ($danhSachBinhLuan as $bl) {
-                                                                        extract($bl);
+                                                                foreach ($danhSachBinhLuan as $binhLuan) {
+                                                                        extract($binhLuan);
                                                                         echo '
                                                                               <tr ">
                                                                                    <td>' . $id_tour . '</td>
