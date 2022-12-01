@@ -13,10 +13,12 @@ include 'dao/forgotpassword.php';
 if (isset($_GET['act']) && $_GET['act'] != "") {
     $act = $_GET['act'];
     switch ($act) {
+
             // liên hệ
         case 'lienHe':
             include 'view/contact.php';
             break;
+
             // đăng ký
         case 'dangKy':
             if (isset($_POST['dangky'])) {
@@ -31,6 +33,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             include 'view/register.php';
             break;
+
             //  dăng nhập
         case 'dangNhap':
             if (isset($_POST['dn'])) {
@@ -58,6 +61,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case 'handbook':
             include 'view/handbook.php';
             break;
+
             //chi tiết cẩm nang
         case 'handbook-detail':
             if (isset($_GET['id']) && $_GET['id'] > 0) {
@@ -82,6 +86,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             include 'view/cart.php';
             break;
+
             // xóa tour cho khách hàng
         case 'xoaBookingCart':
             $idBook = $_GET['idBook'];
@@ -225,7 +230,6 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 }
             }
             include 'view/update_password.php';
-
             break;
 
         default:
