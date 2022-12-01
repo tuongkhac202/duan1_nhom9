@@ -45,7 +45,7 @@ foreach ($tthis as $tt) :
 
                         <!-- đặt tour (book) -->
                         <div class="row m-0 col-5 form-book">
-                                <form action="index.php?act=bo" method="post"
+                                <form action="index.php?act=booking" method="post"
                                         class="bg-light border border-2 rounded-2 border-dark p-3">
                                         <div class="row mx-0 my-1 col-12">
                                                 <div class="col-1"><i class="fas fa-clock"></i></div>
@@ -248,7 +248,7 @@ foreach ($tthis as $tt) :
                             extract($tour);
                             echo '  <div class="row col-12 p-0 my-3 tour-suggest align-items-center">
             <div class="col-5 img-suggest"><img src="upload/' . $image_tour . '" alt="" class="img-fluid"></div>
-            <div class="col-7 overflow-hidden"><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-decoration-none text-black link-warning text-start">' . $name_tour . '</a></div>
+            <div class="col-7 overflow-hidden"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-decoration-none text-black link-warning text-start">' . $name_tour . '</a></div>
         </div>';
                         }
                         ?>

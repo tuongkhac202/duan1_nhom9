@@ -50,7 +50,7 @@
             echo '
     <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-        <a href="index.php?act=ctt&id=' . $id_tour . '">
+        <a href="index.php?act=chiTietTour&id=' . $id_tour . '">
             <img
             class="img-fluid w-100 h-100 rounded-top"
             src="' . $hinh_tour . '"
@@ -60,7 +60,7 @@
         </div>
         <div class="content rounded-bottom bg-light p-3">
           <div class="title-tour text-center">
-           <h6><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
+           <h6><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
           </div>
           <div class="add-time justify-content-start">
             <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
@@ -69,7 +69,7 @@
           <div class="row m-0 footer-tour">
             <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
             <div class="col text-center">
-              <button class="btn btn-danger"><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+              <button class="btn btn-danger"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@
             echo '
     <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-        <a href="index.php?act=ctt&id=' . $id_tour . '">
+        <a href="index.php?act=chiTietTour&id=' . $id_tour . '">
             <img
             class="img-fluid w-100 h-100 rounded-top"
             src="' . $hinh_tour . '"
@@ -111,7 +111,7 @@
         </div>
         <div class="content rounded-bottom bg-light p-3">
           <div class="title-tour text-center">
-           <h6><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
+           <h6><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
           </div>
           <div class="add-time justify-content-start">
             <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
@@ -120,7 +120,7 @@
           <div class="row m-0 footer-tour">
             <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
             <div class="col text-center">
-              <button class="btn btn-danger"><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+              <button class="btn btn-danger"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@
             echo '
     <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
     <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-        <a href="index.php?act=ctt&id=' . $id_tour . '">
+        <a href="index.php?act=chiTietTour&id=' . $id_tour . '">
             <img
             class="img-fluid w-100 h-100 rounded-top"
             src="' . $hinh_tour . '"
@@ -163,7 +163,7 @@
         </div>
         <div class="content rounded-bottom bg-light p-3">
           <div class="title-tour text-center">
-           <h6><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
+           <h6><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
           </div>
           <div class="add-time justify-content-start">
             <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
@@ -172,7 +172,7 @@
           <div class="row m-0 footer-tour">
             <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
             <div class="col text-center">
-              <button class="btn btn-danger"><a href="index.php?act=ctt&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+              <button class="btn btn-danger"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
             </div>
           </div>
         </div>

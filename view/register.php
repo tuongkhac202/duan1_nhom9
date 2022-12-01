@@ -1,5 +1,5 @@
 <div class="row m-4 text-center">
-        <form action="index.php?act=dk" method="POST" class="col-6 offset-3  bg-light rounded p-4">
+        <form action="index.php?act=dangKy" method="POST" class="col-6 offset-3  bg-light rounded p-4">
                 <h1 class=" font-thu-phap">Đăng Ký</h1>
                 <center>
                         <hr size="5px" width="80%" align="center" color="red">
@@ -12,7 +12,7 @@
                 <input class="col form-control mt-2" type="date" name="birth" id="" required placeholder="Ngày sinh">
                 <input class="col form-control mt-2" type="text" name="phone" required input
                         placeholder="Số điện thoại">
-                <p>Đã có tài khoản? <a class="text-decoration-none text-warning" href="index.php?act=dn">Đăng nhập</a>
+                <p>Đã có tài khoản? <a class="text-decoration-none text-warning" href="index.php?act=dangNhap">Đăng nhập</a>
                 </p>
                 <button type="submit" class="btn btn-warning w-25 mt-2" name="dangky">Đăng ký </button>
         </form>

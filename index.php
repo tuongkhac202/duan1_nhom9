@@ -9,17 +9,16 @@ include 'dao/binh-luan.php';
 include 'dao/booking.php';
 include 'dao/handbook.php';
 include 'dao/forgotpassword.php';
-
-// code dưới này
+// controller
 if (isset($_GET['act']) && $_GET['act'] != "") {
     $act = $_GET['act'];
     switch ($act) {
             // liên hệ
-        case 'lh':
+        case 'lienHe':
             include 'view/contact.php';
             break;
             // đăng ký
-        case 'dk':
+        case 'dangKy':
             if (isset($_POST['dangky'])) {
 
                 $name = $_POST['name'];
@@ -33,7 +32,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include 'view/register.php';
             break;
             //  dăng nhập
-        case 'dn':
+        case 'dangNhap':
             if (isset($_POST['dn'])) {
                 $name = $_POST['name'];
                 $pass = $_POST['pass'];
@@ -43,14 +42,14 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
                     header('Location:index.php');
                 } else {
-                    header('Location:index.php?act=dn');
+                    header('Location:index.php?dangNhap');
                 }
             }
             include 'view/login.php';
             break;
 
             // đăng xuất
-        case 'dx':
+        case 'dangXuat':
             session_unset();
             include 'view/home.php';
             break;
@@ -72,26 +71,27 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
 
             // danh sách du lịch
-        case 'dl':
+        case 'duLich':
             include 'view/list-tour.php';
             break;
 
             //giỏ hàng
         case 'cart':
-            if(isset($_SESSION['user'])){
-            $loadbooking = booking_cart($_SESSION['user']['id_customer']);}
+            if (isset($_SESSION['user'])) {
+                $loadbooking = booking_cart($_SESSION['user']['id_customer']);
+            }
             include 'view/cart.php';
             break;
             // xóa tour cho khách hàng
-            case 'xoaBookingCart':
-                $idBook = $_GET['idBook'];
-                booking_delete_cart($_SESSION['user']['id_customer'],$idBook);
-                $loadbooking = booking_cart($_SESSION['user']['id_customer']);
-                include 'view/cart.php';
-                break;
+        case 'xoaBookingCart':
+            $idBook = $_GET['idBook'];
+            booking_delete_cart($_SESSION['user']['id_customer'], $idBook);
+            $loadbooking = booking_cart($_SESSION['user']['id_customer']);
+            include 'view/cart.php';
+            break;
 
             // chi tiết tour du lịch
-        case 'ctt':
+        case 'chiTietTour':
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $id = $_GET['id'];
                 $tthis = load_tour_one($id);
@@ -119,12 +119,12 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
 
             //giới thiệu
-        case 'gt':
+        case 'gioiThieu':
             include 'view/introduce.php';
             break;
 
             // book tour trong chi tiết tour
-        case 'bo':
+        case 'booking':
             if (isset($_SESSION['user'])) {
                 $makh = $_SESSION['user']['id_customer'];
                 $matour = $_POST['matour'];
@@ -143,7 +143,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
 
             //lọc tour 
-            case 'filter-tour':
+        case 'filter-tour':
             $loai = $_POST['loai'];
             $diadiem = $_POST['diadiem'];
             $gia = $_POST['gia'];
@@ -161,7 +161,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                     history.back();
                     </script>";
                     die;
-                }   
+                }
                 $check_email = check_email($email);
                 if (is_array($check_email)) {
                     $user_id = $check_email['id_customer'];
@@ -176,12 +176,11 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                     alert('Gửi mail thành công');
                     window.location.href='index.php?act=update_password';
                     </script>";
-                }else{
+                } else {
                     echo "<script>
                     alert('Email không tồn tại');
                     </script>";
                 }
-               
             }
 
             include 'view/forgot_pass.php';
@@ -221,7 +220,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                     update_password($newpass, $user_id);
                     echo "<script>
                             alert('Cập nhật thành công');
-                            window.location.href='index.php?act=dn';
+                            window.location.href='index.php?dangNhap';
                             </script>";
                 }
             }

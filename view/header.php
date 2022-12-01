@@ -35,17 +35,17 @@
                   </a>
                 </div>
                 <div class="col text-center">
-                  <a class="text-decoration-none text-white" href="index.php?act=dl">
+                  <a class="text-decoration-none text-white" href="index.php?act=duLich">
                     <h2 class="font-thu-phap m-0">Du Lịch</h2>
                   </a>
                 </div>
                 <div class="col text-center">
-                  <a class="text-decoration-none text-white" href="index.php?act=gt">
+                  <a class="text-decoration-none text-white" href="index.php?act=gioiThieu">
                     <h2 class="font-thu-phap m-0">Giới Thiệu</h2>
                   </a>
                 </div>
                 <div class="col text-center">
-                  <a class="text-decoration-none text-white" href="index.php?act=lh">
+                  <a class="text-decoration-none text-white" href="index.php?act=lienHe">
                     <h2 class="font-thu-phap m-0">Liên hệ</h2>
                   </a>
                 </div>
@@ -55,7 +55,7 @@
                   </a>
                 </div>
                 <div class="col text-center text-white">
-                  <a href="index.php?act=dn" class="text-white"><i class="fas fa-user"></i></a> &nbsp; |&nbsp;
+                  <a href="index.php?act=dangNhap" class="text-white"><i class="fas fa-user"></i></a> &nbsp; |&nbsp;
                   <a href="index.php?act=cart" class="text-white"><i class="fas fa-shopping-cart"></i></a>
                   <br>
                 </div>
@@ -71,7 +71,7 @@
                     }
                     ?>
                     <?php
-                    echo '<a href="index.php?act=dx" class="text-white text-decoration-none link-danger">Đăng xuất <i class="fas fa-sign-out-alt"></i></a>';
+                    echo '<a href="index.php?act=dangXuat" class="text-white text-decoration-none link-danger">Đăng xuất <i class="fas fa-sign-out-alt"></i></a>';
                     ?>
                   </div>
                 </div>
@@ -89,17 +89,17 @@
                   </a>
                 </div>
                 <div class="col text-center">
-                  <a class="text-decoration-none text-white" href="index.php?act=dl">
+                  <a class="text-decoration-none text-white" href="index.php?act=duLich">
                     <h2 class="font-thu-phap m-0">Du Lịch</h2>
                   </a>
                 </div>
                 <div class="col text-center">
-                  <a class="text-decoration-none text-white" href="index.php?act=gt">
+                  <a class="text-decoration-none text-white" href="index.php?act=gioiThieu">
                     <h2 class="font-thu-phap m-0">Giới Thiệu</h2>
                   </a>
                 </div>
                 <div class="col text-center">
-                  <a class="text-decoration-none text-white" href="index.php?act=lh">
+                  <a class="text-decoration-none text-white" href="index.php?act=lienHe">
                     <h2 class="font-thu-phap m-0">Liên hệ</h2>
                   </a>
                 </div>
@@ -110,7 +110,7 @@
                 </div>
 
                 <div class="col text-center text-white">
-                  <a href="index.php?act=dn" class="text-white"><i class="fas fa-user"></i></a> &nbsp; |&nbsp;
+                  <a href="index.php?act=dangNhap" class="text-white"><i class="fas fa-user"></i></a> &nbsp; |&nbsp;
                   <a href="index.php?act=cart" class="text-white"><i class="fas fa-shopping-cart"></i></a>
                   <br>
                 </div>
