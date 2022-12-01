@@ -1,18 +1,18 @@
 <?php
-
-function insert_booking($maKhactourang, $matour, $songuoi, $ngaybook, $ghichu)
+// thêm booing
+function insert_booking($makhachHang, $matour, $songuoi, $ngaybook, $ghichu)
 {
-    $sql = "insert into bookings(id_customer,id_tour,number_customers,day_booking,note) values ('$maKhactourang','$matour','$songuoi','$ngaybook','$ghichu')";
+    $sql = "insert into bookings(id_customer,id_tour,number_customers,day_booking,note) values ('$makhachHang','$matour','$songuoi','$ngaybook','$ghichu')";
     pdo_execute($sql);
 }
-
+// load danh sách booking
 function select_all_booking()
 {
     $sql = "select * from bookings order by id_booking ";
     $listbook = pdo_query($sql);
     return $listbook;
 }
-
+// xóa booking
 function booking_delete($ma_book)
 {
     $sql = "DELETE FROM bookings WHERE id_booking=?";
@@ -24,7 +24,7 @@ function booking_delete($ma_book)
         pdo_execute($sql, $ma_book);
     }
 }
-
+// lấy thông tin booking trong trang cart
 function booking_cart($id)
 {
     $sql = "select b.*, t.price, t.day_start,t.name_tour,t.image_tour, c.id_customer 
@@ -36,6 +36,7 @@ function booking_cart($id)
     ";
     return pdo_query($sql);
 }
+// xóa booking trong cart
 function booking_delete_cart($id, $idBook)
 {
     $sql = "delete from bookings where id_customer ='$id' and id_booking = '$idBook'";

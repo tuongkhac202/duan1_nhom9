@@ -187,16 +187,16 @@ if (isset($_GET["act"])) {
 
             //khách hàng
         case 'danhSachKhachHang':
-            $listKhachHang = listKhactourang();
+            $listKhachHang = listKhachHang();
             $_SESSION['khachHang'] = $listKhachHang;
             include "khach-hang/list.php";
             break;
 
         case 'suaKhachHang':
             if (isset($_GET['makh']) && ($_GET['makh'] > 0)) {
-                $KhachHang = select_khactourang($_GET['makh']);
+                $KhachHang = select_khachHang($_GET['makh']);
             }
-            $listKhachHang = listKhactourang();
+            $listKhachHang = listKhachHang();
             include "khach-hang/edit.php";
             break;
 
@@ -209,9 +209,9 @@ if (isset($_GET["act"])) {
                 $sdt = $_POST['sdt'];
                 $vaitro = $_POST['vaitro'];
 
-                update_khactourang_admin($makh, $tenkh, $email, $sdt, $vaitro);
+                update_khachHang_admin($makh, $tenkh, $email, $sdt, $vaitro);
             }
-            $listKhachHang = listKhactourang();
+            $listKhachHang = listKhachHang();
             $_SESSION['khachHang'] = $listKhachHang;
             include 'khach-hang/list.php';
             break;
@@ -221,7 +221,7 @@ if (isset($_GET["act"])) {
             if (isset($_GET['makh']) && ($_GET['makh'] > 0)) {
                 delete_customers($_GET['makh']);
             }
-            $listKhachHang = listKhactourang();
+            $listKhachHang = listKhachHang();
             $_SESSION['khachHang'] = $listKhachHang;
             include "khach-hang/list.php";
             break;

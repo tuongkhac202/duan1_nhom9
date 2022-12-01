@@ -1,6 +1,5 @@
 <?php
 require_once 'pdo.php';
-
 function thong_ke_tour()
 {
     $sql = "select tours.id_tour, category, bookings.id_booking, "

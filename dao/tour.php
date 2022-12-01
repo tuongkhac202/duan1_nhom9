@@ -1,35 +1,38 @@
 <?php
+// chọn tour theo danh mục
 function load_tour($cate)
 {
     $sql = "select tours.*, places.name_place from tours join places on tours.id_place = places.id_place  where category = '$cate' limit 6";
     $tour = pdo_query($sql);
     return $tour;
 }
-
+// load 3 tour trang chủ
 function load_tour_3($cate)
 {
     $sql = "select tours.*, places.name_place from tours join places on tours.id_place = places.id_place where category = '$cate' order by id_tour  limit 3";
     $tour = pdo_query($sql);
     return $tour;
 }
+// load 1 tour
 function load_tour_one($id)
 {
     $sql = "select tours.*, places.name_place from tours join places on tours.id_place = places.id_place  where id_tour =" . $id;
     $tour = pdo_query($sql);
     return $tour;
 }
-
+//  thêm tour
 function insert_tour($ten, $iddd, $diaDiem, $batdau, $ketthuc, $gia, $giamgia, $mota, $hinh)
 {
     $sql = "insert into tours(name_tour,id_place, category, day_start, day_end, price, discount, tour_detail, image_tour) values ('$ten','$iddd','$diaDiem','$batdau','$ketthuc','$gia', '$giamgia', '$mota', '$hinh')";
     pdo_execute($sql);
 }
-
+//  xóa tour
 function delete_tour($id)
 {
     $sql = "delete from tours where id_tour =" . $id;
     pdo_execute($sql);
 }
+//  load danh sách tour
 function load_list_tour()
 {
     $sql = "select * from tours,places";
@@ -47,7 +50,7 @@ function load_one_tour($id)
     $tour = pdo_query_one($sql);
     return $tour;
 }
-
+// cập nhật tour
 function update_tour(
     $ma,
     $id_place,
@@ -67,7 +70,7 @@ function update_tour(
     }
     pdo_execute($sql);
 }
-
+// lọc tour
 function filter_tour($diaDiem, $diadiem, $gia)
 {
     $sql = "select tours.*, places.name_place 
@@ -84,6 +87,7 @@ function filter_tour($diaDiem, $diadiem, $gia)
     }
     return pdo_query($sql);
 }
+// tour gợi ý
 function load_tour_goiy()
 {
     $sql = "select tours.*, places.name_place from tours join places on tours.id_place = places.id_place  limit 9";
