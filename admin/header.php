@@ -98,14 +98,6 @@
                                                         </div>
                                                         THỐNG KÊ
                                                 </a>
-
-                                                <!-- <a class="nav-link" href="index.php?act=logout-admin">
-                        <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
-                            ĐĂNG XUẤT ADMIN
-                            
-                        </a>
-                    </div> -->
                                         </div>
-
                         </nav>
                 </div>

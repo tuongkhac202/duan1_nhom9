@@ -21,40 +21,33 @@
                                                 </thead>
 
                                                 <?php
-        foreach ($_SESSION['khachHang'] as $KhachHangactourang) {
-          extract($KhachHangactourang);
-
-          $suaKhachHang = "index.php?act=suaKhachHang&makh=" . $id_customer;
-          $xoaKhachHang = "index.php?act=xoaKhachHang&makh=" . $id_customer;
-
-          echo '
-          <tr>
-          <td><input type="checkbox"></td>
-          <td>' . $id_customer . '</td>
-          <td>' . $name . '</td>
-          <td>' . $pass_word . '</td>
-          <td>' . $birth_day . '</td>
-          <td>' . $phone_number . '</td>
-          <td>' . $email . '</td>
-          <td>' . $point . '</td>
-          <td>' . $role . '</td>
-
-          <td>
-           <a href="' . $suaKhachHang . '"  ><input type="button" value="Sửa" class="btn btn-warning"></a>
-           <a href="' . $xoaKhachHang . '"  ><input type="button" value="Xóa"  class="btn btn-danger"></a>
-          </td>
-          </tr>
-          ';
-        }
-        ?>
-
+                                                foreach ($_SESSION['khachHang'] as $KhachHangactourang) 
+                                                {
+                                                        extract($KhachHangactourang);
+                                                        $suaKhachHang = "index.php?act=suaKhachHang&makh=" . $id_customer;
+                                                        $xoaKhachHang = "index.php?act=xoaKhachHang&makh=" . $id_customer;
+                                                        echo '
+                                                        <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>' . $id_customer . '</td>
+                                                        <td>' . $name . '</td>
+                                                        <td>' . $pass_word . '</td>
+                                                        <td>' . $birth_day . '</td>
+                                                        <td>' . $phone_number . '</td>
+                                                        <td>' . $email . '</td>
+                                                        <td>' . $point . '</td>
+                                                        <td>' . $role . '</td>
+                                                        <td>
+                                                         <a href="' . $suaKhachHang . '"  ><input type="button" value="Sửa" class="btn btn-warning"></a>
+                                                         <a href="' . $xoaKhachHang . '"  ><input type="button" value="Xóa"  class="btn btn-danger"></a>
+                                                        </td>
+                                                        </tr>
+                                                        ';
+                                                }
+                                                ?>
                                         </table>
-
-
                                 </div>
                         </div>
-
-
                         <form action="" class="mtt">
                                 <input type="button" value="Chọn tất cả  " class="btn btn-success">
                                 <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
