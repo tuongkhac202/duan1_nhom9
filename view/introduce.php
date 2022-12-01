@@ -43,15 +43,11 @@
                                         đến Quý đối tác, Quý khách hàng. Chúng tôi luôn nỗ lực vì sự hợp tác thân thiện,
                                         hiệu
                                         quả và sự phát triển bền vững.</p>
-
                                 <div class="col-3 offset-9 text-center">
                                         <b>Tổng giám đốc</b>
                                         <img src="upload/anh-chu-ki.png" alt="" class="img-fluid">
-
                                         <h5 class="my-2">Nguyễn Khánh Tường</h5>
-
                                 </div>
-
                         </div>
                 </div>
 

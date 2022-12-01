@@ -6,21 +6,21 @@
                 </center>
                 <input class="col form-control" type="text" name="name" required placeholder="Tên đăng nhập">
                 <input class="col  form-control mt-2" type="password" name="pass" required input placeholder="Mật khẩu">
-                <input class="col form-control mt-2" type="password" name="pass2" required input
-                        placeholder="Nhập lại mật khẩu">
+                <input class="col form-control mt-2" type="password" name="pass2" required input placeholder="Nhập lại mật khẩu">
                 <input class="col form-control mt-2" type="email" name="email" required input placeholder="Email">
                 <input class="col form-control mt-2" type="date" name="birth" id="" required placeholder="Ngày sinh">
-                <input class="col form-control mt-2" type="text" name="phone" required input
-                        placeholder="Số điện thoại">
+                <input class="col form-control mt-2" type="text" name="phone" required input placeholder="Số điện thoại">
                 <p>Đã có tài khoản? <a class="text-decoration-none text-warning" href="index.php?act=dangNhap">Đăng nhập</a>
                 </p>
-                <button type="submit" class="btn btn-warning w-25 mt-2" name="dangky">Đăng ký </button>
+                <button type="submit" class="btn btn-warning w-25 mt-2" name="dangky">
+                        Đăng ký
+                </button>
         </form>
         <?php
 
-    if (isset($tb) && $tb != "") {
-        echo $tb;
-    }
+        if (isset($tb) && $tb != "") {
+                echo $tb;
+        }
 
-    ?>
+        ?>
 </div>

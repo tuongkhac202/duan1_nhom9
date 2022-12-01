@@ -27,8 +27,8 @@
 
                 </div>
         </div>
- <!-- lọc tour -->
- <div class="row d-none d-xl-block p-3 filter">
+        <!-- lọc tour -->
+        <div class="row d-none d-xl-block p-3 filter">
                 <div class="row col-xl-8 offset-xl-2 text-center filter-chirld">
                         <form action="index.php?act=filter-tour" method="post" class="row form-filter">
                                 <div class="col text-center">
@@ -40,10 +40,8 @@
                                                 <option value="all">Tất cả</option>
                                         </select>
                                 </div>
-
                                 <div class="col text-center">
-                                        <input type="text" placeholder="Địa điểm" class="form-control w-100"
-                                                name="diadiem" />
+                                        <input type="text" placeholder="Địa điểm" class="form-control w-100" name="diadiem" />
                                 </div>
                                 <div class="col text-center">
                                         <input type="text" placeholder="Giá" class="form-control w-100" name="gia" />
@@ -64,49 +62,44 @@
                         </p>
                         <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Bắc</h3>
                 </div>
-
                 <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
-
                         <div class="row m-0 col-8 offset-xl-2 p-xl-0">
                                 <?php
-        $cate = "Bắc";
-        $tours = load_tour($cate);
-        foreach ($tours as $tour) {
-          extract($tour);
-          $hinh_tour = "upload/" . $image_tour;
-
-          echo '
-    <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
-    <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-        <a href="index.php?act=chiTietTour&id=' . $id_tour . '">
-            <img
-            class="img-fluid w-100 h-100 rounded-top"
-            src="' . $hinh_tour . '"
-            alt=""
-          />
-           </a>
-        </div>
-        <div class="content rounded-bottom bg-light p-3">
-          <div class="title-tour text-center">
-            <h6><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
-          </div>
-          <div class="add-time justify-content-start">
-            <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
-            <p><i class="far fa-clock"></i> &ensp;' . $day_start . ' - ' . $day_end . '</p>
-          </div>
-          <div class="row m-0 footer-tour">
-            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
-            <div class="col text-center">
-              <button class="btn btn-danger"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
-            </div>
-          </div>
-        </div>
-  </div>
-    
-    ';
-        }
-
-        ?>
+                                $cate = "Bắc";
+                                $tours = load_tour($cate);
+                                foreach ($tours as $tour) {
+                                        extract($tour);
+                                        $hinh_tour = "upload/" . $image_tour;
+                                        echo '
+                                                <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
+                                                <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
+                                                         <a href="index.php?act=chiTietTour&id=' . $id_tour . '">
+                                                         <img
+                                                         class="img-fluid w-100 h-100 rounded-top"
+                                                         src="' . $hinh_tour . '"
+                                                         alt=""
+                                                         />
+                                                         </a>
+                                                </div>
+                                                <div class="content rounded-bottom bg-light p-3">
+                                                <div class="title-tour text-center">
+                                                         <h6><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
+                                                </div>
+                                                <div class="add-time justify-content-start">
+                                                        <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
+                                                        <p><i class="far fa-clock"></i> &ensp;' . $day_start . ' - ' . $day_end . '</p>
+                                                </div>
+                                                <div class="row m-0 footer-tour">
+                                                <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
+                                                <div class="col text-center">
+                                                        <button class="btn btn-danger"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                        ';
+                                }
+                                ?>
                         </div>
                 </div>
         </div>
@@ -119,50 +112,46 @@
                         </p>
                         <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Trung</h3>
                 </div>
-
                 <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
-
                         <div class="row m-0 col-8 offset-xl-2 p-xl-0">
                                 <?php
-        $cate = "Trung";
-        $tours = load_tour($cate);
-        foreach ($tours as $tour) {
-          extract($tour);
-          $hinh_tour = "upload/" . $image_tour;
+                                $cate = "Trung";
+                                $tours = load_tour($cate);
+                                foreach ($tours as $tour) {
+                                        extract($tour);
+                                        $hinh_tour = "upload/" . $image_tour;
 
-          echo '
-    <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
-    <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-        <a href="index.php?act=chiTietTour&id=' . $id_tour . '">
-            <img
-            class="img-fluid w-100 h-100 rounded-top"
-            src="' . $hinh_tour . '"
-            alt=""
-          />
-           </a>
-        </div>
-        <div class="content rounded-bottom bg-light p-3">
-          <div class="title-tour text-center">
-            <h6><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
+                                        echo '
+                                                <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
+                                                <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
+                                                    <a href="index.php?act=chiTietTour&id=' . $id_tour . '">
+                                                        <img
+                                                        class="img-fluid w-100 h-100 rounded-top"
+                                                        src="' . $hinh_tour . '"
+                                                        alt=""
+                                                      />
+                                                       </a>
+                                                    </div>
+                                                    <div class="content rounded-bottom bg-light p-3">
+                                                      <div class="title-tour text-center">
+                                                        <h6><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
 
-          </div>
-          <div class="add-time justify-content-start">
-            <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
-            <p><i class="far fa-clock"></i> &ensp;' . $day_start . ' - ' . $day_end . '</p>
-          </div>
-          <div class="row m-0 footer-tour">
-            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
-            <div class="col text-center">
-              <button class="btn btn-danger"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
-            </div>
-          </div>
-        </div>
-  </div>
-    
-    ';
-        }
-
-        ?>
+                                                      </div>
+                                                      <div class="add-time justify-content-start">
+                                                        <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
+                                                        <p><i class="far fa-clock"></i> &ensp;' . $day_start . ' - ' . $day_end . '</p>
+                                                      </div>
+                                                      <div class="row m-0 footer-tour">
+                                                        <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
+                                                        <div class="col text-center">
+                                                          <button class="btn btn-danger"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                         ';
+                                }
+                                ?>
                         </div>
                 </div>
         </div>
@@ -176,61 +165,47 @@
                         </p>
                         <h3 class="pb-2 m-0 font-thu-phap">Tour Miền Nam</h3>
                 </div>
-
                 <div class="row m-0 py-5 px-5 gx-xl-5 tour justify-content-center">
-
                         <div class="row m-0 col-8 offset-xl-2 p-xl-0">
                                 <?php
-        $cate = "Nam";
-        $tours = load_tour($cate);
-        foreach ($tours as $tour) {
-          extract($tour);
-          $hinh_tour = "upload/" . $image_tour;
+                                $cate = "Nam";
+                                $tours = load_tour($cate);
+                                foreach ($tours as $tour) {
+                                        extract($tour);
+                                        $hinh_tour = "upload/" . $image_tour;
+                                        echo '
+                                                <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
+                                                <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
+                                                    <a href="index.php?act=chiTietTour&id=' . $id_tour . '">
+                                                        <img
+                                                        class="img-fluid w-100 h-100 rounded-top"
+                                                        src="' . $hinh_tour . '"
+                                                        alt=""
+                                                      />
+                                                       </a>
+                                                    </div>
+                                                    <div class="content rounded-bottom bg-light p-3">
+                                                      <div class="title-tour text-center">
+                                                        <h6><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
+                                                      </div>
+                                                      <div class="add-time justify-content-start">
+                                                        <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
+                                                        <p><i class="far fa-clock"></i> &ensp;' . $day_start . ' - ' . $day_end . '</p>
+                                                      </div>
+                                                      <div class="row m-0 footer-tour">
+                                                        <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
+                                                        <div class="col text-center">
+                                                          <button class="btn btn-danger"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                 </div>
+                                         ';
+                                }
 
-          echo '
-    <div class="row m-0 mb-4 col-12 rounded-top rounded-bottom col-xl-4 tourr">
-    <div class="col-12 col-xl-12 rounded-top image-tour px-0 ">
-        <a href="index.php?act=chiTietTour&id=' . $id_tour . '">
-            <img
-            class="img-fluid w-100 h-100 rounded-top"
-            src="' . $hinh_tour . '"
-            alt=""
-          />
-           </a>
-        </div>
-        <div class="content rounded-bottom bg-light p-3">
-          <div class="title-tour text-center">
-            <h6><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-black text-decoration-none link-warning">' . $name_tour . '</a></h6>
-          </div>
-          <div class="add-time justify-content-start">
-            <p><i class="far fa-flag"></i>&ensp; ' . $name_place . '</p>
-            <p><i class="far fa-clock"></i> &ensp;' . $day_start . ' - ' . $day_end . '</p>
-          </div>
-          <div class="row m-0 footer-tour">
-            <div class="col px-0 d-flex justify-content-start align-items-center "><i class="far fa-money-bill-alt"></i>&ensp; <p class="text-danger m-0">' . number_format($price, 0, ',', '.') . ' đ</p></div>
-            <div class="col text-center">
-              <button class="btn btn-danger"><a href="index.php?act=chiTietTour&id=' . $id_tour . '" class="text-white text-decoration-none">ĐẶT LỊCH</a></button>
-            </div>
-          </div>
-        </div>
-  </div>
-    
-    ';
-        }
-
-        ?>
+                                ?>
                         </div>
                 </div>
         </div>
-
-
-
-
-
-
-
-
-
-
 
 </article>

@@ -13,13 +13,13 @@
             foreach ($danhSachBinhLuan as $bl) {
                 extract($bl);
                 echo '
-   <tr>
-   <td>' . $id_tour . '</td>
-   <td>' . $content . '</td>
-   <td>' . $id_customer . '</td>
-   <td>' . $day_comment . '</td>
-   </tr>
-   ';
+                <tr>
+                <td>' . $id_tour . '</td>
+                <td>' . $content . '</td>
+                <td>' . $id_customer . '</td>
+                <td>' . $day_comment . '</td>
+                </tr>
+                ';
             }
             ?>
         </table>
@@ -46,5 +46,4 @@
         header("Location: " . $_SERVER['HTTP_REFERER']);
     }
     ?>
-
 </div>
