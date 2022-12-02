@@ -42,10 +42,20 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $check = checkUser($name, $pass);
                 if (is_array($check)) {
                     $_SESSION['user'] = $check;
+                    echo'
+                    <script>
+                    window.location.href="index.php";
+                    </script>
+                    ';
 
-                    header('Location:index.php');
+                    // header('Location:index.php');
                 } else {
-                    header('Location:index.php?dangNhap');
+                    echo'
+                    <script>
+                    window.location.href="index.php?act=dangNhap";
+                    </script>
+                    ';
+                    // header('Location:index.php?dangNhap');
                 }
             }
             include 'view/login.php';
