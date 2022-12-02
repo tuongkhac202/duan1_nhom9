@@ -37,7 +37,7 @@
           <td>' . $image_place . '</td>
           <td>
            <a href="' . $suaDiaDiem . '" class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
-           <a href="' . $xoaDiaDiem . '" class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger"></a>
+           <a href="' . $xoaDiaDiem . '" class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger" Onclick="return ConfirmDelete();"></a>
           </td>
           </tr>
           ';

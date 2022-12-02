@@ -39,7 +39,7 @@
                                                         <td>' . $role . '</td>
                                                         <td>
                                                          <a href="' . $suaKhachHang . '"  ><input type="button" value="Sửa" class="btn btn-warning"></a>
-                                                         <a href="' . $xoaKhachHang . '"  ><input type="button" value="Xóa"  class="btn btn-danger"></a>
+                                                         <a href="' . $xoaKhachHang . '"  ><input type="button" value="Xóa"  class="btn btn-danger" Onclick="return ConfirmDelete();"></a>
                                                         </td>
                                                         </tr>
                                                         ';

@@ -46,7 +46,7 @@ table td p {
           <td>' . $img . '</td>
           <td>
            <a href="' . $suatintuc . '"  class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
-           <a href="' . $xoatintuc . '"   class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger"></a>
+           <a href="' . $xoatintuc . '"   class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger" Onclick="return ConfirmDelete();"></a>
           </td>
           </tr>
           ';

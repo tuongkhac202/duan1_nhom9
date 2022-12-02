@@ -1,4 +1,11 @@
 </div>
+<!-- xác nhận xóa -->
+<script>
+    function ConfirmDelete()
+    {
+      return confirm("Bạn có chắc muốn xóa không?");
+    }
+</script>
 <script src="https://cdn.ckeditor.com/ckeditor5/35.3.1/classic/ckeditor.js"></script>
 <script>
 ClassicEditor

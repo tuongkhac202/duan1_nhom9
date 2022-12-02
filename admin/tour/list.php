@@ -46,7 +46,7 @@
           <td>' . $discount . '</td>
           <td>
            <a href="' . $suatour . '"  class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
-           <a href="' . $xoatour . '"   class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger"></a>
+           <a href="' . $xoatour . '"   class="xoabtn"><input type="button" value="Xóa" class="btn btn-danger" Onclick="return ConfirmDelete();"></a>
           </td>
           </tr>
           ';

@@ -41,7 +41,7 @@ table td p {
                                 <td>' . $id_tour . '</td>
                                 <td>' . $day_comment . '</td>
                                 <td>
-                                 <a href="' . $xoaBinhLuan . '" class="xoabtn"><input type="button" class="btn btn-danger" value="Xóa"></a>
+                                 <a href="' . $xoaBinhLuan . '" class="xoabtn"><input type="button" class="btn btn-danger" value="Xóa" Onclick="return ConfirmDelete();"></a>
                                 </td>
                                 </tr>
                                 ';

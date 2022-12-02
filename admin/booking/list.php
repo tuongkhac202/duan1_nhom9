@@ -35,7 +35,7 @@
           <td>'.$note.'</td>
           <td>'.$status.'</td>
           <td>
-          <a href="'.$xoabook.'" class="xoabtn"><input class="btn btn-danger" type="button" value="Xóa"></a>
+          <a href="'.$xoabook.'" class="xoabtn"><input class="btn btn-danger" type="button" value="Xóa" Onclick="return ConfirmDelete();"></a>
           </td>
           </tr>
           ';
