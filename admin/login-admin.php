@@ -14,24 +14,26 @@
                 margin: 0;
         }
         body {
-                background: url('../upload/2201_w030_n002_290b_p1_290.jpg');
+                background: url('../upload/bg-admin.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+        }
+        .container-fluid{
+                margin: 10% auto;
         }
 </style>
 
 <body>
         <div class="container-fluid">
-                <div class="row m-4 text-center">
+                <div class="row text-center">
                         <form action="index.php" method="post" class="col-6 offset-3  bg-light rounded bg-opacity-75 p-4">
-                                <h4 class=" font-thu-phap">Đăng Nhập Amin</h4>
-                                <center>
-                                        <hr size="5px" width="80%" align="center" color="red">
-                                </center>
-
+                                <h4 class=" font-thu-phap text-white">Đăng Nhập Admin</h4>
+                               
                                 <input class="col form-control" type="text" name="name" required placeholder="Tên đăng nhập">
 
                                 <input class="col  form-control mt-2" type="password" name="pass" required input placeholder="Mật khẩu">
 
-                                <button type="submit" class="btn btn-warning w-25 mt-2" name="dn">Đăng nhập </button>
+                                <button type="submit" class="btn btn-primary w-25 mt-2" name="dn">Đăng nhập </button>
 
                         </form>
                 </div>
