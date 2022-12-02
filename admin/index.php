@@ -14,7 +14,12 @@ if (isset($_POST['dn'])) {
     $_SESSION['admin'] = checkUser($name, $pass);
 }
 if (!isset($_SESSION['admin']) || $_SESSION['admin']['role'] != 1) {
-    header('Location: login-admin.php');
+    echo'
+    <script>
+    window.location.href="login-admin.php";
+    </script>
+    ';
+    // header('Location: login-admin.php');
 }
 include "header.php";
 
