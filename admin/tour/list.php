@@ -56,9 +56,9 @@
                 </div>
             </div>
             <form action="" class="mtt">
-                <input type="button" value="Chọn tất cả  " class="btn btn-success">
+                <!-- <input type="button" value="Chọn tất cả  " class="btn btn-success">
                 <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
-                <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger">
+                <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger"> -->
                 <button class="btn btn-warning"><a href="index.php?act=addtour">Nhập thêm</a></button>
             </form>
         </div>

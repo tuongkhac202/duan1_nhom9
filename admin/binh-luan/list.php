@@ -50,11 +50,11 @@ table td p {
                     </table>
                 </div>
             </div>
-            <form action="" class="mtt">
+            <!-- <form action="" class="mtt">
                 <input type="button" value="Chọn tất cả  " class="btn btn-success">
                 <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
                 <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger">
-            </form>
+            </form> -->
         </div>
     </main>
 </div>
