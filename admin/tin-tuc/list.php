@@ -11,7 +11,10 @@ table td p {
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h4 class="mt-4">DANH SÁCH TIN TỨC</h4>
+        <div class="py-3 d-flex justify-content-between">
+            <h4 class="">DANH SÁCH TIN TỨC</h4>
+            <a class="btn btn-warning" href="index.php?act=add-tintuc">Nhập thêm</a>
+            </div>
             <div class="card mb-4">
                 <div class="card-body">
 
@@ -55,15 +58,8 @@ table td p {
                     </table>
                 </div>
             </div>
-            <form action="" class="mtt">
-                <!-- <input type="button" value="Chọn tất cả  " class="btn btn-success">
-                <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
-                <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger"> -->
-                <button class="btn btn-warning">
-                        <a href="index.php?act=add-tintuc">Nhập thêm
-                        </a>
-                </button>
-            </form>
+           
+                        
         </div>
     </main>
 </div>

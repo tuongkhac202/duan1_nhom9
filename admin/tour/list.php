@@ -1,7 +1,10 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h4 class="mt-4">DANH SÁCH TOUR</h4>
+        <div class="py-3 d-flex justify-content-between">
+            <h4 class="">DANH SÁCH TOUR</h4>
+            <a class="btn btn-warning" href="index.php?act=addtour">Nhập thêm</a></button>
+            </div>
             <div class="card mb-4">
                 <div class="card-body">
                     <table class="table table-bordered table-striped table-hover">
@@ -21,18 +24,18 @@
                             </tr>
                         </thead>
                         <?php
-        foreach ($listtour as $tour) {
-          extract($tour);
+foreach ($listtour as $tour) {
+    extract($tour);
 
-          $suatour = "index.php?act=suatour&matour=" . $id_tour ."&tenDiaDiem=".$name_place;
-          $xoatour = "index.php?act=xoatour&matour=" . $id_tour;
-          $hinhpath = "../upload/" . $image_tour;
-          if (is_file($hinhpath)) {
-            $image_tour = "<img src='" . $hinhpath . "' height='60' width='100'>";
-          } else {
-            $image_tour = "ko tìm thấy ảnh";
-          }
-          echo '
+    $suatour = "index.php?act=suatour&matour=" . $id_tour . "&tenDiaDiem=" . $name_place;
+    $xoatour = "index.php?act=xoatour&matour=" . $id_tour;
+    $hinhpath = "../upload/" . $image_tour;
+    if (is_file($hinhpath)) {
+        $image_tour = "<img src='" . $hinhpath . "' height='60' width='100'>";
+    } else {
+        $image_tour = "ko tìm thấy ảnh";
+    }
+    echo '
           <tr>
           <td><input type="checkbox"></td>
           <td>' . $id_tour . '</td>
@@ -50,17 +53,12 @@
           </td>
           </tr>
           ';
-        }
-        ?>
+}
+?>
                     </table>
                 </div>
             </div>
-            <form action="" class="mtt">
-                <!-- <input type="button" value="Chọn tất cả  " class="btn btn-success">
-                <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
-                <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger"> -->
-                <button class="btn btn-warning"><a href="index.php?act=addtour">Nhập thêm</a></button>
-            </form>
+
         </div>
     </main>
 </div>
