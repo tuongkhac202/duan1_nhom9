@@ -1,7 +1,11 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h4 class="mt-4">DANH SÁCH ĐỊA ĐIỂM DU LỊCH</h4>
+            <div class="py-3 d-flex justify-content-between">
+                <h4>DANH SÁCH ĐỊA ĐIỂM DU LỊCH</h4>
+                <a class="btn btn-warning" href="index.php?act=addDiaDiem">Nhập thêm</a>
+            </div>
+            
             <div class="card mb-4">
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-bordered table-striped table-hover">
@@ -46,13 +50,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <form action="" class="mtt">
-                <!-- <input type="button" value="Chọn tất cả  " class="btn btn-success">
-                <input type="button" value="Bỏ chọn tất cả " class="btn btn-success">
-                <input type="button" value="Xóa các mục đã chọn" class="btn btn-danger"> -->
-                <button class="btn btn-warning"><a href="index.php?act=addDiaDiem">Nhập thêm</a></button>
-            </form>
+            </div>              
         </div>
     </main>
 </div>
