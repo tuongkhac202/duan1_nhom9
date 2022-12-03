@@ -97,6 +97,14 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include 'view/cart.php';
             break;
 
+            // thanh toán
+        case 'thanhToan':
+            if (isset($_SESSION['user'])) {
+                $loadbooking = booking_cart($_SESSION['user']['id_customer']);
+            }
+            include 'view/pay.php';
+            break;
+
             // xóa tour cho khách hàng
         case 'xoaBookingCart':
             $idBook = $_GET['idBook'];
