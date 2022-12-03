@@ -14,7 +14,7 @@ function load_handbook_one($id)
 //  load tất cả cẩm nang
 function load_handbook_all0()
 {
-    $sql = "select* from handbooks";
+    $sql = "select* from handbooks order by id_handbook desc";
     return pdo_query($sql);
 }
 //  load cẩm nang 0-2

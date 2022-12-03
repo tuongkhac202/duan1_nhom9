@@ -37,7 +37,7 @@ function load_list_tour()
 {
     $sql = "select * from tours,places";
     $sql .= " where tours.id_place=places.id_place ";
-    $sql .= " order by id_tour ";
+    $sql .= " order by id_tour desc";
 
     $list_tour = pdo_query($sql);
     return $list_tour;

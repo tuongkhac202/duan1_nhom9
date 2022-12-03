@@ -8,7 +8,7 @@ function insert_booking($makhachHang, $matour, $songuoi, $ngaybook, $ghichu)
 // load danh sách booking
 function select_all_booking()
 {
-    $sql = "select * from bookings order by id_booking ";
+    $sql = "select * from bookings order by id_booking desc";
     $listbook = pdo_query($sql);
     return $listbook;
 }
