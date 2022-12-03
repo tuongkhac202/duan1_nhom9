@@ -30,7 +30,7 @@
           if (is_file($hinhpath)) {
             $image_place = "<img src='" . $hinhpath . "' height='60' width='100'>";
           } else {
-            $image_place = "ko tìm thấy ảnh";
+            $image_place = "không tìm thấy ảnh";
           }
           echo '
           <tr>

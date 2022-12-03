@@ -38,7 +38,7 @@ table td p {
           if (is_file($hinhpath)) {
             $img = "<img src='" . $hinhpath . "' height='60' width='100'>";
           } else {
-            $img = "ko tìm thấy ảnh";
+            $img = "không tìm thấy ảnh";
           }
           echo '
           <tr>

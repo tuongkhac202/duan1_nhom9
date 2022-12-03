@@ -33,7 +33,7 @@ foreach ($listtour as $tour) {
     if (is_file($hinhpath)) {
         $image_tour = "<img src='" . $hinhpath . "' height='60' width='100'>";
     } else {
-        $image_tour = "ko tìm thấy ảnh";
+        $image_tour = "không tìm thấy ảnh";
     }
     echo '
           <tr>
