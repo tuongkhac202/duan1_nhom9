@@ -14,7 +14,7 @@ function delete_places($id)
 // danh sách địa điểm
 function load_list_diaDiem()
 {
-    $sql = "select * from places";
+    $sql = "select * from places ORDER BY id_place desc";
     $listDiaDiem = pdo_query($sql);
     return $listDiaDiem;
 }
