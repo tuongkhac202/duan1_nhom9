@@ -104,6 +104,15 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             include 'view/pay.php';
             break;
+            // hoàn tất thanh toán
+        case 'confirmPay':
+            $maBook = $_POST['maBook'];
+            booking_handle($maBook);
+                if (isset($_SESSION['user'])) {
+                    $loadbooking = booking_cart($_SESSION['user']['id_customer']);
+                }
+                include 'view/cart.php';
+                break;
 
             // xóa tour cho khách hàng
         case 'xoaBookingCart':

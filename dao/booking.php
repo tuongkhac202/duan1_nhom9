@@ -42,3 +42,8 @@ function booking_delete_cart($id, $idBook)
     $sql = "delete from bookings where id_customer ='$id' and id_booking = '$idBook'";
     pdo_execute($sql);
 }
+// xủ lí booking
+function booking_handle($id){
+    $sql = "update bookings set status ='Đang chờ xử lí...' where id_booking = '$id'";
+    pdo_execute($sql);
+}
