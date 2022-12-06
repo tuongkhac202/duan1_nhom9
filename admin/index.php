@@ -14,7 +14,7 @@ if (isset($_POST['dn'])) {
     $_SESSION['admin'] = checkUser($name, $pass);
 }
 if (!isset($_SESSION['admin']) || $_SESSION['admin']['role'] != 1) {
-    echo'
+    echo '
     <script>
     window.location.href="login-admin.php";
     </script>
@@ -23,13 +23,11 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin']['role'] != 1) {
 }
 include "header.php";
 
-
-
 //controller
 if (isset($_GET["act"])) {
     $act = $_GET["act"];
     switch ($act) {
-            // địa điểm 
+        // địa điểm
         case 'addDiaDiem':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $tendiaDiem = $_POST['tendiaDiem'];
@@ -69,7 +67,6 @@ if (isset($_GET["act"])) {
             include "dia-diem/edit.php";
             break;
 
-
         case 'updatediaDiem':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $tendiaDiem = $_POST['tendiaDiem'];
@@ -90,8 +87,7 @@ if (isset($_GET["act"])) {
             include 'dia-diem/list.php';
             break;
 
-
-            // tour
+        // tour
         case 'addtour':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $tentour = $_POST['tentour'];
@@ -112,15 +108,12 @@ if (isset($_GET["act"])) {
                     // echo "Sorry, there was an error uploading your file.";
                 }
 
-
-
                 insert_tour($tentour, $iddd, $diaDiemtour, $start, $end, $gia, $giamgia, $mota, $hinh);
                 $thongbao = "thêm thành công";
             }
             $listDiaDiem = load_list_diaDiem();
             include "tour/new.php";
             break;
-
 
         case 'listtour':
             if (isset($_POST['listok']) && ($_POST['listok'])) {
@@ -177,20 +170,7 @@ if (isset($_GET["act"])) {
             include 'tour/list.php';
             break;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //khách hàng
+        //khách hàng
         case 'danhSachKhachHang':
             $listKhachHang = listKhachHang();
             $_SESSION['khachHang'] = $listKhachHang;
@@ -204,7 +184,6 @@ if (isset($_GET["act"])) {
             $listKhachHang = listKhachHang();
             include "khach-hang/edit.php";
             break;
-
 
         case 'updateKhachHang':
             if (isset($_POST['capnhatkh']) && ($_POST['capnhatkh'])) {
@@ -221,7 +200,6 @@ if (isset($_GET["act"])) {
             include 'khach-hang/list.php';
             break;
 
-
         case 'xoaKhachHang':
             if (isset($_GET['makh']) && ($_GET['makh'] > 0)) {
                 delete_customers($_GET['makh']);
@@ -231,10 +209,7 @@ if (isset($_GET["act"])) {
             include "khach-hang/list.php";
             break;
 
-
-
-
-            // bình luận
+        // bình luận
         case 'danhSachBinhLuan':
             $listBinhLuan = select_all_binh_luan();
             include "binh-luan/list.php";
@@ -248,8 +223,7 @@ if (isset($_GET["act"])) {
             include "binh-luan/list.php";
             break;
 
-
-            // booking
+        // booking
 
         case 'listbook':
             $listbook = select_all_booking();
@@ -264,8 +238,25 @@ if (isset($_GET["act"])) {
             include "booking/list.php";
             break;
 
+        case 'suabooking':
+            if (isset($_GET['mabook']) && ($_GET['mabook'] > 0)) {
+                $Booking = select_booking($_GET['mabook']);
+            }
+            $listKhachHang = listKhachHang();
+            include "booking/edit.php";
+            break;
+        case 'updateBooking':
+            if (isset($_POST['updatebooking']) && ($_POST['updatebooking'])) {
+                $status = $_POST['status'];
 
-            // Tin tức
+                update_booking_admin($mabook,$id_customer,$id_tour,$daybooking,$number_customer,$note,$status);
+            }
+            $listbook = listBooking();
+            $_SESSION['Booking'] =$listbook;
+            include 'booking/list.php';
+            break;
+
+        // Tin tức
         case 'add-tintuc':
             if (isset($_POST['themmoi-tintuc']) && ($_POST['themmoi-tintuc'])) {
                 $tieude = $_POST['tieuDe'];
@@ -294,12 +285,11 @@ if (isset($_GET["act"])) {
             break;
 
         case 'sua-tintuc':
-            if (isset($_GET['matt'])){
+            if (isset($_GET['matt'])) {
                 $tt = load_handbook_one($_GET['matt']);
             }
             include "tin-tuc/edit.php";
             break;
-
 
         case 'update_tintuc':
             if (isset($_POST['capnhattt']) && ($_POST['capnhattt'])) {
@@ -317,15 +307,7 @@ if (isset($_GET["act"])) {
             include 'tin-tuc/list.php';
             break;
 
-
-
-
-
-
-
-
-
-            // thống kê
+        // thống kê
         case 'thongKe':
             $listtk = thong_ke_tour();
             include "thong-ke/list.php";
@@ -334,13 +316,10 @@ if (isset($_GET["act"])) {
             $listtk = thong_ke_tour();
             include "thong-ke/bieudo.php";
             break;
-            // logout admin
+        // logout admin
         case 'logout-admin':
             session_destroy();
             break;
-
-
-
 
         default:
             include "home.php";

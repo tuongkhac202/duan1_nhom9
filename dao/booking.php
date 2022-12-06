@@ -47,3 +47,20 @@ function booking_handle($id){
     $sql = "update bookings set status ='Đang chờ xử lí...' where id_booking = '$id'";
     pdo_execute($sql);
 }
+function select_booking($idbooking)
+{
+    $sql = "select * from bookings where id_booking='$idbooking'";
+    $booking = pdo_query_one($sql);
+    return $booking;
+}
+function listBooking()
+{
+    $sql = "select * from bookings";
+    $booking = pdo_query($sql);
+    return $booking;
+}
+function update_booking_admin($mabook,$id_customer,$id_tour,$daybooking,$number_customer,$note,$status)
+{
+    $sql = "update bookings set id_customer ='$id_customer',id_tour='$id_tour',daybooking='$daybooking',number_customer='$number_customer',note'$note', status = '$status' where id_booking='$mabook'";
+    pdo_execute($sql);
+}

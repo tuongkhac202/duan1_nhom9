@@ -24,6 +24,7 @@
           {
           extract($bo);
           $xoabook="index.php?act=xoabook&mabook=".$id_booking;
+          $suabook ="index.php?act=suabooking&mabook=".$id_booking;
           echo '
           <tr>
           <td><input type="checkbox"></td>
@@ -36,6 +37,7 @@
           <td>'.$status.'</td>
           <td>
           <a href="'.$xoabook.'" class="xoabtn"><input class="btn btn-danger" type="button" value="Xóa" Onclick="return ConfirmDelete();"></a>
+          <a href="' . $suabook . '" class="suabtn"><input type="button" value="Sửa" class="btn btn-warning"></a>
           </td>
           </tr>
           ';
