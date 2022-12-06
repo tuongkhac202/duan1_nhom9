@@ -14,9 +14,9 @@ function delete_customers($id)
     pdo_execute($sql);
 }
 // đăng ký
-function insert_customers($name, $pass, $birth, $phone, $email)
+function insert_customers($name, $pass, $birth, $phone, $email, $point)
 {
-    $sql = "insert into customers(name,pass_word,birth_day,phone_number,email) values ('$name','$pass','$birth','$phone','$email')";
+    $sql = "insert into customers(name,pass_word,birth_day,phone_number,email,point) values ('$name','$pass','$birth','$phone','$email', '$point')";
     pdo_execute($sql);
 }
 function select_khachHang($makhachHang)
