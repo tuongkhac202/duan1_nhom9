@@ -22,25 +22,25 @@
                         <div class="row mb10">
                             <label for=""> Mã tour</label>
                             <br />
-                            <input type="text" name="tenkh" value="<?php echo $id_tour ?>" />
+                            <input type="text" name="matour" value="<?php echo $id_tour ?>" disabled/>
                         </div>
                         <br />
                         <div class="row mb10">
                             <label for="">Ngày booking</label>
                             <br />
-                            <input type="text" name="email" value="<?php echo $day_booking ?>" />
+                            <input type="text" name="email" value="<?php echo $day_booking ?>" disabled/>
                         </div>
                         <br />
                         <div class="row mb10">
                             <label for=""> Số điện thoại</label>
                             <br />
-                            <input type="number" name="sdt" value="<?php echo $number_customers ?>" />
+                            <input type="number" name="sdt" value="<?php echo $number_customers ?>" disabled/>
                         </div>
                         <br />
                         <div class="row mb10">
                                 <label for="">Trạng Thái</label>
                                 <input type="text"
-                                value="<?php echo $status ?>">
+                                value="<?php echo $status ?>" name="status">
                         </div>
                         <br />
                         <br />

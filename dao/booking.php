@@ -59,8 +59,8 @@ function listBooking()
     $booking = pdo_query($sql);
     return $booking;
 }
-function update_booking_admin($mabook,$id_customer,$id_tour,$daybooking,$number_customer,$note,$status)
+function update_booking_admin($mabook,$status)
 {
-    $sql = "update bookings set id_customer ='$id_customer',id_tour='$id_tour',daybooking='$daybooking',number_customer='$number_customer',note'$note', status = '$status' where id_booking='$mabook'";
+    $sql = "update bookings set status = '$status' where id_booking='$mabook'";
     pdo_execute($sql);
 }

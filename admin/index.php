@@ -245,15 +245,15 @@ if (isset($_GET["act"])) {
             $listKhachHang = listKhachHang();
             include "booking/edit.php";
             break;
+            
         case 'updateBooking':
-            if (isset($_POST['updatebooking']) && ($_POST['updatebooking'])) {
+            if (isset($_POST['capnhatbook'])) {
                 $status = $_POST['status'];
-
-                update_booking_admin($mabook,$id_customer,$id_tour,$daybooking,$number_customer,$note,$status);
+                $mabook = $_POST['mabook'];
+                update_booking_admin($mabook,$status);
             }
-            $listbook = listBooking();
-            $_SESSION['Booking'] =$listbook;
-            include 'booking/list.php';
+            $listbook = select_all_booking();
+            include "booking/list.php";
             break;
 
         // Tin tức
