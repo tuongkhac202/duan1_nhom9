@@ -23,12 +23,13 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case 'dangKy':
             if (isset($_POST['dangky'])) {
 
-                $name = $_POST['name'];
-                $pass = $_POST['pass'];
-                $birth = $_POST['birth'];
-                $phone = $_POST['phone'];
-                $email = $_POST['email'];
-                insert_customers($name, $pass, $birth, $phone, $email);
+                $name = $_POST['name']??'';
+                $pass = $_POST['pass']??'';
+                $birth = $_POST['birth']??'';
+                $phone = $_POST['phone']??'';
+                $email = $_POST['email']??'';
+                $point = $_POST['point']??0;
+                insert_customers($name, $pass, $birth, $phone, $email, $point);
                 $tb = "Đăng ký thành công";
             }
             include 'view/register.php';
@@ -201,7 +202,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                     $code = random_int(100000, 999999);
                     $ex_code = date("Y-m-d H:i:s", strtotime("+10 minutes"));
                     $date = date("Y-m-d H:i:s");
-                    $sql = "insert into get_code(id_customer,expiry,date,code) values(?,?,?,?)";
+                    $sql = "insert into get_code(id_customer,expiry,date,code, status) values(?,?,?,?,0)";
                     pdo_execute($sql, $user_id, $ex_code, $date, $code);
                     send_email($email, $code, $user_name);
                     echo "<script>
